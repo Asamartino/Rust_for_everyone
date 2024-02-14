@@ -35,7 +35,7 @@ pub fn answer_1() -> char {
 /// - a) mut fn main() {
 /// - b) let mut x = 42;
 /// - c) mut x = 0;
-/// - d) the above code compiles
+/// - d) nothing, the above code compiles
 pub fn answer_2() -> char {
     todo!()
 }
@@ -134,3 +134,22 @@ pub fn answer_7() -> char {
 pub fn answer_8() -> char {
     todo!()
 }
+
+/// ## Question 9
+///
+/// What are the three kinds of loops in Rust?
+///
+/// - a) for, while and do while
+/// - b) loop, do while and while
+/// - c) loop, while and for
+/// - d) for, while and do
+
+
+/// ## Question 10
+///
+/// What are the three kinds of loops in Rust?
+///
+/// - a) for, while and do while
+/// - b) loop, do while and while
+/// - c) loop, while and for
+/// - d) for, while and do
