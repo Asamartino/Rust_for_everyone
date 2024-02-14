@@ -1,0 +1,40 @@
+//! # Multiple Choice Questions
+//!
+//! ** As this section introduce several conceme concepts This portion of the exam is to be completed without accessing the internet, books, the rust
+//! compiler, or any other resources.**
+//!
+//! There is only one right answer for the multiple choice questions
+//! ```sh
+//! cargo doc --open
+//! ```
+
+/// ## Question 1
+///
+/// By default variables are:
+///
+/// - a) mutable
+/// - b) immutable
+/// - c) methamorphasable
+/// - d) made of cheese
+pub fn answer_1() -> char {
+    todo!()
+}
+
+/// ## Question 2
+///
+/// The below code won't compile:
+///
+/// ```notest
+/// fn main() {
+/// let x = 42;
+/// x = 0;
+/// ```
+/// What needs to change in order for the above code to compile?
+///
+/// - a) mut fn main() {
+/// - b) let mut x = 42;
+/// - c) mut x = 0;
+/// - d) the above code compiles
+pub fn answer_2() -> char {
+    todo!()
+}
