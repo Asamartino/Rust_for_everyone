@@ -3,6 +3,23 @@
 //! ** As this section introduce several conceme concepts This portion of the exam is to be completed without accessing the internet, books, the rust
 //! compiler, or any other resources.**
 //!
+//!  Replace the todo!() macros with your answer e.g.:
+//! 
+//! Question 0
+//! 
+//! Do you want to learn Rust?
+//! 
+//! - a) yes
+//! - b) no
+//! - c) what is Rust?
+//! - d) I don't know
+//! 
+//! ```notest
+//! pub fn answer_0(){
+//!  'a'
+//! }
+//! ```
+//! 
 //! There is only one right answer for the multiple choice questions
 //! ```sh
 //! cargo doc --open
@@ -137,12 +154,12 @@ pub fn answer_8() -> char {
 
 /// ## Question 9
 ///
-/// What are the three kinds of loops in Rust?
+/// One difference between shadowing a variable rather than making it mutable is that :
 ///
-/// - a) for, while and do while
-/// - b) loop, do while and while
-/// - c) loop, while and for
-/// - d) for, while and do
+/// - a) shadowing allow you to also change the type of the variable, which is not possible with a mutable variable
+/// - b) mutability allow you to also change the type of the variable, which is not possible with a shadowed variable
+/// - c) there is no difference
+/// - d) you can only shadowed a variable once then it becomes immutable
 
 
 /// ## Question 10
