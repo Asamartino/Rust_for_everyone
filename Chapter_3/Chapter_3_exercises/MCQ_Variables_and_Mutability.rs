@@ -147,7 +147,7 @@ pub fn answer_7() -> char {
 /// - a) for, while and do while
 /// - b) loop, do while and while
 /// - c) loop, while and for
-/// - d) for, while and do
+/// - d) for, while and do while
 pub fn answer_8() -> char {
     todo!()
 }
@@ -164,9 +164,9 @@ pub fn answer_8() -> char {
 
 /// ## Question 10
 ///
-/// What are the three kinds of loops in Rust?
+/// Which Rust loop would you use if you first need to check a condtion before entering the loop
 ///
-/// - a) for, while and do while
-/// - b) loop, do while and while
-/// - c) loop, while and for
-/// - d) for, while and do
+/// - a) for
+/// - b) while 
+/// - c) loop
+/// - d) do while
