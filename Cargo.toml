@@ -1,8 +1,15 @@
 [package]
-name = "Rust_for_everyone"
+name = "rust_for_everyone"
 version = "0.1.0"
-edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+# This exam will be graded by rust stable 1.68 using the 2021 edition.
+# Solutions may not require newer editions or versions including nightly.
+rust-version = "1.68"
+edition = "2021"
+
+# Solutions must not be shared!
+publish = false
 
 [dependencies]

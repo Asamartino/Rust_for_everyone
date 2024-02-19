@@ -4,22 +4,22 @@
 //! compiler, or any other resources.**
 //!
 //!  Replace the todo!() macros with your answer e.g.:
-//! 
+//!
 //! Question 0
-//! 
+//!
 //! Do you want to learn Rust?
-//! 
+//!
 //! - a) yes
 //! - b) no
 //! - c) what is Rust?
 //! - d) I don't know
-//! 
+//!
 //! ```notest
 //! pub fn answer_0(){
 //!  'a'
 //! }
 //! ```
-//! 
+//!
 //! There is only one right answer for the multiple choice questions
 //! ```sh
 //! cargo doc --open
@@ -33,7 +33,7 @@
 /// - b) immutable
 /// - c) methamorphasable
 /// - d) made of cheese
-pub fn answer_1() -> char {
+pub fn answer_01() -> char {
     todo!()
 }
 
@@ -53,7 +53,7 @@ pub fn answer_1() -> char {
 /// - b) let mut x = 42;
 /// - c) mut x = 0;
 /// - d) nothing, the above code compiles
-pub fn answer_2() -> char {
+pub fn answer_02() -> char {
     todo!()
 }
 
@@ -73,7 +73,7 @@ pub fn answer_2() -> char {
 /// - b) no, because by default variables are immutables
 /// - c) no, because you can not defined twice a variable with the same name
 /// - d) yes, because the first variable is shadowed by the second
-pub fn answer_3() -> char {
+pub fn answer_03() -> char {
     todo!()
 }
 
@@ -87,7 +87,7 @@ pub fn answer_3() -> char {
 /// - b) every element in a tuples and an array can have different types
 /// - c) the elements in a tuple can have different type while every element in an array must have the same type
 /// - d) the elements in an arrayy can have different type while every element in an tuple must have the same type
-pub fn answer_4() -> char {
+pub fn answer_04() -> char {
     todo!()
 }
 
@@ -101,7 +101,7 @@ pub fn answer_4() -> char {
 /// - b) every element in a tuple and an array can have different types
 /// - c) the elements in a tuple can have different type while every element in an array must have the same type
 /// - d) the elements in an arrayy can have different type while every element in an tuple must have the same type
-pub fn answer_5() -> char {
+pub fn answer_05() -> char {
     todo!()
 }
 
@@ -113,7 +113,7 @@ pub fn answer_5() -> char {
 /// - b) statement return a value while expression do not return values
 /// - c) a statement is a synonyme for an expression
 /// - d) A statement is a whisper, and an expression is a shout in the programming world.
-pub fn answer_6() -> char {
+pub fn answer_06() -> char {
     todo!()
 }
 // turn this expresion into a statement
@@ -136,7 +136,7 @@ pub fn answer_6() -> char {
 /// - b) no, you can't use if on the right side of a let statement
 /// - c) yes,because if is a statement and thus can be use on the right side of a let statement
 /// - d) no, because the value on each arm of the if must have the same type
-pub fn answer_7() -> char {
+pub fn answer_07() -> char {
     todo!()
 }
 
@@ -148,7 +148,7 @@ pub fn answer_7() -> char {
 /// - b) loop, do while and while
 /// - c) loop, while and for
 /// - d) for, while and do while
-pub fn answer_8() -> char {
+pub fn answer_08() -> char {
     todo!()
 }
 
@@ -160,13 +160,80 @@ pub fn answer_8() -> char {
 /// - b) mutability allow you to also change the type of the variable, which is not possible with a shadowed variable
 /// - c) there is no difference
 /// - d) you can only shadowed a variable once then it becomes immutable
-
-
+pub fn answer_09() -> char {
+    todo!()
+}
 /// ## Question 10
 ///
 /// Which Rust loop would you use if you first need to check a condtion before entering the loop
 ///
 /// - a) for
-/// - b) while 
+/// - b) while
 /// - c) loop
 /// - d) do while
+pub fn answer_10() -> char {
+    todo!()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn sanity_check(f: &dyn Fn() -> char) {
+        assert!(
+            "abcd".contains(f()),
+            "{}",
+            "You have not returned an answer a, b, c, d."
+        )
+    }
+
+    #[test]
+    fn answer_01_sanity_check() {
+        sanity_check(&answer_01)
+    }
+
+    #[test]
+    fn answer_02_sanity_check() {
+        sanity_check(&answer_02)
+    }
+
+    #[test]
+    fn answer_03_sanity_check() {
+        sanity_check(&answer_03)
+    }
+
+    #[test]
+    fn answer_04_sanity_check() {
+        sanity_check(&answer_04)
+    }
+
+    #[test]
+    fn answer_05_sanity_check() {
+        sanity_check(&answer_05)
+    }
+
+    #[test]
+    fn answer_06_sanity_check() {
+        sanity_check(&answer_06)
+    }
+
+    #[test]
+    fn answer_07_sanity_check() {
+        sanity_check(&answer_07)
+    }
+
+    #[test]
+    fn answer_08_sanity_check() {
+        sanity_check(&answer_08)
+    }
+
+    #[test]
+    fn answer_09_sanity_check() {
+        sanity_check(&answer_09)
+    }
+
+    #[test]
+    fn answer_10_sanity_check() {
+        sanity_check(&answer_10)
+    }
+}
