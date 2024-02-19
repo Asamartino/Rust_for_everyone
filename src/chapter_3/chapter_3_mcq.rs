@@ -1,9 +1,6 @@
 //! # Multiple Choice Questions
 //!
-//! ** As this section introduce several conceme concepts This portion of the exam is to be completed without accessing the internet, books, the rust
-//! compiler, or any other resources.**
-//!
-//!  Replace the todo!() macros with your answer e.g.:
+//! Replace the todo!() macros with your answer e.g.:
 //!
 //! Question 0
 //!
@@ -11,7 +8,7 @@
 //!
 //! - a) yes
 //! - b) no
-//! - c) what is Rust?
+//! - c) maybe
 //! - d) I don't know
 //!
 //! ```notest
@@ -47,7 +44,7 @@ pub fn answer_01() -> char {
 /// x = 0;
 /// }
 /// ```
-/// What needs to change in order for the above code to compile?
+/// Where do we need to add mut for the above code to compile?
 ///
 /// - a) mut fn main() {
 /// - b) let mut x = 42;
@@ -175,6 +172,24 @@ pub fn answer_10() -> char {
     todo!()
 }
 
+/// ## Question 10
+///
+/// Consider this code:
+///
+/// ```notest
+/// let mut arr = [1,2,3];
+/// ```
+///
+/// What does the above code enables you to do?
+///
+/// - a) It enables you to add additional elements to the array
+/// - b) It enables you to only change the values of the elements in the array
+/// - c) It only enables you to grow the size of the array
+/// - d) It only enables you to shrink the size of the array
+pub fn answer_11() -> char {
+    todo!()
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -230,6 +245,11 @@ mod tests {
     #[test]
     fn answer_09_sanity_check() {
         sanity_check(&answer_09)
+    }
+
+    #[test]
+    fn answer_10_sanity_check() {
+        sanity_check(&answer_10)
     }
 
     #[test]

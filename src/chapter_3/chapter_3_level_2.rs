@@ -10,10 +10,15 @@
 //////                                     Data Types                                      //////
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
-// reverse the tuple provided using destructuring and return the new tuple
-pub fn reverse_tuple(tup: (u32, u32, u32)) -> (u32, u32, u32) {
+
+//this function will take the middle value of an array of number and convert it to a floating number
+// e.g. [1,2,3] -> 2.0
+// you could use shadowing
+pub fn array_middle_value(arr: [u32;3]) -> f64 {
     todo!()
 }
+
+// convert tuple to array and round the floating number to closest integer
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //////                                     Else if                                         //////
@@ -36,4 +41,17 @@ pub fn reverse_tuple(tup: (u32, u32, u32)) -> (u32, u32, u32) {
 // tip: you could use a for loop and the modulo operator
 pub fn is_prime(number: u32) -> bool {
     todo!()
+}
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_array_middle_value() {
+        let arr: [u32;3]= [4,5,6];
+        let response: f64 = 5.0;
+        assert_eq!(response, array_middle_value(arr));
+    }
 }
