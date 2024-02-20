@@ -253,7 +253,7 @@ mod tests {
     }
 
     #[test]
-    fn answer_10_sanity_check() {
+    fn answer_11_sanity_check() {
         sanity_check(&answer_10)
     }
 }

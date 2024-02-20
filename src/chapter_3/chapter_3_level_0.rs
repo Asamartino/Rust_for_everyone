@@ -19,7 +19,7 @@ pub fn return_six_mutability() -> u32 {
 }
 
 // complete the below code. This function should return the char '6' by shadowing x
-// note that this is not you can't achieve this behavior if the variable is declared as mutable
+// note that you can't achieve this behavior if the variable x is declared as mutable
 pub fn return_six_char() -> char {
     let x = 5;
     todo!() // remove the todo!()
@@ -36,8 +36,6 @@ pub fn return_tuple() -> (u32, f32, char) {
     // 2. return the tuple
     todo!()
 }
-
-// reverse and destructuring, tuple of tuple
 
 // This function should return the u32 value of a tuple (u64, f64, char, u32, f64, i64)
 pub fn return_u32_tuple(tup: (u64, f64, char, u32, f64, i64)) -> u32 {
