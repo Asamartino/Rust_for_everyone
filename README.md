@@ -1,6 +1,6 @@
 # Rust for everyone
 
-This series of exercises will closely follow the book. "The Rust Programming Language".
+This series of exercises will closely follow the book : [The Rust Programming Language](https://doc.rust-lang.org/book/)
 
 While the learning materials offer valuable insights, we've recognized the need for more hands-on exercises to solidify your understanding of the concepts and familiarize yourself with Rust. 
 
