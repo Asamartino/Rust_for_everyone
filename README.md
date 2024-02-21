@@ -19,6 +19,6 @@ cargo test chapter_3_level_0
 The only requirement is that the tests must pass.
 
 ## Next steps
-We will produce a video as soon as possible, allowing you to learn some valuable tricks as well :)
+We will produce videos as soon as possible, allowing you to not only see live coding but to also learn some valuable tricks as well :)
 
 If you believe there are exercises that would be valuable additions or if you wish to propose changes, please do not hesitate to submit a pull request.
