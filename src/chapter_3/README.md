@@ -8,3 +8,10 @@ Here is a brief explanation of the levels:
 -  level 2: intermediate exercises. They combine multiple concepts together, you might need to look around for a solution (as you might not know some concepts)
 
 The multiple choice questions (MCQ) can be taken at any time. We recommend that you do it without any external help. 
+
+You can gauge your progress by running the tests associated with each level of exercises.
+```sh
+# Run the unit tests of chapter 3 level 1
+cargo test chapter_3_level_1
+```
+The only requirement is that the tests must pass.
