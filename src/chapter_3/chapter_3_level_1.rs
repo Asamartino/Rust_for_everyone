@@ -71,7 +71,7 @@ pub fn return_max(num1: u32, num2: u32, num3: u32) -> u32 {
     todo!()
 }
 
-// this function return a tuple of bools depending if the number is divisible by two three or four
+// this function return a tuple of bools depending if the number is divisible by two, three or four
 // divisible_by_2_3_4(4) -> (true, false,true)
 // divisible_by_2_3_4(3) -> (false, true, false)
 // divisible_by_2_3_4(24) -> (true, true, true)
@@ -84,19 +84,37 @@ pub fn divisble_by_2_3_4(num: u32) -> (bool, bool, bool) {
 //////                                     Loops                                           //////
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
-//sort an array from small to big
 
-// sort an array of u32 from bigger to smaller
+// Complete the code below by using a while loop that will add 1 to number and index, 25 times in total
+// note that this function returns a tuple of the number incremented by 25 and the index
+pub fn increment_by_25(number: u32) -> (u32, u32) {
+    todo!()
+    // uncoment the code below
+    // let mut response = number;
+    // let mut index = 0;
+    // add your code here
+    // (response,index)
+}
 
-// this function return an array where every element of the array provided as argument is incremented by 10. This time use a for loop.
+// Complete the below function that will add all numbers together in the array provided using a for loop
+pub fn add_elements_together(arr: [u32; 10]) -> u32 {
+    todo!()
+    // uncoment the code below
+    // let mut response = 0;
+    // put your for loop here
+    // response
+}
+
+// this function return an array where every element of the array provided as argument is incremented by 10 using a for loop
 pub fn for_array_add_10(arr: [u32; 5]) -> [u32; 5] {
     todo!()
 }
 
-// reverse the array provided, f.i. [1,2,3,4,5] -> [5,4,3,2,1]. This time use a for loop.
+// reverse the array provided, f.i. [1,2,3,4,5] -> [5,4,3,2,1] using a for loop.
 pub fn for_reverse_array(arr: [u32; 5]) -> [u32; 5] {
     todo!()
 }
+
 
 #[cfg(test)]
 mod tests {
@@ -174,20 +192,6 @@ mod tests {
     }
 
     #[test]
-    fn test_for_array_add_10() {
-        let arr: [u32; 5] = [0, 1, 2, 3, 4];
-        let response: [u32; 5] = [10, 11, 12, 13, 14];
-        assert_eq!(response, for_array_add_10(arr));
-    }
-
-    #[test]
-    fn test_for_reverse_array() {
-        let arr: [u32; 5] = [6, 7, 8, 9, 10];
-        let response: [u32; 5] = [10, 9, 8, 7, 6];
-        assert_eq!(response, for_reverse_array(arr));
-    }
-
-    #[test]
     fn test_return_max() {
         let num1: u32 = 100;
         let num2: u32 = 50;
@@ -238,5 +242,33 @@ mod tests {
         let num: u32 = 24;
         let response: (bool, bool, bool) = (true, true, true);
         assert_eq!(response, divisble_by_2_3_4(num));
+    }
+
+    #[test]
+    fn test_for_array_add_10() {
+        let arr: [u32; 5] = [0, 1, 2, 3, 4];
+        let response: [u32; 5] = [10, 11, 12, 13, 14];
+        assert_eq!(response, for_array_add_10(arr));
+    }
+
+    #[test]
+    fn test_for_reverse_array() {
+        let arr: [u32; 5] = [6, 7, 8, 9, 10];
+        let response: [u32; 5] = [10, 9, 8, 7, 6];
+        assert_eq!(response, for_reverse_array(arr));
+    }
+
+    #[test]
+    fn test_increment_by_25() {
+        let num: u32 = 50;
+        let increment = 25;
+        assert_eq!((num + increment, increment), increment_by_25(num));
+    }
+
+    #[test]
+    fn test_add_elements_together() {
+        let arr: [u32; 10] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let response: u32 = arr.iter().sum();
+        assert_eq!(response, add_elements_together(arr));
     }
 }

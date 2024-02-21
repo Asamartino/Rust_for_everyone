@@ -12,7 +12,7 @@ pub fn return_six_shadowing() -> u32 {
 // complete the below code. This function should return the value 6.
 pub fn return_six_mutability() -> u32 {
     todo!()
-    //uncoment the below line
+    //uncoment the below lines
     // let mut x = 5;
     // add your 1-liner code here
     // x
@@ -47,7 +47,7 @@ pub fn return_array_12345() -> [u32; 5] {
     todo!()
 }
 
-// This function return an array by taking the first, third, and fifth element of an array passed to this function
+// This function return an array created by taking the first, third, and fifth element of an array passed to this function
 pub fn return_array_1_3_5(my_array: [u32; 5]) -> [u32; 3] {
     // get the first element, third element and fifth element
     // create a new array and return it
@@ -81,13 +81,13 @@ pub fn return_maximum_if_let(n1: u32, n2: u32) -> u32 {
 //////                                     Loops                                           //////
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
-// In rust there is three types of loops:
+// In rust there are three types of loops:
 //      - loop: creates an infinite loop that can be stoped by using a break statement
 //      - while: will run till the condition is true
-//      - for: is a more concise and safe way
+//      - for: is a more concise and safe way than a while loop
 
-// Complete the below function by incrementing number by 1 using loop and breaking it once the number 100 is reached.
-pub fn return_hundred() -> u32 {
+// Complete the below function by incrementing number by 1 at each loop incrementation. You should use a loop and breaking it once the number 100 is reached.
+pub fn return_hundred_loop() -> u32 {
     todo!()
     // uncomment the code below and complete the loop
     // let mut number = 0;
@@ -98,24 +98,22 @@ pub fn return_hundred() -> u32 {
     // number
 }
 
-// Complete the code below by using a while loop that will add 1 to number and index, 25 times in total
-// note that this function returns a tuple of the number incremented by 25 and the index
-pub fn increment_by_25(number: u32) -> (u32, u32) {
+// Complete the below function by incrementing number by 1 at each loop incrementation. You should use a while loop and breaking it once the number 100 is reached.
+pub fn return_hundred_while() -> u32 {
     todo!()
-    // uncoment the code below
-    // let mut response = number;
-    // let mut index = 0;
-    // add your code here
-    // (response,index)
+    // uncomment the code below and complete
+    // let mut number = 0;
+    // add a while loop
+    // number
 }
 
-// Complete the below function, that will add all numbers together in the array provided using a for loop
-pub fn add_elements_together(arr: [u32; 10]) -> u32 {
+// Complete the below function by incrementing number by 1 at each loop incrementation. You should use a for loop and breaking it once the number 100 is reached.
+pub fn return_hundred_for() -> u32 {
     todo!()
-    // uncoment the code below
-    // let mut response = 0;
-    // put your for loop here
-    // response
+    // uncomment the code below and complete
+    // let mut number = 0;
+    // add a for loop
+    // number
 }
 
 #[cfg(test)]
@@ -217,23 +215,23 @@ mod tests {
         assert_eq!(n1, return_maximum_if_let(n1, n1));
     }
 
+    // Loops
     #[test]
-    fn test_return_hundred() {
+    fn test_return_hundred_loop() {
         let answer: u32 = 100;
-        assert_eq!(answer, return_hundred());
+        assert_eq!(answer, return_hundred_loop());
     }
 
     #[test]
-    fn test_increment_by_25() {
-        let num: u32 = 50;
-        let increment = 25;
-        assert_eq!((num + increment, increment), increment_by_25(num));
+    fn test_return_hundred_while() {
+        let answer: u32 = 100;
+        assert_eq!(answer, return_hundred_while());
     }
 
     #[test]
-    fn test_add_elements_together() {
-        let arr: [u32; 10] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-        let response: u32 = arr.iter().sum();
-        assert_eq!(response, add_elements_together(arr));
+    fn test_return_hundred_for() {
+        let answer: u32 = 100;
+        assert_eq!(answer, return_hundred_for());
     }
+
 }
