@@ -6,3 +6,5 @@ Here is a brief explanation of the levels:
 -  level 0: beginner exercises to get you familiar with the Rust syntax
 -  level 1: easy exercises
 -  level 2: intermediate exercises. They combine multiple concepts together, you might need to look around for a solution (as you might not know some concepts)
+
+The multiple choice questions (MCQ) can be taken at any time. We recommend that you do it without any exeternal help. 
