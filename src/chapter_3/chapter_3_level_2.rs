@@ -3,7 +3,7 @@ pub fn nested_tuple_increment(nested_tup: ((u32,u32,u32),(u32,u32,u32),(u32,u32,
     todo!()
 }
 
-//this function will take the middle value of an array of number and convert it to a floating number
+//this function will take the middle value of an array of u32 and convert it to a floating number
 // e.g. [1,2,3] -> 2.0
 // you could use shadowing
 pub fn array_middle_value(arr: [u32;3]) -> f64 {
