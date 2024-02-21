@@ -18,6 +18,9 @@
 //! ```
 //!
 //! There is only one right answer per question
+//! 
+//! 
+//! The below command will open the docs in a browser after building them
 //! ```sh
 //! cargo doc --open
 //! ```
