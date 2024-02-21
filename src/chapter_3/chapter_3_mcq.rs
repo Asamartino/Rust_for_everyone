@@ -17,7 +17,7 @@
 //! }
 //! ```
 //!
-//! There is only one right answer for the multiple choice questions
+//! There is only one right answer per question
 //! ```sh
 //! cargo doc --open
 //! ```
