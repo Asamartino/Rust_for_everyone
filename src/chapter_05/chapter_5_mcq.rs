@@ -49,8 +49,8 @@ pub fn answer_01() -> char {
 ///     sign_in_counter: u32,
 /// }
 /// ```
-/// - a) It is less efficient as the Sting data type is stored on the stack
-/// - b) It is more efficient as the Sting data type is stored on the stack
+/// - a) It is less efficient as the String data type is stored on the stack
+/// - b) It is more efficient as the String data type is stored on the stack
 /// - c) It doesn't change anything
 /// - d) So the struct has complete ownership of its data, ensuring that the data remains valid for as long as the struct is valid
 pub fn answer_02() -> char {
