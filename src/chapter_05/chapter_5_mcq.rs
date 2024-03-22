@@ -27,22 +27,32 @@
 
 /// ## Question 1
 ///
-/// Does Rust have a garbage collector?
+/// What is a struct or structure in Rust?
 ///
-/// - a) yes
-/// - b) no
-/// - c) let me consult my crystal ball... oh, it's foggy again... maybe?
+/// - a) A primitive data type that enables you to name and bundle together various related values into a coherent group.
+/// - b) A custom data type that enables you to name and bundle together various related values into a coherent group.
+/// - c) A dance move popular in the late '80s, known for its rigid, robotic motions.
+/// - d) A system of components ensuring the stability and integrity of buildings or other constructions.
 pub fn answer_01() -> char {
     todo!()
 }
 
 /// ## Question 2
 ///
-/// What is Rust ownership feature?
+/// What is the advantage of defining the below fields of User with the type String instead of &str ?
 ///
-/// - a) a way to manage computer's CPU while running
-/// - b) a way to manage computer's memory while running
-/// - c) the act, state, or right of Rust to possess some features
+/// ```notest
+/// struct User {
+///     username: String,
+///     email: String,
+///     active: bool,
+///     sign_in_counter: u32,
+/// }
+/// ```
+/// - a) It is less efficient as the Sting data type is stored on the stack
+/// - b) It is more efficient as the Sting data type is stored on the stack
+/// - c) It doesn't change anything
+/// - d) So the struct has complete ownership of its data, ensuring that the data remains valid for as long as the struct is valid
 pub fn answer_02() -> char {
     todo!()
 }

@@ -3,15 +3,36 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Exercise n°1
-// create a struct named MyUser with the following fields: username of type String, email of type String, active of type bool, and id of type u32
-// it should be the same as the structure User defined in the tests
+// create a struct named MyUser with the following fields: username of type String, email of type String, active of type bool, and sign_in_counter of type u32
 
-//Exercise n°2
-// create an instance of the structure MyUser and initialised with the value you want.
+// Exercise n°2
+// create an instance of the structure MyUser and initialized with the value you want.
 
-//Exercise n°3
-// create a mutable instance of this struct, initialised with the value you want.
+// Exercise n°3
+// create a mutable instance of this struct, initialized with the value you want. Modify the field active from true to false or vice versa
 
+// Exercise n°4
+// complete the below function that returns a User (User and MyUser have the same filed)
+// default value for active is true and sign_in_counter is 1
+fn build_user(username: String, email: String) -> User {
+    todo!()
+}
+
+//Exercise n°5
+//complete the below function that returns a User (User and MyUser have the same filed) using the field init shorthand syntax 
+//default value for active is true and sign_in_counter is 1
+fn build_user_shorthand(username: String, email: String) -> User {
+    todo!()
+}
+
+// Exercise n°5 create an instance of User and use this instance to initate some fields in a second instance using the syntax ..
+
+
+// Exercise n°6 create struct Rectangle_3D with the fields length, width, and height. Those three field are of type u32
+
+// Exercise n°7 create the function rectangle_3D_volume that takes a Rectangle_3D and return the volume of this rectangle (= length*width*height)
+
+// Exercise n°8 implement the volume function as a method of the struct Rectangle_3D
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //////                                   String Types                                      //////
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -58,7 +79,7 @@ mod tests {
         username: String,
         email: String,
         active: bool,
-        id: u32,
+        sign_in_counter: u32,
     }
 
     // Variables, mutability and shadowing
