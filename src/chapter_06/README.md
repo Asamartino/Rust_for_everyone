@@ -1,6 +1,6 @@
-## Chapter 5
+## Chapter 6
 
-The exercises in this chapter assume that you have read the chapter 5 of [The Rust Programming Language](https://doc.rust-lang.org/book/ch05-00-structs.html).
+The exercises in this chapter assume that you have read the chapter 6 of [The Rust Programming Language](https://doc.rust-lang.org/book/ch06-00-enums.html).
 Ideally, you should begin with the level 0 exercises and progressively move to the next levels.
 
 Here is a brief explanation of the levels:
