@@ -1,4 +1,7 @@
-// Exercise n°1
+fn main() {
+    // To familiarize you with the syntax, solutions to the following exercises are provided in a separate file.
+    
+    // Exercise n°1
     // create a struct named User with the following fields: username of type String, email of type String, active of type bool, and sign_in_counter of type u32
     struct User {
         username: String,
@@ -39,7 +42,7 @@
     }
 
     //Exercise n°5
-    //complete the below function that returns a User (User and MyUser have the same filed) using the field init shorthand syntax
+    //complete the below function that returns a User using the field init shorthand syntax
     //default value for active is true and sign_in_counter is 1
     fn build_user_shorthand(username: String, email: String) -> User {
         User {
@@ -76,7 +79,7 @@
         }
     }
 
-    // Exercise n°9 implement another method. This method called is_cube will return true if the rectangle has the same height, width and height value
+    // Exercise n°9 implement another method called is_cube will which return true if the rectangle has the same height, width and height value
     impl Rectangle3d {
         fn is_cube(&self) -> bool {
             self.length == self.width && self.width == self.height
@@ -86,8 +89,11 @@
     // Exercise n°10 implement another method. This method called is_bigger which will compare the first rectangle volume with the volume of a second instance.
     // this function should return true only if the first rectangle volume is bigger thant the second
     // and false if they have the same volume or if the second volume is bigger than the first one
+    // Tip: why not use a method you created before?
+
     impl Rectangle3d {
         fn is_bigger(&self, other_rect: &Rectangle3d) -> bool {
             self.volume() > other_rect.volume()
         }
     }
+}

@@ -1,18 +1,25 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
-//////                                       Ownership                                     //////
+//////                                     Exercise n°2                                    //////
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
-//////                                   String Types                                      //////
-/////////////////////////////////////////////////////////////////////////////////////////////////
+// The below struct represent a more complex bank account. Complete the methods of the BankAccount structure
+// The field frozen represent if the account is frozen or not:
+//      - if frozen the account can not transfer money but can receive money
+//      - if frozen is false the account can transfer and receive money
+// once you complete this exercise try doing from a blank file to get use of writing the struct functions, etc.
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
-//////                            References and Borrowing                                 //////
-/////////////////////////////////////////////////////////////////////////////////////////////////
+struct Balance {
+    usd: f64,
+    eur: f64,
+}
+struct BankAccount {
+    account_name: String,
+    balance: Balance,
+    frozen: bool
+}
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
-//////                                    Slice Type                                       //////
-/////////////////////////////////////////////////////////////////////////////////////////////////
+const USD_EUR_RATE: f64 = 0.9;
+const BANK_FLAT_FEE: f64 = 2.5;
 
 // complete the below function that should return the first word find in a sentence.
 // Assume the sentence is only constituted of the 26 letters of the modern English alphabet and the words are separated by whitespace

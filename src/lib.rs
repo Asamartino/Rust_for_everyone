@@ -7,3 +7,5 @@
 
 pub mod chapter_03;
 pub mod chapter_04;
+pub mod chapter_05;
+pub mod chapter_06;
