@@ -2,7 +2,7 @@
 //////                                     Exercise n°2                                    //////
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Exercise n°1
+// Exercise n°
 // create an enum Shape with three variants (Rectangle, Square, Circle).
 // associate an anonymous struct to Rectangle {base: Option<f32>, height: Option<f32>}, a Option<f32> to Square (that will represent its side) and a Option<f32> to Circle (that will represent its radius)
 pub enum Shape{
@@ -15,8 +15,9 @@ pub enum Shape{
     Circle(Option<f32>),
 }
 
-// Exercise n°2
-// complete the below function area that compute the area of a shape using a match. In the case that the Shape variant contains None it returns 0.
+// Exercise n°
+// complete the below function area that compute the area of a Shape using a match. In the case that the Shape variant contains None it returns 0.
+// reminder i.e. for rectangle = base * height, for the square = side * side and for the circle = 3.14 * radius * radius
 pub fn area(shape: Shape) -> f32 {
     // todo!();
 
