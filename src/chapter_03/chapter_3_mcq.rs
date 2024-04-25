@@ -18,8 +18,8 @@
 //! ```
 //!
 //! There is only one right answer per question
-//! 
-//! 
+//!
+//!
 //! The below command will open the docs in a browser after building them
 //! ```sh
 //! cargo doc --open
@@ -86,26 +86,14 @@ pub fn answer_03() -> char {
 /// - a) every element in a tuples and an array must have the same types
 /// - b) every element in a tuples and an array can have different types
 /// - c) the elements in a tuple can have different type while every element in an array must have the same type
-/// - d) the elements in an arrayy can have different type while every element in an tuple must have the same type
+/// - d) the elements in an array can have different type while every element in an tuple must have the same type
 pub fn answer_04() -> char {
     todo!()
 }
 
-// exemple of vector with array
+// example of vector with array
 
 /// ## Question 5
-///
-/// Rust has two primitive compound types: tuples and arrays. Which statement below is true?
-///
-/// - a) every element in a tuple and an array must have the same types
-/// - b) every element in a tuple and an array can have different types
-/// - c) the elements in a tuple can have different type while every element in an array must have the same type
-/// - d) the elements in an arrayy can have different type while every element in an tuple must have the same type
-pub fn answer_05() -> char {
-    todo!()
-}
-
-/// ## Question 6
 ///
 /// What is the difference between a statement and an expression?
 ///
@@ -118,7 +106,7 @@ pub fn answer_06() -> char {
 }
 // turn this expresion into a statement
 
-/// ## Question 7
+/// ## Question 6
 ///
 /// Consider the below code:
 ///
@@ -140,7 +128,7 @@ pub fn answer_07() -> char {
     todo!()
 }
 
-/// ## Question 8
+/// ## Question 7
 ///
 /// What are the three kinds of loops in Rust?
 ///
@@ -152,7 +140,7 @@ pub fn answer_08() -> char {
     todo!()
 }
 
-/// ## Question 9
+/// ## Question 8
 ///
 /// One difference between shadowing a variable rather than making it mutable is that :
 ///
@@ -163,7 +151,7 @@ pub fn answer_08() -> char {
 pub fn answer_09() -> char {
     todo!()
 }
-/// ## Question 10
+/// ## Question 9
 ///
 /// Which Rust loop would you use if you first need to check a condtion before entering the loop
 ///

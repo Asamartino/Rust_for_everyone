@@ -5,9 +5,7 @@
 #![allow(unused_variables)]
 #![allow(unused_macros)]
 
-pub mod chapter_03;
-pub mod chapter_04;
-pub mod chapter_05;
-pub mod chapter_06;
-pub mod chapter_07;
-
+// pub mod chapter_5_level_0;
+pub mod chapter_6_level_1;
+pub mod chapter_6_level_2;
+pub mod chapter_6_mcq;
