@@ -101,7 +101,7 @@ pub fn answer_04() -> char {
 /// - b) statement return a value while expression do not return values
 /// - c) a statement is a synonyme for an expression
 /// - d) A statement is a whisper, and an expression is a shout in the programming world.
-pub fn answer_06() -> char {
+pub fn answer_05() -> char {
     todo!()
 }
 // turn this expresion into a statement
@@ -124,7 +124,7 @@ pub fn answer_06() -> char {
 /// - b) no, you can't use if on the right side of a let statement
 /// - c) yes,because if is a statement and thus can be use on the right side of a let statement
 /// - d) no, because the value on each arm of the if must have the same type
-pub fn answer_07() -> char {
+pub fn answer_06() -> char {
     todo!()
 }
 
@@ -136,7 +136,7 @@ pub fn answer_07() -> char {
 /// - b) loop, do while and while
 /// - c) loop, while and for
 /// - d) for, while and do while
-pub fn answer_08() -> char {
+pub fn answer_07() -> char {
     todo!()
 }
 
@@ -148,18 +148,18 @@ pub fn answer_08() -> char {
 /// - b) mutability allow you to also change the type of the variable, which is not possible with a shadowed variable
 /// - c) there is no difference
 /// - d) you can only shadowed a variable once then it becomes immutable
-pub fn answer_09() -> char {
+pub fn answer_08() -> char {
     todo!()
 }
 /// ## Question 9
 ///
-/// Which Rust loop would you use if you first need to check a condtion before entering the loop
+/// Which Rust loop would you use if you first need to check a condition before entering the loop
 ///
 /// - a) for
 /// - b) while
 /// - c) loop
 /// - d) do while
-pub fn answer_10() -> char {
+pub fn answer_09() -> char {
     todo!()
 }
 
@@ -177,7 +177,7 @@ pub fn answer_10() -> char {
 /// - b) It enables you to only change the values of the elements in the array
 /// - c) It only enables you to grow the size of the array
 /// - d) It only enables you to shrink the size of the array
-pub fn answer_11() -> char {
+pub fn answer_10() -> char {
     todo!()
 }
 
@@ -240,11 +240,6 @@ mod tests {
 
     #[test]
     fn answer_10_sanity_check() {
-        sanity_check(&answer_10)
-    }
-
-    #[test]
-    fn answer_11_sanity_check() {
         sanity_check(&answer_10)
     }
 }

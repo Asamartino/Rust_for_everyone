@@ -6,6 +6,6 @@
 #![allow(unused_macros)]
 
 // pub mod chapter_5_level_0;
-pub mod chapter_6_level_1;
-pub mod chapter_6_level_2;
-pub mod chapter_6_mcq;
+pub mod chapter_7_level_1;
+pub mod chapter_7_level_2;
+pub mod chapter_7_mcq;

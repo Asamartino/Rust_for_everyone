@@ -44,123 +44,78 @@ pub fn string_reversed(string: &str) -> String {
 }
 
 // Count the number of vowel (i.e. a,e,i,o,u ) in a string provided as input. Assume that the input only contains latin characters (that can also be uppercase)
-fn count_vowels(input: &String) -> usize {
+pub fn string_count_vowels(input: &String) -> usize {
     todo!()
 }
 
 // Have a look at the different methods of hashmap before or while solving the below exercises: https://doc.rust-lang.org/std/collections/struct.HashMap.html
 
 // returns the sum of the values of a hashmap
-fn hashmap_values_sum(hm: &HashMap<String,u32>) ->u32{
-
+pub fn hashmap_values_sum(hm: &HashMap<String, u32>) -> u32 {
+    todo!()
 }
 
 // returns the sum of the keys of a hashmap
-fn hashmap_keys_sum(hm: &HashMap<u32,u32>) -> u32{
-
+pub fn hashmap_keys_sum(hm: &HashMap<u32, u32>) -> u32 {
+    todo!()
 }
 
+// returns true if the hashmap contains the key
+pub fn hashmap_contains_key(hm: &HashMap<u32, u32>, key: u32) -> bool {
+    todo!()
+}
+
+// remove the key from the hashmap and returns the value of the key if it is present or None
+pub fn hashmap_removes_key(hm: &mut HashMap<u32, u32>, key: u32) -> Option<u32> {
+    todo!()
+}
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    enum Shape {
-        Rectangle { base: u32, height: u32 },
-        Square(u32),
-        Circle(u32),
-    }
-    enum Color {
-        Red,
-        Yellow,
-        Blue,
-    }
-
-    struct ShapeInfo {
-        shape: Shape,
-        color: Color,
+    #[test]
+    fn test_vec_pop() {
+        let mut vec = vec![0, 1, 2, 3, 4, 5];
+        assert_eq!(Some(5), vec_pop(&vec));
     }
 
     #[test]
-    fn test_get_grade_failed() {
-        let score_0 = 0;
-        let score_59 = 59;
-        let failed = String::from("Failed");
-
-        assert_eq!(failed, get_grade(score_0));
-        assert_eq!(failed, get_grade(score_59));
-    }
-    #[test]
-    fn test_get_grade_d() {
-        let score_60 = 60;
-        let score_69 = 69;
-        let grade_d = String::from("D");
-
-        assert_eq!(grade_d, get_grade(score_60));
-        assert_eq!(grade_d, get_grade(score_69));
-    }
-    #[test]
-    fn test_get_grade_c() {
-        let score_70 = 70;
-        let score_79 = 79;
-        let grade_c = String::from("C");
-
-        assert_eq!(grade_c, get_grade(score_70));
-        assert_eq!(grade_c, get_grade(score_79));
-    }
-    #[test]
-    fn test_get_grade_b() {
-        let score_80 = 80;
-        let score_89 = 89;
-        let grade_b = String::from("B");
-
-        assert_eq!(grade_b, get_grade(score_80));
-        assert_eq!(grade_b, get_grade(score_89));
-    }
-    #[test]
-    fn test_get_grade_a() {
-        let score_90 = 90;
-        let score_100 = 100;
-        let grade_a = String::from("A");
-
-        assert_eq!(grade_a, get_grade(score_90));
-        assert_eq!(grade_a, get_grade(score_100));
-    }
-    #[test]
-    fn test_get_grade_invalid() {
-        let invalid_score = 12345;
-
-        assert_eq!(String::from("invalid"), get_grade(invalid_score));
+    fn test_vec_pop_empty() {
+        let mut vec = vec::new();
+        assert_eq!(None, vec_pop(&vec));
     }
 
     #[test]
-    fn test_power_level_baby() {
-        let level = 4;
-
-        assert_eq!(String::from("Probably a baby"), power_level(level));
+    fn test_vec_length() {
+        let vec = vec![0, 1, 2, 3];
+        assert_eq!(4, vec_length(&vec));
     }
 
     #[test]
-    fn test_power_level_average() {
-        let level = 10;
+    fn test_sum_of_vec() {
+        let vec = vec![0, 1, 2, 3, 4, 5];
+        assert_eq!(0 + 1 + 2 + 3 + 4 + 5, sum_of_vec(vec));
+    }
 
-        assert_eq!(String::from("Average level"), power_level(level));
+    #[test]
+    fn test_mean_of_vec() {
+        let vec = vec![10, 10, 10, 10, 10, 10];
+        assert_eq!(10, sum_of_vec(vec));
+    }
+
+    #[test]
+    fn test_vec_append() {
+        let mut vec1 = vec![0, 1, 2, 3, 4, 5];
+        let mut vec2 = vec![6, 7, 8, 9];
+        assert_eq!(&[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], vec_append(vec1, vec2));
+        assert_eq!(&[], vec2);
     }
     #[test]
-    fn test_power_level_nothing() {
-        let eleven = 11;
-        let nine_thousand_one = 9001;
-
-        assert_eq!(String::from(""), power_level(eleven));
-        assert_eq!(String::from(""), power_level(nine_thousand_one));
-    }
-    #[test]
-    fn test_power_level_nine_thousand() {
-        let nine_thousand = 900;
-
-        assert_eq!(
-            String::from("What?! 9000?! There's no way that can be right!"),
-            power_level(nine_thousand)
-        );
+    fn test_vec_append_not_empty() {
+        let mut vec1 = vec![0, 1, 2, 3, 4, 5];
+        let mut vec2 = vec![6, 7, 8, 9];
+        assert_eq!(&[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], vec_append(vec1, vec2));
+        assert_eq!(&[6, 7, 8, 9], vec2);
     }
 }
