@@ -138,7 +138,6 @@ pub fn answer_06() -> char {
 
 /// ## Question 7
 ///
-///
 /// Consider the below code:
 ///
 /// ```notest
@@ -165,7 +164,7 @@ pub fn answer_07() -> char {
 /// - a) grapheme clusters
 /// - b) base characters
 /// - c) bytes
-/// - d) scalar values
+/// - d) unicode scalar values
 pub fn answer_08() -> char {
     todo!()
 }
@@ -224,6 +223,27 @@ pub fn answer_10() -> char {
 /// - c) No, because the variable alice has been moved and thus can no longer be used after being inserted into balances.
 /// - d) No, because you can't use the entry function with a non existing key.
 pub fn answer_11() -> char {
+    todo!()
+}
+
+/// ## Question 12
+///
+/// Does the below code compile and why?
+///
+/// ```notest
+/// fn print_str(s: &str) {
+///     println!("{}", s);
+/// }
+/// fn main() {
+///     let kenobi = &String::from("Hello there");
+///     print_str(kenobi);
+/// }
+///  ```
+/// - a) No, because print_str expect and &str and we provided &String as argument
+/// - b) Yes, because &str and &String are equivalent
+/// - c) No, because we should also add "General Kenobi" somewhere in this code
+/// - d) Yes, this due to deref coercion that turns &String to &str
+pub fn answer_12() -> char {
     todo!()
 }
 
@@ -291,6 +311,11 @@ mod tests {
 
     #[test]
     fn answer_11_sanity_check() {
+        sanity_check(&answer_10)
+    }
+
+    #[test]
+    fn answer_12_sanity_check() {
         sanity_check(&answer_10)
     }
 }
