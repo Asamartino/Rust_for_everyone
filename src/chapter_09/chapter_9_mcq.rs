@@ -25,7 +25,6 @@
 //! cargo doc --open
 //! ```
 
-
 /// ## Question 1
 ///
 /// What is a backtrace ?
@@ -38,19 +37,17 @@ pub fn answer_01() -> char {
     todo!()
 }
 
-
 /// ## Question 2
 ///
 /// What happen when the panic! macro is executed?
 ///
-/// - a) The program will display an error message, rollback and clean up the stack, and then terminate.
-/// - b) The program will have sudden uncontrollable anxiety and produce incoherent results
+/// - a) The program will display an error message, rollback and clean up the stack, and then terminate
+/// - b) The program will have sudden uncontrollable anxiety and produce incoherent results.
 /// - c) The program will display an error message
 /// - d) The program terminate without cleaning up
 pub fn answer_02() -> char {
     todo!()
 }
-
 
 /// ## Question 3
 ///
@@ -64,7 +61,6 @@ pub fn answer_03() -> char {
     todo!()
 }
 
-
 /// ## Question 4
 ///
 /// How are recoverable errors handled?
@@ -77,12 +73,11 @@ pub fn answer_04() -> char {
     todo!()
 }
 
-
 /// ## Question 5
 ///
 /// Is the sentence correct?
-/// 
-/// The Result enum and its variants are automatically imported into every Rust program. 
+///
+/// The Result enum and its variants are automatically imported into every Rust program.
 ///
 /// - a) Yes
 /// - b) No, because the Result enum is imported in the prelude, which is not automatically imported into every Rust program
@@ -92,9 +87,8 @@ pub fn answer_05() -> char {
     todo!()
 }
 
-
 /// ## Question 6
-/// 
+///
 /// How are unrecoverable errors handled?
 ///
 /// - a) with a buffer overread
@@ -104,7 +98,6 @@ pub fn answer_05() -> char {
 pub fn answer_06() -> char {
     todo!()
 }
-
 
 /// ## Question 7
 ///
@@ -119,7 +112,6 @@ pub fn answer_07() -> char {
     todo!()
 }
 
-
 /// ## Question 8
 ///
 /// What does the unwrap method of the Result type do?
@@ -131,7 +123,6 @@ pub fn answer_07() -> char {
 pub fn answer_08() -> char {
     todo!()
 }
-
 
 /// ## Question 9
 ///
@@ -145,36 +136,33 @@ pub fn answer_09() -> char {
     todo!()
 }
 
-
 /// ## Question 10
 ///
 /// When could you return a Result?
 ///
 /// - a) when a function might fail
 /// - b) only for File I/O operations
-/// - c) when a function returns no value if successful
+/// - c) only for when a function returns no value if successful
 /// - d) whenever a function is guaranteed to not raise an error
 pub fn answer_10() -> char {
     todo!()
 }
 
-
 /// ## Question 11
 ///
 /// When should your code panic ?
 ///
-/// - a) When you encounter unrecoverable errors and continuing the execution of the program would lead to a inconsistent state. 
-/// - b) When you encounter recoverable errors and continuing the execution of the program would lead to a bad state. 
-/// - c) Whenever a Result variant returns is Err.
+/// - a) When you encounter unrecoverable errors and continuing the execution of the program would lead to a inconsistent state.
+/// - b) When you encounter recoverable errors and continuing the execution of the program would lead to a bad state.
+/// - c) Whenever a Result variant is Err.
 /// - d) When you don't have time to handle this problem.
 pub fn answer_11() -> char {
     todo!()
 }
 
-
 /// ## Question 12
 ///
-/// The question mark operator `?` placed after a Result value functions almost identically to the match expressions defined to handle Result values in Listing 9-6.
+/// The question mark operator `?` placed after a Result value functions almost identically to the match expressions defined to handle Result values in listing 9-6.
 /// However, there is a difference between them, namely?  
 ///
 /// - a) ? is a more flexible construct that allows pattern matching on various types
@@ -185,20 +173,17 @@ pub fn answer_12() -> char {
     todo!()
 }
 
-
 /// ## Question 13
 ///
-/// it this sentence correct: 
-/// The question mark operator `?` can be used with every functions.
+/// The question mark operator `?` can be used:
 ///
-/// - a) Yes
-/// - b) No, only with functions that return a Result type
-/// - c) No, only with functions that return an Enum type
-/// - d) No, only with functions that return a Generic type
+/// - a) everywhere
+/// - b) only in function that returns Result
+/// - c) only inside the main function
+/// - d) only when the code in unclear
 pub fn answer_13() -> char {
     todo!()
 }
-
 
 #[cfg(test)]
 mod tests {

@@ -23,6 +23,14 @@ fn main() {
     //////                                       Option                                        //////
     /////////////////////////////////////////////////////////////////////////////////////////////////
     
+    /// Reminder: Option is an enum:
+    enum Option<T> {
+        None,
+        Some(T),
+    }
+    /// We will learn more about the <T> syntax in chapter 10. For now, think of it as a placeholder for any type. You will define this type in your code.
+    /// So Some(T) will hold a type T wrapped into Some()
+
     // Exercise n°
     // create the variable some_char that is an Option<char> containing the character 'b'.
 
