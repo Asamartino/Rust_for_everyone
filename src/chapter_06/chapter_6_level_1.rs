@@ -11,6 +11,30 @@
 // Exercise n°
 // shadow the variable number_of_beer that is an Option<u32> it should now contains the value 5.
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// add other methods on Option
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+// complete the below function that returns true if the Option has a some value
+// you could use the is_some method: https://doc.rust-lang.org/std/option/enum.Option.html#method.is_some
+pub fn option_is_some(op: Option<u32>) -> bool{
+    todo!()
+}
+
+// complete the below function that returns false if the Option has a None value
+// you could use the is_some method: https://doc.rust-lang.org/std/option/enum.Option.html#method.is_some
+pub fn option_is_none(op: Option<u32>) -> bool{
+    todo!()
+}
+
+// Exercise n°
+// complete the below function that returns the value of the option. If it contains none it should return 0
+// using the or method 
+pub fn option_to_value (op: Option<u32>) -> u32{
+    todo!();
+}
+
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //////     To complete the exercise below you should read the Pattern syntax part of Chapter 18. read more about match guards.
 /////////////////////////////////////////////////////////////////////////////////////////////////

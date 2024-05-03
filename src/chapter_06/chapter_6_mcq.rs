@@ -132,7 +132,7 @@ pub fn answer_06() -> char {
 /// - a) Yes, number_of_socks hold the value 7.
 /// - b) No, because the plus_two function expects an Option<u32>
 /// - c) Yes, number_of_socks hold the value Option<7>.
-/// - d) Yes, number_of_socks hold the value Some<7>.
+/// - d) Yes, number_of_socks hold the value Some(7).
 pub fn answer_07() -> char {
     todo!()
 }
@@ -146,90 +146,8 @@ pub fn answer_07() -> char {
 /// - a) Yes
 /// - b) No, because every arm that match the pattern will be evaluated
 /// - c) No, match is not exhaustive
-/// - d) No, 
+/// - d) No, only the last arm will be executed
 pub fn answer_08() -> char {
-    todo!()
-}
-
-/// ## Question 9
-///
-/// Does the below code compile?
-///
-/// ```notest
-///     pub fn main() {
-///         let s = String::from("hello");
-///         print_string(s);
-///
-///         let x: u32 = 5;
-///         print_u32(x);
-///
-///         let x = 6;
-///         println!("the value of variable x is: {}", x);
-///     }
-///
-///     pub fn print_string(s: String) {
-///         println!("the value of the string is: {}", s)
-///     }
-///     pub fn print_u32(x: u32) {
-///         println!("the value of variable x is: {}", x)
-///     }
-/// ```
-/// - a) Yes
-/// - b) No, because s is moved into print_string()
-/// - c) No, because x is declared twice
-pub fn answer_09() -> char {
-    todo!()
-}
-
-/// ## Question 10
-///
-/// Does the below code compiles?
-///
-/// ```notest
-///         let mut s = String::from("hello");
-///         
-///         let s1 = &s;
-///         let s2 = &s;
-///         let s3 = &mut s;
-///         let s4 = s;
-///     }
-/// ```
-/// - a) Yes
-/// - b) No, because you can only have one immutable reference
-/// - c) No, because we can't have a mutable reference while also having an immutable one
-pub fn answer_10() -> char {
-    todo!()
-}
-/// ## Question 11
-///
-/// Which of the following are the rules of reference?
-///
-/// n°1 References must always be valid
-/// n°2 At any given time, you can have either but bot both of the following: one mutable reference or any number of immutable references
-/// n°3 Reference can be invalid thanks to Rust ownership rules
-/// n°4 At any given time, you can have either but bot both of the following: one immutable reference or any number of mutable references
-///
-/// - a) n°1 and n°2
-/// - b) n°1 and n°4
-/// - c) n°2 and n°3
-/// - d) n°3 and n°4
-pub fn answer_11() -> char {
-    todo!()
-}
-
-/// ## Question 12
-///
-/// What is the type of s in the below code?
-///
-/// ```notest
-/// let s = "Hello"
-/// ```
-///
-/// - a) String, which is a mutable reference
-/// - b) &str, which is an mutable reference
-/// - c) String, which is a immutable reference
-/// - d) &str, which is an immutable reference
-pub fn answer_12() -> char {
     todo!()
 }
 
@@ -285,23 +203,4 @@ mod tests {
         sanity_check(&answer_08)
     }
 
-    #[test]
-    fn answer_09_sanity_check() {
-        sanity_check(&answer_09)
-    }
-
-    #[test]
-    fn answer_10_sanity_check() {
-        sanity_check(&answer_10)
-    }
-
-    #[test]
-    fn answer_11_sanity_check() {
-        sanity_check(&answer_10)
-    }
-
-    #[test]
-    fn answer_12_sanity_check() {
-        sanity_check(&answer_10)
-    }
 }

@@ -23,6 +23,7 @@ pub fn get_grade(score: u32) -> String {
     todo!();
 }
 
+
 // Exercise n°
 // complete the below function that returns the following String depending on the input
 // "Probably a baby" if the value is between 0 and 4

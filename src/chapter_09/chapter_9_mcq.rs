@@ -142,7 +142,7 @@ pub fn answer_09() -> char {
 ///
 /// - a) when a function might fail
 /// - b) only for File I/O operations
-/// - c) only for when a function returns no value if successful
+/// - c) only when a function returns no value if successful
 /// - d) whenever a function is guaranteed to not raise an error
 pub fn answer_10() -> char {
     todo!()
