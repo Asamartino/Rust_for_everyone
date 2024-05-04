@@ -23,6 +23,16 @@ fn main() {
     //////                                       Option                                        //////
     /////////////////////////////////////////////////////////////////////////////////////////////////
     
+    // Reminder: Option is an enum defined as:
+    // enum Option<T> {}
+    //     Some(T),
+    //     None,
+    // }
+    // We will learn more about generics in Chapter 10. For now think of <T> in Option<T> as representing any type. 
+    // It serves as a stand-in suggesting its capability to accommodate any type. 
+    // Once the type is clearly specified, it will anticipate an option of that particular type
+    // e.g. pub fn option_is_some(op: Option<u32>) -> bool{...} expects an Option<u32>
+
     // Exercise n°
     // create the variable some_char that is an Option<char> containing the character 'b'.
 

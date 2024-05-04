@@ -4,6 +4,10 @@ fn main() {
     /////////////////////////////////////////////////////////////////////////////////////////////////
     //////                                        Vectors                                      //////
     /////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    // We will learn more about generics in Chapter 10. For now think of <T> in Vec<T> as representing any type. 
+    // Once <T> is explicitly determined, it denotes that the vector anticipates elements exclusively of the specified type, 
+    // thereby enforcing a rigorous adherence to the prescribed data type.
 
     // Exercise n°1
     // create an empty vector called vec that will contain i32 values
@@ -58,6 +62,10 @@ fn main() {
     /////////////////////////////////////////////////////////////////////////////////////////////////
     //////                                      Hash Maps                                      //////
     /////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    // You will learn more about generics in Chapter 10. For now think of <K,V> in HashMap<K, V> as representing a key and a value of any type. 
+    // Once <K> and <V> are explicitly determined, the hashmap will anticipate keys and values exclusively of the specified type.  
+    // It will ensure a rigorous conformity to the designated data type.
 
     // Exercise n°
     // create an empty mutable hashmap called balance
