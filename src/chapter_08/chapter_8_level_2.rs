@@ -12,6 +12,7 @@ fn deduplicate_vector(vec: Vec<u32>) -> Vec<u32> {
     todo!()
 }
 
+// create a new type and create a vector of this type
 #[cfg(test)]
 mod tests {
     use super::*;

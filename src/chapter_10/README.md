@@ -1,6 +1,8 @@
 ## Chapter 7
 
 The exercises in this chapter assume that you have read the chapter 10 of [The Rust Programming Language](https://doc.rust-lang.org/book/ch10-00-generics.html).
+This chapter brings some key concepts that depending on your background might be hard to grasp at first. That is why there is a long list of exercises in order to help you master those concepts. 
+
 Ideally, you should begin with the level 0 exercises and progressively move to the next levels.
 
 Here is a brief explanation of the levels:

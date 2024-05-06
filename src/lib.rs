@@ -12,3 +12,4 @@ pub mod chapter_06;
 pub mod chapter_07;
 pub mod chapter_08;
 pub mod chapter_09;
+pub mod chapter_10;

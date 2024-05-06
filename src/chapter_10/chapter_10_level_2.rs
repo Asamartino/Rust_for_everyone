@@ -2,36 +2,6 @@
 //////                                     Exercise n°2                                    //////
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
-// complete the below function that converts Result<Result<u32, &'static str>, &'static str> to Result<u32, &'static str>
-pub fn result_flatten(res: Result<Result<u32, &'static str>, &'static str>) -> Result<u32, &'static str>{
-    todo!()
-}
-
-// transpose a result from an option into an option of a result
-// e.g. result_transpose(Ok(Some(5))) -> Some(Ok(5)), 
-// e.g. result_transpose(Ok(None)) -> None,
-// e.g. result_transpose(Err(_)) -> Some(Err(_)),
-pub fn result_transpose(res: Result<Option<u32>,&'static str>) ->  Option<Result<u32, &'static str>>{
-    todo!()
-}
-
-
-// complete the below function that returns an different error message if:
-// - the password is less than 8 characters long
-// - the password do not contains any digit
-// - the password do not contains any letter
-fn check_password_strength(password: &str) -> Result<(), &'static str> {
-    if password.len() < 8 {
-        return Err("Password must be at least 8 characters long");
-    }
-    if !password.chars().any(char::is_digit) {
-        return Err("Password must contain at least one digit");
-    }
-    if !password.chars().any(char::is_alphabetic) {
-        return Err("Password must contain at least one letter");
-    }
-    Ok(())
-}
 
 // Show how to use debbuger
 use std::fs::File;
