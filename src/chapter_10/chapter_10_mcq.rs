@@ -138,48 +138,131 @@ pub fn answer_09() -> char {
 }
 
 /// ## Question 10
-/// Is this sentence correct: 
+/// Is this sentence correct:
 /// Lifetime are implicit and inferred. Their primary objective is to ensure that a value goes out of scope at the right time.
 /// - a) Yes
 /// - b) No, their primary objective is to prevent dangling references.
 /// - c) No, lifetime are not inferred.
-/// - d) No, lifetimes ensure that a value is properly dropped when the owner goes out of scope
+/// - d) No, their primary objective is to change how long the value lives.
 pub fn answer_10() -> char {
     todo!()
 }
 
+
 /// ## Question 11
-///
-/// borrow checker
+/// Consider the below code:
+/// ```notest
+/// fn biggest(x: u32, y: u32) -> u32 {
+///     if x > y {
+///         return x;
+///     }
+///     y
+/// }
+/// ```
+// Do we need to annotate the lifetime of the above function?
+/// - a) Yes, because Rust can't tell which variable is returned and we don't know either :/
+/// - b) No, due to the first and second elision rule.
+/// - c) Yes, but only for the output as per the second elision rule
+/// - d) No, as this function doesn't have any references.
 pub fn answer_11() -> char {
     todo!()
 }
 
 /// ## Question 12
 ///
-/// Is this sentence correct: 
-/// By annotating a lifetime we change how long our reference live thus helping the borrow checker perform its analysis.
-/// - a) 
-/// - b) 
-/// - c) 
-/// - d) 
+/// What does the borrow checker do?
+/// - a) it checks that all borrows are valid
+/// - b) it checks the rate at which a borrower can lend cpu power
+/// - c) it checks the correct allocation of heap data
+/// - d) it checks which variable is first in a data race
 pub fn answer_12() -> char {
     todo!()
 }
 
 /// ## Question 13
-/// the liftime annotations are enforce by the borro checker 
-/// 
+///
+/// Is this sentence correct:
+/// By adding a lifetime to a reference we can change how long it lives.
+/// - a) Yes, but we can only increase how long it lives.
+/// - b) No, lifetime are only useful with variable and not their reference.
+/// - c) Yes, but we can only decrease its life expectancy.
+/// - d) No, lifetime annotation do not change how long a reference lives.
 pub fn answer_13() -> char {
     todo!()
 }
 
 /// ## Question 14
-/// the liftime annotations are enforce by the borro checker 
-/// 
+/// Is this sentence true: the lifetime annotations are enforce by the borrow checker?
+/// - a) Yes, the borrow checker will reject any values that don't adhere to the constraints we specified.
+/// - b) No, as lifetime annotation do not change how long a reference lives.
+/// - c) No, as the borrow checker only borrow those annotation without enforcing them
+/// - d) Yes, this is due to the omission rules
 pub fn answer_14() -> char {
     todo!()
 }
+
+/// ## Question 15
+///
+/// If the output of a function is a reference and we annotate it with a lifetime. Then, the lifetime for the return type needs to match:
+/// - a) the lifetime parameter of the main function.
+/// - b) the lifetime output of the main function. Otherwise, it's like trying to fit a square peg into a round hole.
+/// - c) the lifetime parameters of all its inputs.
+/// - d) the lifetime parameters of one of the input.
+pub fn answer_15() -> char {
+    todo!()
+}
+
+/// ## Question 16
+///
+/// What are the lifetime elision rules?
+/// - a) rules that programers should follow
+/// - b) rules applied by the Rust compiler to automatically infer the lifetimes based on the structure of the code
+/// - c) rules and conventions used in Rust to name your variables
+/// - d) an oath similar to the Hippocratic Oath but for software developer.
+pub fn answer_16() -> char {
+    todo!()
+}
+
+/// ## Question 17
+///
+/// What is an output lifetime?
+/// - a) the lifetime on function or method parameters
+/// - b) the total amount of lifetime of all your variables
+/// - c) the lifetime on the return value of function or method
+/// - d) a type of data unification for memory management (DUMM)
+pub fn answer_17() -> char {
+    todo!()
+}
+
+/// ## Question 18
+///
+/// What does 'static lifetime means?
+/// - a) that the variable is static, and can't be moved
+/// - b) that the Rust compiler is at rest
+/// - c) that the lifetime is as long as the entire duration of your program
+/// - d) that the reference reached its perfect equilibrium state
+pub fn answer_18() -> char {
+    todo!()
+}
+
+/// ## Question 19
+///
+/// Consider the below code:
+/// ```notest
+/// fn longest <'a>(first: &'a str, second: &'a str) -> &'a str{
+///     if first.len() > second.len(){
+///         first
+///     } else {
+///         second
+///     }
+/// }
+/// ```
+/// The generic lifetime 'a will get the lifetime that is:
+/// - a) equal to the bigger of the lifetimes of first and second
+/// - b) equal to the lifetime of first and second
+/// - c) equal to smaller of the lifetimes of first and second
+/// - d) not possible to know as it will be determined during runtime
+
 
 #[cfg(test)]
 mod tests {
@@ -256,5 +339,30 @@ mod tests {
     #[test]
     fn answer_13_sanity_check() {
         sanity_check(&answer_13)
+    }
+
+    #[test]
+    fn answer_14_sanity_check() {
+        sanity_check(&answer_14)
+    }
+
+    #[test]
+    fn answer_15_sanity_check() {
+        sanity_check(&answer_15)
+    }
+
+    #[test]
+    fn answer_16_sanity_check() {
+        sanity_check(&answer_16)
+    }
+
+    #[test]
+    fn answer_17_sanity_check() {
+        sanity_check(&answer_17)
+    }
+
+    #[test]
+    fn answer_18_sanity_check() {
+        sanity_check(&answer_18)
     }
 }
