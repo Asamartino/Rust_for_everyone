@@ -148,7 +148,6 @@ pub fn answer_10() -> char {
     todo!()
 }
 
-
 /// ## Question 11
 /// Consider the below code:
 /// ```notest
@@ -262,7 +261,9 @@ pub fn answer_18() -> char {
 /// - b) equal to the lifetime of first and second
 /// - c) equal to smaller of the lifetimes of first and second
 /// - d) not possible to know as it will be determined during runtime
-
+pub fn answer_19() -> char {
+    todo!()
+}
 
 #[cfg(test)]
 mod tests {
@@ -364,5 +365,10 @@ mod tests {
     #[test]
     fn answer_18_sanity_check() {
         sanity_check(&answer_18)
+    }
+
+    #[test]
+    fn answer_19_sanity_check() {
+        sanity_check(&answer_19)
     }
 }
