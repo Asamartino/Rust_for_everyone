@@ -19,6 +19,12 @@
 
 // exo combining --test-threads=1 with --nocapture
 
+// panic with expected
+
+// Exercise n°
+// Order the test you created as you please adn run them all. As you might see they run in parallel.
+// Use the test-threads=1 option to run them sequentially.
+
 #[cfg(test)]
 mod tests {
     use super::*;

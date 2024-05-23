@@ -26,7 +26,7 @@
 //! ```
 
 /// ## Question 1
-/// 
+///
 /// Why do we need to write tests?
 /// - a) to ensure that our code behave as expected
 /// - b) to increase the performance of our code
@@ -48,13 +48,13 @@ pub fn answer_02() -> char {
 }
 
 /// ## Question
-/// 
+///
 /// Is the below sentence correct?
 /// Rust does all the borrower-checking and type checking at compile time. However, the Rust compiler can't assess if our code behave as we intend.
 /// By adding tests, we can test our code to make sure it behaves as planned.
 /// a) Yes
 /// b) No, because the borrower-checking and type checking is done at runtime.
-/// c) Yes, because adding test is the only way to show the absence of bug. 
+/// c) Yes, because adding test is the only way to show the absence of bug.
 /// d) No, because the Rust compiler also asses it our code behave as we intend. Rust is designed with a high degree of correctness.
 pub fn answer_0000() -> char {
     todo!()
@@ -68,7 +68,7 @@ pub fn answer_0000() -> char {
 /// - a) to import the inner module into scope
 /// - b) to import the outer module into scope
 /// - c) to import the in-between module into scope
-/// - d) to import the outer and inner module into scope 
+/// - d) to import the outer and inner module into scope
 pub fn answer_03() -> char {
     todo!()
 }
@@ -104,10 +104,9 @@ pub fn answer_05() -> char {
 /// - c) because it is specially optimized to be executed by the Rust compiler
 /// - d) because it will also print both value if the test fails which makes it easier to debug
 
-
 /// ## Question 6
 ///
-/// Values being compared with the `assert_eq!` macro and the  `asset_ne!` macro must implement which traits? 
+/// Values being compared with the `assert_eq!` macro and the  `asset_ne!` macro must implement which traits?
 /// - a) Debug and PartialEq
 /// - b) Eq and PartialSol
 /// - c) Debug and PartialSol
@@ -120,9 +119,9 @@ pub fn answer_06() -> char {
 ///
 /// Is the below sentence correct:
 ///  A should_panic test can panic due to a different reason than the one we anticipated, making it imprecise.
-/// - a) Yes
+/// - a) Yes, and we can make it more precise by using the optional expected parameter
 /// - b) No, because a should_panic test is precise
-/// - c) Yes, and by using the substring method of should_panic we can make it more precise
+/// - c) Yes, and we can make it more precise by using the substring method of should_panic
 /// - d) No, because it only panic for the reason we specified
 pub fn answer_07() -> char {
     todo!()
@@ -131,9 +130,9 @@ pub fn answer_07() -> char {
 /// ## Question 8
 ///
 /// The `asset_ne!` macro use case
-/// - a) 
-/// - b) 
-/// - c) 
+/// - a)
+/// - b)
+/// - c)
 /// - d)
 pub fn answer_08() -> char {
     todo!()
@@ -141,10 +140,10 @@ pub fn answer_08() -> char {
 
 /// ## Question 9
 ///
-/// binary test 
-/// - a) 
-/// - b) 
-/// - c) 
+/// binary test
+/// - a)
+/// - b)
+/// - c)
 /// - d)
 pub fn answer_09() -> char {
     todo!()
@@ -152,57 +151,68 @@ pub fn answer_09() -> char {
 
 /// ## Question 10
 ///
-/// When you are running multiple tests, they run in parallel by default
+/// When you are running multiple tests, they run in parallel by default.
 /// Is the above sentence correct?
 /// // look test_threads flag
-/// - a) Yes,
+/// - a) Yes
 /// - b) No, they run in sequence by default
-/// - c) No, 
-/// - d) Yes, an
+/// - c) No, you can't run multiple test
+/// - d)
 pub fn answer_10() -> char {
     todo!()
 }
-
 
 /// ## Question 11
 ///
 /// By default, if we call a println! in a test and that test fails we won't see the println! output
 /// Is the above sentence correct
-/// - a) Yes, 
-/// - b) No. By default, if we call a println! in a test and that test passes we won't see the println! output
-/// - c) No. By default, if we call a println! in a test and that test passes we won't see the println! output
-/// - d) Yes, because the output capture is enable by default
+/// - a) Yes, because the output capture is disable by default
+/// - b) No, because you will see the println! output
+/// - c) No, because you only see the failure message
+/// - d) Yes, because The Rust's test library captures anything printed to standard output
+pub fn answer_11() -> char {
+    todo!()
+}
+
+/// ## Question
+///
+/// Using the command: `cargo test adding` will:
+///
+/// - a) run all test that start with adding
+/// - b) run only the test adding
+/// - c) run all test
+/// - d) run all test that contain the word adding
 pub fn answer_11() -> char {
     todo!()
 }
 
 /// ## Question 12
 ///
-/// question with ignore multiple test 
-/// - a) 
-/// - b) 
-/// - c) 
+/// Using the command: `cargo test -- --ignored` will:
+/// - a) run all test that have the #[ignore] line
+/// - b) run all test and ignored the failing one
+/// - c) run all test that are filtered out from the Rust compiler making the compilation slower but your code more safe
 /// - d)
 pub fn answer_12() -> char {
     todo!()
 }
 
 /// ## Question 13
-/// 
+///
 /// What is the purpose of a unit test
-/// - a) 
-/// - b) 
-/// - c) 
-/// - d)
+/// - a) to test how fast your functions run
+/// - b) to do only one thorough test of a function
+/// - c) to test one module in isolation at a time or private interfaces
+/// - d) to make sure the conversion between the different data types is respected (e.g. converting a u32 to a u16)
 pub fn answer_13() -> char {
     todo!()
 }
 
 /// ## Question 14
-/// 
+///
 /// Is the below sentence correct?
 /// By default, due to Rust privacy rules you can't test private functions
-/// - a) Yes, and to enable it you should use the --private flag 
+/// - a) Yes, and to enable it you should use the --private flag
 /// - b) No, Rust privacy rules allow you to test private functions
 /// - c) No, Rust privacy rules only applies in integration tests
 /// - d) Yes, and to enable it you should use the --no-private flag
@@ -211,53 +221,66 @@ pub fn answer_14() -> char {
 }
 
 /// ## Question 15
-/// 
-/// What is the purpose of integration tests?
-/// - a) 
-/// - b) 
-/// - c) 
-/// - d)
+///
+/// By convention where should you put the unit tests?
+/// - a) in the src directory in the file with the code they are testing by creating a separated module named test
+/// - b) in the module directory and create a file src.rs
+/// - c) in the debug directory by importing the code they are testing and creating a separated module named test
+/// - d) nowhere, the Rust compiler will take care of them
 pub fn answer_15() -> char {
     todo!()
 }
 
 /// ## Question 16
-///
-/// - a) 
-/// - b) 
-/// - c) 
-/// - d)
+/// 
+/// Adding to much test in the test module can slow the compilation time when you run the command `cargo build`.
+/// Is the above sentence true?
+/// - a) Yes, that is why unit test should be as small as possible
+/// - b) No, by adding the annotation `#[cfg(test)]` on the tests module, tests will only be compile and run with the command `cargo test`
+/// - c) Yes, but it rarely happens as Rust has very good RAM 
+/// - d) No, because tests do not need to be compiled.
 pub fn answer_16() -> char {
     todo!()
 }
 
 /// ## Question 17
-///
-/// - a) 
-/// - b) 
-/// - c) 
-/// - d)
+/// 
+/// Do Rust privacy rules allow you to test private functions?
+/// - a) Yes, but if you don't want to test them feel free to do so
+/// - b) Yes, because by ideology is best to test private function
+/// - c) No, because by ideology is best to not test private function
+/// - d) No, this is why we have privacy rules in the first place
 pub fn answer_17() -> char {
     todo!()
 }
 
 /// ## Question 18
-///
-/// - a) 
-/// - b) 
-/// - c) 
-/// - d)
+/// 
+/// What is the use of integration tests?
+/// - a) to test the correct integration of your private function with the public one
+/// - b) to test small module at a time 
+/// - c) to test the private function of your library
+/// - d) to use many parts of your library and verify that they work correctly together
 pub fn answer_18() -> char {
     todo!()
 }
 
 /// ## Question 19
-///
-/// - a) 
-/// - b) 
-/// - c) 
-/// - d)
+/// 
+/// Where should you put integration tests?
+/// - a) in a test directory at the top level of your project directory
+/// - b) in a separate module inside your files
+/// - c) wherever you like
+/// - d) in an integration directory at the lowest level of your project directory
 
+
+/// ## Question 20
+/// 
+/// What is the use of this command: `cargo test --test integration`?
+/// - a) to run all the tests that do not contain the word integration
+/// - b) to run all the tests that start with integration
+/// - c) to run all the tests in an integration file called integration 
+/// - d) to run all the tests in the integration folder
 
 #[cfg(test)]
 mod tests {
