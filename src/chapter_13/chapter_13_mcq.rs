@@ -28,8 +28,8 @@
 /// ## Question 1
 ///
 /// What is a closure in Rust?
-/// - a) closures are anonymous functions, that can capture values from the scope in which they are called
-/// - b) a way to capture and protect variable making them safe
+/// - a) closures are anonymous functions, that can access variables from the scope in which they are defined
+/// - b) a way to capture and protect variable making them feel safe
 /// - c) closures are known functions, that can capture values from the scope in which they are called
 /// - d) closures are anonymous functions, that can not capture values from the scope in which they are called
 pub fn answer_01() -> char {
@@ -49,13 +49,13 @@ pub fn answer_02() -> char {
 
 /// ## Question 3
 ///
-/// What does adding contain 
+/// Considering the below code, what does adding contain ?
 /// ```notest
 /// let adding = |num1, num2| num1+num2;
 /// ```
-/// 
+///
 /// - a) the result of num1+num2
-/// - b) the definition of an anonymous function 
+/// - b) the definition of an anonymous function
 /// - c) the definition of a known function
 /// - d) the result of the absolute value of num1 and num2 added together
 pub fn answer_03() -> char {
@@ -66,16 +66,137 @@ pub fn answer_03() -> char {
 ///
 /// Complete the below sentence:
 /// Closure do not require you to annotate the types of the the parameters. ...
-/// 
+///
 /// - a) The compiler infers the type every time the closure is called. Thus, the same closure could be used with different types.
-/// - b) 
+/// - b)
 /// - c) However, once inferred they are fixed and we could get a type error by using the closure with another type.
 /// - d) However, you can only call a closure once.
 pub fn answer_04() -> char {
     todo!()
 }
 
-// What is referred to memoization
+/// ## Question 5
+///
+/// Complete the below sentence:
+/// Closure do not require you to annotate the types of the the parameters. ...
+///
+/// - a) The compiler infers the type every time the closure is called. Thus, the same closure could be used with different types.
+/// - b) This is known as memoization.
+/// - c) However, once inferred they are fixed and we could get a type error by using the closure with another type.
+/// - d) This is known as congolexitimization.
+pub fn answer_05() -> char {
+    todo!()
+}
+
+/// ## Question 6
+///
+/// Is the below sentence correct?
+/// Closure can capture a value from its environment. This process cause a memory overhead.
+///
+/// - a) Yes.
+/// - b) No, thanks to Rust optimization it doesn't incur any additional overhead.
+/// - c) No, it does not cause a memory overhead but reduce runtime performances.
+/// - d) No, it cause a memoization overhead.
+pub fn answer_06() -> char {
+    todo!()
+}
+
+/// ## Question 7
+///
+/// Considering the below code, which trait are implement by the closure?
+/// ```notest
+/// let forty_two = 42;
+/// let is_equal_42 = |x| x == forty_two;
+/// ```
+///
+/// - a) Fn and FnOnce
+/// - b) Fn and FnMut
+/// - c) FnMut and FnOnce
+/// - d) FnMut and FnTwice
+pub fn answer_07() -> char {
+    todo!()
+}
+
+/// ## Question 8
+///
+/// In Rust, an iterator:
+///
+/// - a) enables you to traverse all your files faster
+/// - b) is responsible for the logic of iterating over many different kind of sequences.
+/// - c) a powerful abstraction that allows for lazy evaluation, enabling efficient processing of large datasets without consuming excessive memory.
+/// - d) autonomously optimize code performance by predicting future data access patterns.
+pub fn answer_08() -> char {
+    todo!()
+}
+
+/// ## Question 9
+///
+/// In Rust, iterators are:
+///
+/// - a) busy
+/// - b) energetic
+/// - c) lazy
+/// - d) confused
+pub fn answer_09() -> char {
+    todo!()
+}
+
+/// ## Question 10
+///
+/// What is an iterator adaptor?
+///
+/// - a) set of method defined on the Iterator trait that convert the iterator into another one
+/// - b) set of method defined on the Iterator trait that consumes the iterator
+/// - c) a way to turn an iterator into a closure
+/// - d) a way to convert US iterators to their EU counterpart
+pub fn answer_10() -> char {
+    todo!()
+}
+
+/// ## Question 11
+///
+/// We can defined our own Iterator and use the library . We only need to define the: // question on next
+///
+/// - a) subsequent method
+/// - b) now method
+/// - c) previous method
+/// - d) next method
+pub fn answer_11() -> char {
+    todo!()
+}
+
+/// ## Question 12
+///
+/// Is the below sentence correct?
+/// Iterators are a high level abstraction that impose no additional memory overhead.
+///
+/// - a) Yes.
+/// - b) No, they impose no additional compile overhead.
+/// - c) No, they impose no additional runtime overhead.
+/// - d) No, iterators are a low level abstraction.
+pub fn answer_12() -> char {
+    todo!()
+}
+
+/// ## Question 13
+///
+/// What will the following code produce in the terminal?
+/// ```notest
+///     (0..5).map(|x| println!("{x}"));
+/// ```
+/// 
+/// - a) 1,2,3,4,5
+/// - b) 0,1,2,3,4
+/// - c) 0,1,2,3,4,5
+/// - d) nothing // as iterators are lazy
+pub fn answer_13() -> char {
+    todo!()
+}
+
+
+
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -138,43 +259,43 @@ mod tests {
         sanity_check(&answer_10)
     }
 
-    #[test]
-    fn answer_11_sanity_check() {
-        sanity_check(&answer_11)
-    }
+    // #[test]
+    // fn answer_11_sanity_check() {
+    //     sanity_check(&answer_11)
+    // }
 
-    #[test]
-    fn answer_12_sanity_check() {
-        sanity_check(&answer_12)
-    }
+    // #[test]
+    // fn answer_12_sanity_check() {
+    //     sanity_check(&answer_12)
+    // }
 
-    #[test]
-    fn answer_13_sanity_check() {
-        sanity_check(&answer_13)
-    }
+    // #[test]
+    // fn answer_13_sanity_check() {
+    //     sanity_check(&answer_13)
+    // }
 
-    #[test]
-    fn answer_14_sanity_check() {
-        sanity_check(&answer_14)
-    }
+    // #[test]
+    // fn answer_14_sanity_check() {
+    //     sanity_check(&answer_14)
+    // }
 
-    #[test]
-    fn answer_15_sanity_check() {
-        sanity_check(&answer_15)
-    }
+    // #[test]
+    // fn answer_15_sanity_check() {
+    //     sanity_check(&answer_15)
+    // }
 
-    #[test]
-    fn answer_16_sanity_check() {
-        sanity_check(&answer_16)
-    }
+    // #[test]
+    // fn answer_16_sanity_check() {
+    //     sanity_check(&answer_16)
+    // }
 
-    #[test]
-    fn answer_17_sanity_check() {
-        sanity_check(&answer_17)
-    }
+    // #[test]
+    // fn answer_17_sanity_check() {
+    //     sanity_check(&answer_17)
+    // }
 
-    #[test]
-    fn answer_18_sanity_check() {
-        sanity_check(&answer_18)
-    }
+    // #[test]
+    // fn answer_18_sanity_check() {
+    //     sanity_check(&answer_18)
+    // }
 }
