@@ -155,7 +155,7 @@ pub fn answer_10() -> char {
 
 /// ## Question 11
 ///
-/// We can defined our own Iterator and use the library . We only need to define the: // question on next
+/// We can defined our own Iterator and use the library. We only need to define the: // question on next
 ///
 /// - a) subsequent method
 /// - b) now method
@@ -188,7 +188,7 @@ pub fn answer_12() -> char {
 /// - a) 1,2,3,4,5
 /// - b) 0,1,2,3,4
 /// - c) 0,1,2,3,4,5
-/// - d) nothing // as iterators are lazy
+/// - d) nothing, because iterators are lazy
 pub fn answer_13() -> char {
     todo!()
 }

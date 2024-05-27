@@ -4,43 +4,54 @@ fn main() {
     /////////////////////////////////////////////////////////////////////////////////////////////////
     //////                                       Closures                                      //////
     /////////////////////////////////////////////////////////////////////////////////////////////////
-    
-    // rewrite the following closure with as minimum syntax as possible 
-    let add_one = |x:u32| -> u32 {x +1};
-    let add_one_minimal = todo!();
 
+    // rewrite the following closure with as minimum syntax as possible
+    let add_two = |x: u32| -> u32 { x + 2 };
+    // uncomment the below line and complete it
+    // let add_two_minimal = todo!();
 
-    // rewrite the following closure with as minimum syntax as possible sur
-    // closure sur plusieurs ligne
-    
+    // create a closure that returns 42
+    // uncomment the below lin and complete it
+    let return_forty_two = || 42;
 
     // create a closure that prints Hello
+    // uncomment the below line and complete it
+    // let print_hello = todo!();
 
-    // create a closure that takes one argument name and print to the terminal "hello name"
-    // e.g. 
+    // create a closure that takes one argument name and print to the terminal "Hello name"
+    // e.g. print_hello_name("John") -> "Hello John"
+    // uncomment the below line and complete it
+    // let print_hello_name = todo!();
 
-    // create a closure that will take two argument and add them together 
-    // the {} brackets are optional 
+    // create a closure that takes two arguments and add them together
+    // uncomment the below line and complete it
+    // let adding = todo!();
 
-    // create a closure that captures the variable num and multiply it by another number provided by the user.
+    // create a closure that captures the variable four and multiply it by another number provided by the user.
     let four = 4;
-    let four_multiplied_by = todo!();
+    // uncomment the below line and complete it
+    // let four_multiplied_by = todo!();
 
     /////////////////////////////////////////////////////////////////////////////////////////////////
     //////                                       Iterators                                     //////
     /////////////////////////////////////////////////////////////////////////////////////////////////
-    
-// complete the below function that turns the array received as input into an iterator
-    // pub fn convert_arr_to_iter(arr: [u32; 5]) -> impl Iterator<Item = u32> {
-    //     arr.iter()
-    // }
+
+    // create a simple iterator over the value 0,1,2,3,4 from a vector
+    // using a for loop print for each element "Value is {}"
+
+    // same exercise as above except this time iterate over an array
 
     // complete the below function that sum up every element togethers using iterators
-    pub fn total(num: Vec<u32>) -> u32 {
-       todo!()
+    // hint: https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.sum
+    pub fn total(vec: Vec<u32>) -> u32 {
+        todo!()
     }
 
-
+    // complete the below function that will return true if any element of this vector is > 0
+    // hint: https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.any
+    pub fn any_positive_number(vec: Vec<i32>) -> bool {
+        todo!()
+    }
     // complete the below function that filters the vector to a vector of only even numbers using iterators
     pub fn even(numbers: Vec<i32>) -> Vec<i32> {
         todo!()
@@ -61,7 +72,6 @@ fn main() {
     }
 
     // using filter takes only the student that have a score higher thant 50
-
 }
 
 #[cfg(test)]
