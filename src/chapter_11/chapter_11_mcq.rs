@@ -174,17 +174,6 @@ pub fn answer_11() -> char {
     todo!()
 }
 
-/// ## Question
-///
-/// Using the command: `cargo test adding` will:
-///
-/// - a) run all test that start with adding
-/// - b) run only the test adding
-/// - c) run all test
-/// - d) run all test that contain the word adding
-pub fn answer_11() -> char {
-    todo!()
-}
 
 /// ## Question 12
 ///
@@ -282,6 +271,18 @@ pub fn answer_18() -> char {
 /// - c) to run all the tests in an integration file called integration 
 /// - d) to run all the tests in the integration folder
 
+
+/// ## Question 21
+///
+/// Using the command: `cargo test adding` will:
+///
+/// - a) run all test that start with adding
+/// - b) run only the test adding
+/// - c) run all test
+/// - d) run all test that contain the word adding
+pub fn answer_21() -> char {
+    todo!()
+}
 #[cfg(test)]
 mod tests {
     use super::*;

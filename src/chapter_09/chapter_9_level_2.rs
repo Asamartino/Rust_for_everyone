@@ -20,18 +20,18 @@ pub fn result_transpose(res: Result<Option<u32>,&'static str>) ->  Option<Result
 // - the password is less than 8 characters long
 // - the password do not contains any digit
 // - the password do not contains any letter
-fn check_password_strength(password: &str) -> Result<(), &'static str> {
-    if password.len() < 8 {
-        return Err("Password must be at least 8 characters long");
-    }
-    if !password.chars().any(char::is_digit) {
-        return Err("Password must contain at least one digit");
-    }
-    if !password.chars().any(char::is_alphabetic) {
-        return Err("Password must contain at least one letter");
-    }
-    Ok(())
-}
+// fn check_password_strength(password: &str) -> Result<(), &'static str> {
+//     if password.len() < 8 {
+//         return Err("Password must be at least 8 characters long");
+//     }
+//     if !password.chars().any(char::is_ascii_digit) {
+//         return Err("Password must contain at least one digit");
+//     }
+//     if !password.chars().any(char::is_alphabetic) {
+//         return Err("Password must contain at least one letter");
+//     }
+//     Ok(())
+// }
 
 // Show how to use debbuger
 use std::fs::File;

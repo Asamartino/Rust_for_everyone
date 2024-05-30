@@ -5,73 +5,113 @@ fn main() {
     //////                                       Closures                                      //////
     /////////////////////////////////////////////////////////////////////////////////////////////////
 
-    // rewrite the following closure with as minimum syntax as possible
-    let add_two = |x: u32| -> u32 { x + 2 };
+    // Ex 1: Rewrite the following function to a closure with as minimum syntax as possible
+    fn add_two(x: u32) -> u32 {
+        x + 2
+    }
     // uncomment the below line and complete it
     // let add_two_minimal = todo!();
 
-    // create a closure that returns 42
-    // uncomment the below lin and complete it
-    let return_forty_two = || 42;
+    // Ex 2: Rewrite the following function to a closure with as minimum syntax as possible
+    fn navi_being_navi(x: u32, increment: u32) -> u32 {
+        println!("Look, x is there {}", x);
+        let new_x = x + increment;
+        println!("Watch out, x is here{}", new_x);
+        new_x
+    }
+    // uncomment the below line and complete it
+    // let navi_being_navi_minimal = todo!();
 
-    // create a closure that prints Hello
+    // Ex 3: Rewrite the below closure with fully type annotation
+    // let multiply = |x, y| x * y;
+    // uncomment the below line and complete it
+    // let multiply_full = todo!();
+
+    // Ex 4: Create a closure that returns 42
+    // uncomment the below line and complete it
+    // let return_forty_two = todo!();
+
+    // Ex 5: Create a closure that prints Hello
     // uncomment the below line and complete it
     // let print_hello = todo!();
 
-    // create a closure that takes one argument name and print to the terminal "Hello name"
+    // Ex 6: Create a closure that takes one argument name and print to the terminal "Hello name"
     // e.g. print_hello_name("John") -> "Hello John"
     // uncomment the below line and complete it
     // let print_hello_name = todo!();
 
-    // create a closure that takes two arguments and add them together
+    // Ex 7: Create a closure that takes two arguments and add them together
     // uncomment the below line and complete it
     // let adding = todo!();
 
-    // create a closure that captures the variable four and multiply it by another number provided by the user.
+    // Ex 8: Create a closure that captures the variable four and multiply it by another number provided by the user.
     let four = 4;
     // uncomment the below line and complete it
     // let four_multiplied_by = todo!();
+
+    // Ex 9: Write a closure that will increment index by an amount specified by the user
+    let mut index = 0;
+    // let adding_to_index = todo!()
 
     /////////////////////////////////////////////////////////////////////////////////////////////////
     //////                                       Iterators                                     //////
     /////////////////////////////////////////////////////////////////////////////////////////////////
 
-    // create a simple iterator over the value 0,1,2,3,4 from a vector
-    // using a for loop print for each element "Value is {}"
+    // Ex 10: Create a simple iterator from the below vector using the iter method
+    let vec_0_5 = vec![0, 1, 2, 3, 4, 5];
 
-    // same exercise as above except this time iterate over an array
+    // Ex 11:Create a simple iterator from the below array using the iter method
+    let array_0_5 = [0, 1, 2, 3, 4, 5];
 
-    // complete the below function that sum up every element togethers using iterators
-    // hint: https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.sum
-    pub fn total(vec: Vec<u32>) -> u32 {
-        todo!()
-    }
+    // The common methods to create an iterators are (learn more here: https://doc.rust-lang.org/std/iter/#implementing-iterator):
+    // - iter(), which iterates over &T.
+    // - iter_mut(), which iterates over &mut T.
+    // - into_iter(), which iterates over T.
 
-    // complete the below function that will return true if any element of this vector is > 0
-    // hint: https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.any
-    pub fn any_positive_number(vec: Vec<i32>) -> bool {
-        todo!()
-    }
-    // complete the below function that filters the vector to a vector of only even numbers using iterators
-    pub fn even(numbers: Vec<i32>) -> Vec<i32> {
-        todo!()
-    }
+    // Ex 12: Using a for loop and iter_mut increment each value by 1
+    let mut mut_vec = [0, 1, 2, 3, 4, 5];
 
-    // complete the below function that find the maximum value using the maximum method of iterator.
-    fn find_max(num: Vec<u32>) -> Option<u32> {
-        todo!()
-    }
+    // for...
 
-    // complete the below function that multiply each element of the iterators by 2 using the map method
-    fn iter_multiplied_by_two(iter: impl Iterator<Item = u32>) -> impl Iterator<Item = u32> {
-        todo!()
-    }
-    // complete the below function that return the sum of the squares using iterators
-    pub fn sum_of_squares(num: Vec<u32>) -> u32 {
-        todo!()
-    }
+    // Notice that the original vector has been updated
+    println!("mut_vec is now: {:?}", mut_vec);
 
-    // using filter takes only the student that have a score higher thant 50
+    // Ex 13: Using a for loop and into_iter print each value of the below vector
+    let into_vec = [0, 1, 2, 3, 4, 5];
+
+    // for...
+
+    // Note that into_iter takes ownership of the element and consumes them -> there are no longer accessible
+    // If uncommented the below line will result into a compilation error
+    // println!("into_vec is now: {:?}", into_vec);
+
+    // Ex 14: Using a for loop and iter print for each element "Value is {}"
+    // note that Rust’s for loop syntax is actually sugar for iterators (learn more here: https://doc.rust-lang.org/std/iter/#for-loops-and-intoiterator)
+    let vec_iter = [0, 1, 2, 3, 4, 5];
+
+    // for...
+
+    // Note that vec_iter is still accessible to us and has not been modified
+    // println!("vec_iter is: {:?}", into_vec);
+
+    // Ex 15: You can create your own iterator (learn more here: https://doc.rust-lang.org/std/iter/#implementing-iterator)
+    // You first need to define a struct that holds the iterator’s state. Then, you need to implement the Iterator trait for this struct
+    // Create an Iterator CountDown that starts at 10 and is decrement by 1 till 1, and then yields None.
+
+    // todo!()
+
+    // Uncomment the below line after your iterator has been created
+    // let mut count_down = CountDown::new();
+    // assert_eq!(count_down.next(), Some(9));
+    // assert_eq!(count_down.next(), Some(8));
+    // assert_eq!(count_down.next(), Some(7));
+    // assert_eq!(count_down.next(), Some(6));
+    // assert_eq!(count_down.next(), Some(5));
+    // assert_eq!(count_down.next(), Some(4));
+    // assert_eq!(count_down.next(), Some(3));
+    // assert_eq!(count_down.next(), Some(2));
+    // assert_eq!(count_down.next(), Some(1));
+    // assert_eq!(count_down.next(), None);
 }
 
 #[cfg(test)]

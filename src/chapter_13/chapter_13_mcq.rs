@@ -145,8 +145,8 @@ pub fn answer_09() -> char {
 ///
 /// What is an iterator adaptor?
 ///
-/// - a) set of method defined on the Iterator trait that convert the iterator into another one
-/// - b) set of method defined on the Iterator trait that consumes the iterator
+/// - a) a function that takes an iterator and return another iterator
+/// - b) a function that takes an iterator and consumes it
 /// - c) a way to turn an iterator into a closure
 /// - d) a way to convert US iterators to their EU counterpart
 pub fn answer_10() -> char {
@@ -155,7 +155,7 @@ pub fn answer_10() -> char {
 
 /// ## Question 11
 ///
-/// We can defined our own Iterator and use the library. We only need to define the: // question on next
+/// We can defined our own Iterator and use the library. We only need to define the: 
 ///
 /// - a) subsequent method
 /// - b) now method
@@ -190,6 +190,21 @@ pub fn answer_12() -> char {
 /// - c) 0,1,2,3,4,5
 /// - d) nothing, because iterators are lazy
 pub fn answer_13() -> char {
+    todo!()
+}
+
+/// ## Question 14
+///
+/// What does the below code produce?
+/// ```notest
+///     let infinite_iterator = 0..;
+/// ```
+/// 
+/// - a) a compilation error
+/// - b) an infinite iterator, 
+/// - c) a finite iterator 
+/// - d) a limitless closure
+pub fn answer_14() -> char {
     todo!()
 }
 

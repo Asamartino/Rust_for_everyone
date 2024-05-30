@@ -5,13 +5,16 @@ fn main() {
     //////                                       Closures                                      //////
     /////////////////////////////////////////////////////////////////////////////////////////////////
 
-    // rewrite the following closure with as minimum syntax as possible
-    let add_two = |x: u32| -> u32 { x + 2 };
+    // rewrite the following function to a closure with as minimum syntax as possible
+    fn add_two (x: u32) -> u32 { x + 2 };
     // uncomment the below line and complete it
-    let add_two_minimal = |x| x + 2;
+    // let add_two_minimal = |x| x + 2;
+
+    // rewrite the below closure with fully type annotation
+    // let multiply = |x, y| x * y;
 
     // create a closure that returns 42
-    // uncomment the below lin and complete it
+    // uncomment the below line and complete it
     let return_forty_two = || 42;
 
     // create a closure that prints Hello
@@ -25,11 +28,11 @@ fn main() {
 
     // create a closure that takes two arguments and add them together
     // uncomment the below line and complete it
-    let adding = |x,y| x + y;
+    let adding = |x, y| x + y;
 
     // create a closure that captures the variable num and multiply it by another number provided by the user.
     let four = 4;
-    let four_multiplied_by = |x| x *four;
+    let four_multiplied_by = |x| x * four;
 
     /////////////////////////////////////////////////////////////////////////////////////////////////
     //////                                       Iterators                                     //////
