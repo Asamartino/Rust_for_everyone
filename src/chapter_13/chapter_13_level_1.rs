@@ -8,6 +8,7 @@
 
 // use function enumarate
 
+
 // complete the below function that sum up every element togethers using iterators
 // hint: https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.sum
 pub fn total(arr: [u32; 10]) -> u32 {
@@ -50,6 +51,12 @@ pub fn is_max(vec: Vec<u32>, max: u32) -> bool {
     todo!()
 }
 
+///////////////////////////////////////////////////////////////////////////////
+// The following exercises assumes that you will receive
+// an array of SwissMountain as defined below:
+// Maybe go with vector ???
+
+#[derive(Debug, PartialEq, Clone)]
 pub struct SwissMountain {
     name: String,
     height: u32,
@@ -158,56 +165,48 @@ pub struct SwissMountain {
 //     weisshorn,
 //     zinalrothorn,
 // ];
+
+////////////////////////////////////////////////////////////////////////////////
+
 // filter the array and return an array with only the mountains with a height higher than 4250
-pub fn swiss_mountains_higher_than_4250(sm: [SwissMountain; 20]) -> [SwissMountain; 10] {
-    todo!()
+// hint: use the methods: into_iter filter and collect
+pub fn swiss_mountains_higher_than_4250(sm: [SwissMountain; 20]) -> Vec<SwissMountain> {
+    sm.into_iter().filter(|sm| sm.height > 4250).collect()
 }
 
-// sort the mountains by height
-pub fn sort_swiss_mountains_by_height(sm: [SwissMountain; 20]) -> [SwissMountain; 20] {
-    todo!()
+// sort the mountains by height from smaller to tallest
+// hint: you could convert the array into a vector using into_iter and collect and then use the sort_by method
+pub fn swiss_mountains_sort_by_height(sm: [SwissMountain; 20]) -> Vec<SwissMountain> {
+    let mut sm_vec: Vec<SwissMountain> = sm.into_iter().collect();
+    sm_vec.sort_by(|a, b| a.height.cmp(&b.height));
+    sm_vec
 }
 
 // 1 exercie on map
 
-// compute the total height of all the mountains in highest_swiss_mountains using reduce
-
-// find the name of the mountain with a height of 4505
-pub fn swiss_mountains_4505(sm: [SwissMountain; 20]) -> [SwissMountain; 20] {
-    todo!()
+// compute the total height of all the mountains in highest_swiss_mountains using the iterator method for_each
+pub fn swiss_mountains_total_height_for_each(sm: [SwissMountain; 20]) -> u32 {
+    let mut total_height = 0;
+    sm.iter().for_each(|x| total_height += x.height);
+    total_height
 }
 
-// find the name of the mountain with a height of 4110 and return an array without it.
-pub fn swiss_mountains_wo_4110(sm: [SwissMountain; 20]) -> [SwissMountain; 19] {
-    todo!()
+// compute the total height of all the mountains in highest_swiss_mountains using the iterator method fold
+pub fn swiss_mountains_total_height_fold(sm: [SwissMountain; 20]) -> u32 {
+    let total_height: u32 = sm.iter().fold(0, |acc, e| acc + e.height);
+    total_height
 }
 
-// Sum up the instances of each of these using the reduce method:
-// e.g. -> (SodaSize::Large; 3),...
-// enum SodaSize {
-//     Small,
-//     Medium,
-//     Large,
-//     ExtraLarge,
-// }
+// find and return the SwissMountain with a height of 4505 using iter, find and cloned method
+pub fn swiss_mountains_4505(sm: [SwissMountain; 20]) -> Option<SwissMountain> {
+    let sm_4505 = sm.iter().find(|&x| x.height == 4505).clone();
+    sm_4505.cloned()
+}
 
-// let sales = [
-//     SodaSize::Large,
-//     SodaSize::Medium,
-//     SodaSize::Medium,
-//     SodaSize::ExtraLarge,
-//     SodaSize::ExtraLarge,
-//     SodaSize::Large,
-//     SodaSize::ExtraLarge,
-//     SodaSize::ExtraLarge,
-//     SodaSize::Large,
-// ];
-
-// use of into_iter and iter_mut
-
-// create a struct and create an interator over it
-
-// exercise on filter
+// return a vector of swissmountain without the mountain having a height of 4110
+pub fn swiss_mountains_wo_4110(sm: [SwissMountain; 20]) -> Vec<SwissMountain> {
+    sm.iter().filter(|x| x.height != 4110).cloned().collect()
+}
 
 #[cfg(test)]
 mod tests {
@@ -283,15 +282,609 @@ mod tests {
         let input = vec![1, 2, 3, 4, 5, 6, 7, 8, 9];
         let max = 10;
         let answer = false;
-        assert_eq!(is_max(input,max), answer);
+        assert_eq!(is_max(input, max), answer);
     }
 
     #[test]
     fn test_sum_of_squares_true() {
-        let input= vec![1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let input = vec![1, 2, 3, 4, 5, 6, 7, 8, 9];
         let max = 9;
         let answer = true;
-        assert_eq!(is_max(input,max), answer);
+        assert_eq!(is_max(input, max), answer);
+    }
+    #[test]
+    fn test_swiss_mountains_higher_than_4250() {
+        let aletschhorn = SwissMountain {
+            name: String::from("Aletschhorn"),
+            height: 4194,
+        };
+        let alphubel = SwissMountain {
+            name: String::from("Alphubel"),
+            height: 4206,
+        };
+        let breithorn = SwissMountain {
+            name: String::from("Breithorn"),
+            height: 4160,
+        };
+        let dent_blanche = SwissMountain {
+            name: String::from("Dent Blanche"),
+            height: 4357,
+        };
+        let dent_dherens = SwissMountain {
+            name: String::from("Dent d'Hérens"),
+            height: 4173,
+        };
+        let dom = SwissMountain {
+            name: String::from("Dom"),
+            height: 4546,
+        };
+        let finsteraarhorn = SwissMountain {
+            name: String::from("Finsteraarhorn"),
+            height: 4274,
+        };
+        let grand_combin = SwissMountain {
+            name: String::from("Grand Combin"),
+            height: 4309,
+        };
+        let gross_fiescherhorn = SwissMountain {
+            name: String::from("Gross Fiescherhorn"),
+            height: 4049,
+        };
+        let jungfrau = SwissMountain {
+            name: String::from("Jungfrau"),
+            height: 4158,
+        };
+        let lyskamm = SwissMountain {
+            name: String::from("Lyskamm"),
+            height: 4532,
+        };
+        let matterhorn = SwissMountain {
+            name: String::from("Matterhorn"),
+            height: 4478,
+        };
+        let monch = SwissMountain {
+            name: String::from("Mönch"),
+            height: 4110,
+        };
+        let monte_rosa = SwissMountain {
+            name: String::from("Monte Rosa"),
+            height: 4634,
+        };
+        let ober_gabelhorn = SwissMountain {
+            name: String::from("Ober Gabelhorn"),
+            height: 4063,
+        };
+        let rimpfischhorn = SwissMountain {
+            name: String::from("Rimpfischhorn"),
+            height: 4199,
+        };
+        let schreckhorn = SwissMountain {
+            name: String::from("Schreckhorn"),
+            height: 4078,
+        };
+        let strahlhorn = SwissMountain {
+            name: String::from("Strahlhorn"),
+            height: 4190,
+        };
+        let weisshorn = SwissMountain {
+            name: String::from("Weisshorn"),
+            height: 4505,
+        };
+        let zinalrothorn = SwissMountain {
+            name: String::from("Zinalrothorn"),
+            height: 4221,
+        };
+
+        let input = [
+            aletschhorn.clone(),
+            alphubel.clone(),
+            breithorn.clone(),
+            dent_blanche.clone(),
+            dent_dherens.clone(),
+            dom.clone(),
+            finsteraarhorn.clone(),
+            grand_combin.clone(),
+            gross_fiescherhorn.clone(),
+            jungfrau.clone(),
+            lyskamm.clone(),
+            matterhorn.clone(),
+            monch.clone(),
+            monte_rosa.clone(),
+            ober_gabelhorn.clone(),
+            rimpfischhorn.clone(),
+            schreckhorn.clone(),
+            strahlhorn.clone(),
+            weisshorn.clone(),
+            zinalrothorn.clone(),
+        ];
+        let answer = vec![
+            dent_blanche,
+            dom,
+            finsteraarhorn,
+            grand_combin,
+            lyskamm,
+            matterhorn,
+            monte_rosa,
+            weisshorn,
+        ];
+        assert_eq!(swiss_mountains_higher_than_4250(input), answer);
     }
 
+    #[test]
+    fn test_swiss_mountains_sort_by_height() {
+        let aletschhorn = SwissMountain {
+            name: String::from("Aletschhorn"),
+            height: 4194,
+        };
+        let alphubel = SwissMountain {
+            name: String::from("Alphubel"),
+            height: 4206,
+        };
+        let breithorn = SwissMountain {
+            name: String::from("Breithorn"),
+            height: 4160,
+        };
+        let dent_blanche = SwissMountain {
+            name: String::from("Dent Blanche"),
+            height: 4357,
+        };
+        let dent_dherens = SwissMountain {
+            name: String::from("Dent d'Hérens"),
+            height: 4173,
+        };
+        let dom = SwissMountain {
+            name: String::from("Dom"),
+            height: 4546,
+        };
+        let finsteraarhorn = SwissMountain {
+            name: String::from("Finsteraarhorn"),
+            height: 4274,
+        };
+        let grand_combin = SwissMountain {
+            name: String::from("Grand Combin"),
+            height: 4309,
+        };
+        let gross_fiescherhorn = SwissMountain {
+            name: String::from("Gross Fiescherhorn"),
+            height: 4049,
+        };
+        let jungfrau = SwissMountain {
+            name: String::from("Jungfrau"),
+            height: 4158,
+        };
+        let lyskamm = SwissMountain {
+            name: String::from("Lyskamm"),
+            height: 4532,
+        };
+        let matterhorn = SwissMountain {
+            name: String::from("Matterhorn"),
+            height: 4478,
+        };
+        let monch = SwissMountain {
+            name: String::from("Mönch"),
+            height: 4110,
+        };
+        let monte_rosa = SwissMountain {
+            name: String::from("Monte Rosa"),
+            height: 4634,
+        };
+        let ober_gabelhorn = SwissMountain {
+            name: String::from("Ober Gabelhorn"),
+            height: 4063,
+        };
+        let rimpfischhorn = SwissMountain {
+            name: String::from("Rimpfischhorn"),
+            height: 4199,
+        };
+        let schreckhorn = SwissMountain {
+            name: String::from("Schreckhorn"),
+            height: 4078,
+        };
+        let strahlhorn = SwissMountain {
+            name: String::from("Strahlhorn"),
+            height: 4190,
+        };
+        let weisshorn = SwissMountain {
+            name: String::from("Weisshorn"),
+            height: 4505,
+        };
+        let zinalrothorn = SwissMountain {
+            name: String::from("Zinalrothorn"),
+            height: 4221,
+        };
+
+        let input = [
+            aletschhorn.clone(),
+            alphubel.clone(),
+            breithorn.clone(),
+            dent_blanche.clone(),
+            dent_dherens.clone(),
+            dom.clone(),
+            finsteraarhorn.clone(),
+            grand_combin.clone(),
+            gross_fiescherhorn.clone(),
+            jungfrau.clone(),
+            lyskamm.clone(),
+            matterhorn.clone(),
+            monch.clone(),
+            monte_rosa.clone(),
+            ober_gabelhorn.clone(),
+            rimpfischhorn.clone(),
+            schreckhorn.clone(),
+            strahlhorn.clone(),
+            weisshorn.clone(),
+            zinalrothorn.clone(),
+        ];
+        let answer = vec![
+            gross_fiescherhorn.clone(),
+            ober_gabelhorn.clone(),
+            schreckhorn.clone(),
+            monch.clone(),
+            jungfrau.clone(),
+            breithorn.clone(),
+            dent_dherens.clone(),
+            strahlhorn.clone(),
+            aletschhorn.clone(),
+            rimpfischhorn.clone(),
+            alphubel.clone(),
+            zinalrothorn.clone(),
+            finsteraarhorn.clone(),
+            grand_combin.clone(),
+            dent_blanche.clone(),
+            matterhorn.clone(),
+            weisshorn.clone(),
+            lyskamm.clone(),
+            dom.clone(),
+            monte_rosa.clone(),
+        ];
+        assert_eq!(swiss_mountains_sort_by_height(input), answer);
+    }
+
+    #[test]
+    fn test_swiss_mountains_total_height_for_each() {
+        let aletschhorn = SwissMountain {
+            name: String::from("Aletschhorn"),
+            height: 4194,
+        };
+        let alphubel = SwissMountain {
+            name: String::from("Alphubel"),
+            height: 4206,
+        };
+        let breithorn = SwissMountain {
+            name: String::from("Breithorn"),
+            height: 4160,
+        };
+        let dent_blanche = SwissMountain {
+            name: String::from("Dent Blanche"),
+            height: 4357,
+        };
+        let dent_dherens = SwissMountain {
+            name: String::from("Dent d'Hérens"),
+            height: 4173,
+        };
+        let dom = SwissMountain {
+            name: String::from("Dom"),
+            height: 4546,
+        };
+        let finsteraarhorn = SwissMountain {
+            name: String::from("Finsteraarhorn"),
+            height: 4274,
+        };
+        let grand_combin = SwissMountain {
+            name: String::from("Grand Combin"),
+            height: 4309,
+        };
+        let gross_fiescherhorn = SwissMountain {
+            name: String::from("Gross Fiescherhorn"),
+            height: 4049,
+        };
+        let jungfrau = SwissMountain {
+            name: String::from("Jungfrau"),
+            height: 4158,
+        };
+        let lyskamm = SwissMountain {
+            name: String::from("Lyskamm"),
+            height: 4532,
+        };
+        let matterhorn = SwissMountain {
+            name: String::from("Matterhorn"),
+            height: 4478,
+        };
+        let monch = SwissMountain {
+            name: String::from("Mönch"),
+            height: 4110,
+        };
+        let monte_rosa = SwissMountain {
+            name: String::from("Monte Rosa"),
+            height: 4634,
+        };
+        let ober_gabelhorn = SwissMountain {
+            name: String::from("Ober Gabelhorn"),
+            height: 4063,
+        };
+        let rimpfischhorn = SwissMountain {
+            name: String::from("Rimpfischhorn"),
+            height: 4199,
+        };
+        let schreckhorn = SwissMountain {
+            name: String::from("Schreckhorn"),
+            height: 4078,
+        };
+        let strahlhorn = SwissMountain {
+            name: String::from("Strahlhorn"),
+            height: 4190,
+        };
+        let weisshorn = SwissMountain {
+            name: String::from("Weisshorn"),
+            height: 4505,
+        };
+        let zinalrothorn = SwissMountain {
+            name: String::from("Zinalrothorn"),
+            height: 4221,
+        };
+
+        let input = [
+            aletschhorn,
+            alphubel,
+            breithorn,
+            dent_blanche,
+            dent_dherens,
+            dom,
+            finsteraarhorn,
+            grand_combin,
+            gross_fiescherhorn,
+            jungfrau,
+            lyskamm,
+            matterhorn,
+            monch,
+            monte_rosa,
+            ober_gabelhorn,
+            rimpfischhorn,
+            schreckhorn,
+            strahlhorn,
+            weisshorn,
+            zinalrothorn,
+        ];
+        let answer = 85436;
+        assert_eq!(swiss_mountains_total_height_for_each(input), answer);
+    }
+
+    #[test]
+    fn test_swiss_mountains_total_height_fold() {
+        let aletschhorn = SwissMountain {
+            name: String::from("Aletschhorn"),
+            height: 4194,
+        };
+        let alphubel = SwissMountain {
+            name: String::from("Alphubel"),
+            height: 4206,
+        };
+        let breithorn = SwissMountain {
+            name: String::from("Breithorn"),
+            height: 4160,
+        };
+        let dent_blanche = SwissMountain {
+            name: String::from("Dent Blanche"),
+            height: 4357,
+        };
+        let dent_dherens = SwissMountain {
+            name: String::from("Dent d'Hérens"),
+            height: 4173,
+        };
+        let dom = SwissMountain {
+            name: String::from("Dom"),
+            height: 4546,
+        };
+        let finsteraarhorn = SwissMountain {
+            name: String::from("Finsteraarhorn"),
+            height: 4274,
+        };
+        let grand_combin = SwissMountain {
+            name: String::from("Grand Combin"),
+            height: 4309,
+        };
+        let gross_fiescherhorn = SwissMountain {
+            name: String::from("Gross Fiescherhorn"),
+            height: 4049,
+        };
+        let jungfrau = SwissMountain {
+            name: String::from("Jungfrau"),
+            height: 4158,
+        };
+        let lyskamm = SwissMountain {
+            name: String::from("Lyskamm"),
+            height: 4532,
+        };
+        let matterhorn = SwissMountain {
+            name: String::from("Matterhorn"),
+            height: 4478,
+        };
+        let monch = SwissMountain {
+            name: String::from("Mönch"),
+            height: 4110,
+        };
+        let monte_rosa = SwissMountain {
+            name: String::from("Monte Rosa"),
+            height: 4634,
+        };
+        let ober_gabelhorn = SwissMountain {
+            name: String::from("Ober Gabelhorn"),
+            height: 4063,
+        };
+        let rimpfischhorn = SwissMountain {
+            name: String::from("Rimpfischhorn"),
+            height: 4199,
+        };
+        let schreckhorn = SwissMountain {
+            name: String::from("Schreckhorn"),
+            height: 4078,
+        };
+        let strahlhorn = SwissMountain {
+            name: String::from("Strahlhorn"),
+            height: 4190,
+        };
+        let weisshorn = SwissMountain {
+            name: String::from("Weisshorn"),
+            height: 4505,
+        };
+        let zinalrothorn = SwissMountain {
+            name: String::from("Zinalrothorn"),
+            height: 4221,
+        };
+
+        let input = [
+            aletschhorn,
+            alphubel,
+            breithorn,
+            dent_blanche,
+            dent_dherens,
+            dom,
+            finsteraarhorn,
+            grand_combin,
+            gross_fiescherhorn,
+            jungfrau,
+            lyskamm,
+            matterhorn,
+            monch,
+            monte_rosa,
+            ober_gabelhorn,
+            rimpfischhorn,
+            schreckhorn,
+            strahlhorn,
+            weisshorn,
+            zinalrothorn,
+        ];
+        let answer = 85436;
+        assert_eq!(swiss_mountains_total_height_fold(input), answer);
+    }
+
+    #[test]
+    fn test_swiss_mountains_wo_4110() {
+        let aletschhorn = SwissMountain {
+            name: String::from("Aletschhorn"),
+            height: 4194,
+        };
+        let alphubel = SwissMountain {
+            name: String::from("Alphubel"),
+            height: 4206,
+        };
+        let breithorn = SwissMountain {
+            name: String::from("Breithorn"),
+            height: 4160,
+        };
+        let dent_blanche = SwissMountain {
+            name: String::from("Dent Blanche"),
+            height: 4357,
+        };
+        let dent_dherens = SwissMountain {
+            name: String::from("Dent d'Hérens"),
+            height: 4173,
+        };
+        let dom = SwissMountain {
+            name: String::from("Dom"),
+            height: 4546,
+        };
+        let finsteraarhorn = SwissMountain {
+            name: String::from("Finsteraarhorn"),
+            height: 4274,
+        };
+        let grand_combin = SwissMountain {
+            name: String::from("Grand Combin"),
+            height: 4309,
+        };
+        let gross_fiescherhorn = SwissMountain {
+            name: String::from("Gross Fiescherhorn"),
+            height: 4049,
+        };
+        let jungfrau = SwissMountain {
+            name: String::from("Jungfrau"),
+            height: 4158,
+        };
+        let lyskamm = SwissMountain {
+            name: String::from("Lyskamm"),
+            height: 4532,
+        };
+        let matterhorn = SwissMountain {
+            name: String::from("Matterhorn"),
+            height: 4478,
+        };
+        let monch = SwissMountain {
+            name: String::from("Mönch"),
+            height: 4110,
+        };
+        let monte_rosa = SwissMountain {
+            name: String::from("Monte Rosa"),
+            height: 4634,
+        };
+        let ober_gabelhorn = SwissMountain {
+            name: String::from("Ober Gabelhorn"),
+            height: 4063,
+        };
+        let rimpfischhorn = SwissMountain {
+            name: String::from("Rimpfischhorn"),
+            height: 4199,
+        };
+        let schreckhorn = SwissMountain {
+            name: String::from("Schreckhorn"),
+            height: 4078,
+        };
+        let strahlhorn = SwissMountain {
+            name: String::from("Strahlhorn"),
+            height: 4190,
+        };
+        let weisshorn = SwissMountain {
+            name: String::from("Weisshorn"),
+            height: 4505,
+        };
+        let zinalrothorn = SwissMountain {
+            name: String::from("Zinalrothorn"),
+            height: 4221,
+        };
+
+        let input = [
+            aletschhorn.clone(),
+            alphubel.clone(),
+            breithorn.clone(),
+            dent_blanche.clone(),
+            dent_dherens.clone(),
+            dom.clone(),
+            finsteraarhorn.clone(),
+            grand_combin.clone(),
+            gross_fiescherhorn.clone(),
+            jungfrau.clone(),
+            lyskamm.clone(),
+            matterhorn.clone(),
+            monch.clone(),
+            monte_rosa.clone(),
+            ober_gabelhorn.clone(),
+            rimpfischhorn.clone(),
+            schreckhorn.clone(),
+            strahlhorn.clone(),
+            weisshorn.clone(),
+            zinalrothorn.clone(),
+        ];
+
+        let answer = vec![
+            aletschhorn.clone(),
+            alphubel.clone(),
+            breithorn.clone(),
+            dent_blanche.clone(),
+            dent_dherens.clone(),
+            dom.clone(),
+            finsteraarhorn.clone(),
+            grand_combin.clone(),
+            gross_fiescherhorn.clone(),
+            jungfrau.clone(),
+            lyskamm.clone(),
+            matterhorn.clone(),
+            monte_rosa.clone(),
+            ober_gabelhorn.clone(),
+            rimpfischhorn.clone(),
+            schreckhorn.clone(),
+            strahlhorn.clone(),
+            weisshorn.clone(),
+            zinalrothorn.clone(),
+        ];
+        assert_eq!(swiss_mountains_wo_4110(input), answer);
+    }
 }
