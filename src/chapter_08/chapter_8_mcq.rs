@@ -24,6 +24,9 @@
 //! ```sh
 //! cargo doc --open
 //! ```
+//!
+
+// added question String and Vec<T> are smart pointers see pg 306
 
 /// ## Question 1
 ///
@@ -174,7 +177,7 @@ pub fn answer_08() -> char {
 /// ## Question 9
 ///
 /// is this sentence correct?
-/// 
+///
 /// Hashmaps are homogeneous: all of their keys and values must have the same type
 ///
 /// - a) No, Hashmaps are heterogenous, the keys can contain different type.
