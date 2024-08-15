@@ -87,74 +87,98 @@ pub fn answer_05() -> char {
 
 /// ## Question 6
 ///
-/// What is Deref coercion?
+/// When could you need to use the dereference operator *?
 ///
-/// - a) 
-/// - b)
-/// - c) 
-/// - d) 
+/// - a) when you need to access the data pointed by the reference  
+/// - b) when you need to multiply two values
+/// - c) when you need to build a smart pointer
+/// - d) when you need to implement the Deref trait
 pub fn answer_06() -> char {
     todo!()
 }
 
 /// ## Question 7
 ///
-///
-/// - a) 
-/// - b)
-/// - c) 
-/// - d) 
+/// Select the wrong answer to the question: Why do you need the Deref trait?
+/// 
+/// - a) Otherwise, the compiler can only dereference &references 
+/// - b) To provide seamless access to the underlying data that the smart pointer manages
+/// - c) To move the ownership of the data from the smart pointer to a regular reference
+/// - d) To grant the compiler the capacity to use the deref method to get an &reference, that can be easily dereferenced
 pub fn answer_07() -> char {
     todo!()
 }
 
 /// ## Question 8
 ///
-///
-/// - a) 
-/// - b)
-/// - c) 
-/// - d) 
+/// What is Deref coercion?
+/// 
+/// - a) it converts a type of reference into another type reference to a type that Deref can convert the original type into.
+/// - b) it allows the compiler to automatically convert a reference to a type into a reference to another type, provided that the original type implements the Deref trait
+/// - c) it coerce a reference to implement Deref
+/// - d) it converts a reference to a type that implements Deref into a dereference
 pub fn answer_08() -> char {
     todo!()
 }
 
 /// ## Question 9
 ///
-/// - a) 
-/// - b)
-/// - c) 
-/// - d) 
+/// Is the below sentence correct?
+/// The number of times that Deref::deref needs to be inserted will be resolved at compile time, so there is no runtime penalty for using deref coercion. 
+/// 
+/// - a) No, there is a limit set to 100 to the number of times that Deref::deref needs to be inserted to avoid an infinity loop
+/// - b) No, there is a runtime penalty for using the deref method
+/// - c) No, the number of times that Deref::deref needs to be inserted will be resolved at runtime.
+/// - d) Yes
 pub fn answer_09() -> char {
     todo!()
 }
 
 /// ## Question 10
 ///
-/// - a) 
-/// - b)
-/// - c) 
-/// - d) 
+/// What does the Drop trait allow you to do? 
+/// 
+/// - a) to omit the dereference operator
+/// - b) to define a custom behavior when a value is about to be dropped
+/// - c) to customize what happens when a value come into scope
+/// - d) to specify when a value goes out of scope
 pub fn answer_10() -> char {
     todo!()
 }
 
 /// ## Question 11
 ///
-/// - a) 
-/// - b)
-/// - c) 
-/// - d) 
+/// What will the following code produce in the terminal?
+/// ```notest
+///     struct CustomSmartPointer{
+///            number: i32,
+///     }
+///     impl Drop for CustomSmartPointer{
+///         fn drop(&mut self){
+///             print!("Dropping {} ", self.number);
+///         }
+///     }
+///     fn main(){
+///         let _one = CustomSmartPointer{number: 1};
+///         let _two = CustomSmartPointer{number: 2};
+///     }
+/// ```
+/// 
+/// - a) Dropping one Dropping two
+/// - b) Dropping Two Dropping one
+/// - c) A compilation error as the Drop trait is not included in the prelude and needs to be imported
+/// - d) Nothing, as the drop method needs to be call explicitly
 pub fn answer_11() -> char {
     todo!()
 }
 
 /// ## Question 12
-///
-/// - a) 
-/// - b)
-/// - c) 
-/// - d) 
+/// Is the below sentence correct:
+///     By using the std::mem::drop function you can clean up a value early. However you need to be carful from accidentally cleaning up value still in use.
+/// - a) Yes, this is why you should use it only when you are confident in your understanding of its implications and are certain about your actions
+/// - b) No, as the std::mem::drop function is similar to the drop method in the Drop trait
+/// - c) No, as the ownership system will make sure that the drop method can only be called once the value is no longer needed 
+/// - d) Yes, this makes cleanup convenient and safe
 pub fn answer_12() -> char {
     todo!()
 }

@@ -1,6 +1,17 @@
-// create the struct MyOwnBox<T>(T) and add the deref trait on it
+fn main(){
+
+    // Create the struct MyOwnBox<T>(T). Then, define the new function similar to the new function described on Box<T>. 
+    // Finally, implement the Deref trait on MyOwnBox<T> by implementing the deref method. 
+    // The below code should compile after you uncomment it:
+    
+    // let a = 42;
+    // let b = MyOwnBox::new(a);
+
+    // assert_eq!(a, 42);
+    // assert_eq!(*b, 42);
 
 
+}
 
 
 #[cfg(test)]
