@@ -1,5 +1,11 @@
 fn main(){
 
+    // Do exercise with Box<T>
+    // then with Rc<T>
+    // and finally RefCell<T>
+    // make use of functions
+    
+
     // Create the struct MyOwnBox<T>(T). Then, define the new function similar to the new function described on Box<T>. 
     // Finally, implement the Deref trait on MyOwnBox<T> by implementing the deref method. 
     // The below code should compile after you uncomment it:
@@ -10,6 +16,7 @@ fn main(){
     // assert_eq!(a, 42);
     // assert_eq!(*b, 42);
 
+ 
 
 }
 

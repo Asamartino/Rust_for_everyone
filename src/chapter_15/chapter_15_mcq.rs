@@ -185,31 +185,89 @@ pub fn answer_12() -> char {
 
 /// ## Question 13
 ///
-/// What will the following code produce in the terminal?
-/// ```notest
-///     (0..5).map(|x| println!("{x}"));
-/// ```
-/// - a) 
-/// - b)
-/// - c) 
-/// - d) 
+/// What does Rc<T> enables in Rust?
+/// 
+/// - a) it enables multiple ownership for single-threaded scenarios
+/// - b) it enables multiple ownership for multithreaded scenarios
+/// - c) it enables to coerce a dereference
+/// - d) it enables to coerce a reference
 pub fn answer_13() -> char {
     todo!()
 }
 
 /// ## Question 14
 ///
-/// What does the below code produce?
-/// ```notest
-///     let infinite_iterator = 0..;
-/// ```
-/// - a) 
-/// - b)
-/// - c) 
-/// - d) 
+/// What does Rc::clone() do?
+/// 
+/// - a) it makes a deep copy of all the data
+/// - b) it makes a shallow copy of all the data
+/// - c) it increase the dereference count
+/// - d) it increase the reference count
 pub fn answer_14() -> char {
     todo!()
 }
+
+ 
+/// ## Question 15
+///
+/// What will the last println!() of the below code print in the terminal? 
+/// ```notest
+///     use List::{Cons, Nil};
+///     enum List {
+///         Cons(i32, Rc<List>),
+///         Nil,
+///     }
+///     use std::rc::Rc;
+///     fn main() {
+///         let a = Rc::new(Cons(1, Rc::new(Cons(11, Rc::new(Nil)))));
+///         println!("count after creating a {}", Rc::strong_count(&a));
+///         {
+///             let b = Cons(2, Rc::clone(&a));
+///             println!("count after creating b {}", Rc::strong_count(&a));
+///             {
+///                 let c = Cons(3, Rc::clone(&a));
+///                 println!("count after creating c {}", Rc::strong_count(&a));
+///             }
+///         }
+///         println!("strong count before main ends {}", Rc::strong_count(&a));
+///     }
+/// ```
+/// - a) error[E0425]: cannot find value `a` in this scope
+/// - b) strong count before main ends 2
+/// - c) strong count before main ends 1
+/// - d) count after creating a 1
+pub fn answer_15() -> char {
+    todo!()
+}
+
+
+/// ## Question 16
+///
+/// What can be a use case for RefCell<T>?
+/// 
+/// - a) enables mutable borrows that are verified at runtime instead of compile time. If the borrowing rules are violated, the program will panic and terminate.
+/// - b) enables multiple owners of the same data
+/// - c) enables mutable or immutable borrows checked at compile time
+/// - d) enables only mutable borrows checked at runtime 
+pub fn answer_16() -> char {
+    todo!()
+}
+
+
+
+/// ## Question 14
+///
+/// What does Rc::clone() do?
+/// 
+/// - a) it makes a deep copy of all the data
+/// - b) it makes a shallow copy of all the data
+/// - c) it increase the dereference count
+/// - d) it increase the reference count
+pub fn answer_14() -> char {
+    todo!()
+}
+
+
 
 #[cfg(test)]
 mod tests {
