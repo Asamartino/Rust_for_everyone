@@ -187,7 +187,8 @@ pub fn answer_12() -> char {
 ///
 /// What does Rc<T> enables in Rust?
 /// 
-/// - a) it enables multiple ownership for single-threaded scenarios
+/// - a) it is an abbreviation for reference counting and it keeps track of the number
+///      of references to data stored on the heap and enables multiple ownership for single-threaded scenarios
 /// - b) it enables multiple ownership for multithreaded scenarios
 /// - c) it enables to coerce a dereference
 /// - d) it enables to coerce a reference
@@ -254,16 +255,29 @@ pub fn answer_16() -> char {
 }
 
 
-
-/// ## Question 14
+/// ## Question 17
 ///
-/// What does Rc::clone() do?
+/// If you have an Rc<T> that holds and RefCell<T>, you can get:
 /// 
-/// - a) it makes a deep copy of all the data
-/// - b) it makes a shallow copy of all the data
-/// - c) it increase the dereference count
-/// - d) it increase the reference count
-pub fn answer_14() -> char {
+/// - a) a value that can have multiple owners and that is immutable 
+/// - b) mutable borrows that are checked at compile time
+/// - c) you get an error, also known as pen-pineapple-apple-pen error
+/// - d) a value that can have multiple owners and that you can mutate
+pub fn answer_17() -> char {
+    todo!()
+}
+
+
+/// ## Question 18
+///
+/// Is the below sentence correct?
+/// Rust's memory safety guarantees make it impossible to create memory leak?
+/// 
+/// - a) No, you can create memory leak in Rust (even tough it is difficult)
+/// - b) No, Rust's memory safety guarantees make it impossible to create socket leak
+/// - c) No, Rust's ownership rules make it impossible to create memory leak 
+/// - d) Yes
+pub fn answer_17() -> char {
     todo!()
 }
 

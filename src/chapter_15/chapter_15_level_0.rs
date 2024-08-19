@@ -51,7 +51,7 @@ fn main() {
     // use std::rc::Rc;
     //
     // fn main() {
-    // complete here
+    //      complete here
     // }
 
     // Ex 7
@@ -85,6 +85,7 @@ fn main() {
     //     };
     //     book.borrow();
     //     book.borrow();
+    //     
     // }
 
 
@@ -92,6 +93,11 @@ fn main() {
     // As you know RefCell<T> lets you have many immutable borrows and only one mutable borrow. Modify the borrow function in the code above
     // and make two mutable references in the same scope (i.e. create two variables each containing a RefMut<T> by using borrow_mut())
     // The code should not compile. Familiarize yourself with the error message and note that this happens at runtime.
+
+    // Ex 9 
+    // As you know it is challenging to create memory leak in Rust but not impossible.
+    // Create a reference cycle by completing the below example
+    //
 }
 
 #[cfg(test)]

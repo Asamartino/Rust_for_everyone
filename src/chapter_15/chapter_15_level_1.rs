@@ -4,6 +4,9 @@ fn main(){
     // then with Rc<T>
     // and finally RefCell<T>
     // make use of functions
+    // combine them RcRefCelle
+
+    // play with Cell<T> and Mutex<T> see pg 332?
     
 
     // Create the struct MyOwnBox<T>(T). Then, define the new function similar to the new function described on Box<T>. 
