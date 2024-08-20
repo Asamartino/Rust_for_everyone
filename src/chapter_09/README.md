@@ -1,4 +1,4 @@
-## Chapter 7
+## Chapter 9
 
 The exercises in this chapter assume that you have read the chapter 9 of [The Rust Programming Language](https://doc.rust-lang.org/book/ch09-00-error-handling.html).
 Ideally, you should begin with the level 0 exercises and progressively move to the next levels.

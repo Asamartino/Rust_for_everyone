@@ -1,4 +1,4 @@
-## Chapter 7
+## Chapter 8
 
 The exercises in this chapter assume that you have read the chapter 8 of [The Rust Programming Language](https://doc.rust-lang.org/book/ch08-00-common-collections.html).
 Ideally, you should begin with the level 0 exercises and progressively move to the next levels.

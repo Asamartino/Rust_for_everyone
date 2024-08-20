@@ -6,29 +6,29 @@
 // Fetch the contain of this website and count how many street contain " du " anywhere in their name
 // https://commons.wikimedia.org/wiki/Category:Streets_in_Geneva_by_name
 
-use reqwest::blocking::get;
-use select::document::Document;
-use select::predicate::Name;
-pub fn count_geneva_street_name_with_du() -> usize {
-    let response = get("https://commons.wikimedia.org/wiki/Category:Streets_in_Geneva_by_name").unwrap();
-    assert!(response.status().is_success());
+// use reqwest::blocking::get;
+// use select::document::Document;
+// use select::predicate::Name;
+// pub fn count_geneva_street_name_with_du() -> usize {
+//     let response = get("https://commons.wikimedia.org/wiki/Category:Streets_in_Geneva_by_name").unwrap();
+//     assert!(response.status().is_success());
 
-    let html = response.text().unwrap();
+//     let html = response.text().unwrap();
 
-    // Parse the HTML document
-    let document = Document::from(html.as_str());
+//     // Parse the HTML document
+//     let document = Document::from(html.as_str());
 
-    // Extract street names from the HTML
-    let streets: Vec<String> = document
-        .find("mw-category-group")
-        .flat_map(|node| node.find(Name("a")).map(|n| n.text().trim().to_string()))
-        .collect();
+//     // Extract street names from the HTML
+//     let streets: Vec<String> = document
+//         .find("mw-category-group")
+//         .flat_map(|node| node.find(Name("a")).map(|n| n.text().trim().to_string()))
+//         .collect();
 
-    // Count how many streets contain 'du' anywhere in their name
-    let count = streets.iter().filter(|&street| street.contains(" du ")).count();
-    count
+//     // Count how many streets contain 'du' anywhere in their name
+//     let count = streets.iter().filter(|&street| street.contains(" du ")).count();
+//     count
     
-}
+// }
 
 
 use std::collections::HashMap;
@@ -74,11 +74,10 @@ pub fn compute_soda_size(v: Vec<SodaSize>) -> HashMap<SodaSize, usize> {
 mod tests {
     use super::*;
 
-    #[test]
-    fn test_count_geneva_street_name_with_du() {
-
-        assert_eq!(count_geneva_street_name_with_du(), 5);
-    }
+    // #[test]
+    // fn test_count_geneva_street_name_with_du() {
+    //     assert_eq!(count_geneva_street_name_with_du(), 5);
+    // }
 
 
     #[test]

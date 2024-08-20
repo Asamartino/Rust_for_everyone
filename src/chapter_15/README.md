@@ -1,6 +1,6 @@
-## Chapter 7
+## Chapter 15
 
-The exercises in this chapter assume that you have read the chapter 11 of [The Rust Programming Language](https://doc.rust-lang.org/book/ch11-00-testing.html).
+The exercises in this chapter assume that you have read the chapter 15 of [The Rust Programming Language](https://doc.rust-lang.org/book/ch11-00-testing.html).
 This chapter brings some key concepts that depending on your background might be hard to grasp at first. That is why there is a long list of exercises in order to help you master those concepts. 
 
 Ideally, you should begin with the level 0 exercises and progressively move to the next levels.

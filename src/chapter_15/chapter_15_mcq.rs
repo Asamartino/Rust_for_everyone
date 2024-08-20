@@ -37,7 +37,6 @@ pub fn answer_01() -> char {
     todo!()
 }
 
-
 /// ## Question 2
 ///
 /// What is a smart pointer?
@@ -78,9 +77,9 @@ pub fn answer_04() -> char {
 /// Is this sentence correct: A pointer size doesn't change based on the amount of data it's point to?
 ///
 /// - a) No, the pointer size is fixed within a particular addressable range but will vary depending on the range
-/// - b) No, the pointer size change with each change on the amount of data it's point to 
+/// - b) No, the pointer size change with each change on the amount of data it's point to
 /// - c) No, that only occurs with smart pointers
-/// - d) Yes 
+/// - d) Yes
 pub fn answer_05() -> char {
     todo!()
 }
@@ -100,8 +99,8 @@ pub fn answer_06() -> char {
 /// ## Question 7
 ///
 /// Select the wrong answer to the question: Why do you need the Deref trait?
-/// 
-/// - a) Otherwise, the compiler can only dereference &references 
+///
+/// - a) Otherwise, the compiler can only dereference &references
 /// - b) To provide seamless access to the underlying data that the smart pointer manages
 /// - c) To move the ownership of the data from the smart pointer to a regular reference
 /// - d) To grant the compiler the capacity to use the deref method to get an &reference, that can be easily dereferenced
@@ -112,7 +111,7 @@ pub fn answer_07() -> char {
 /// ## Question 8
 ///
 /// What is Deref coercion?
-/// 
+///
 /// - a) it converts a type of reference into another type reference to a type that Deref can convert the original type into.
 /// - b) it allows the compiler to automatically convert a reference to a type into a reference to another type, provided that the original type implements the Deref trait
 /// - c) it coerce a reference to implement Deref
@@ -124,8 +123,8 @@ pub fn answer_08() -> char {
 /// ## Question 9
 ///
 /// Is the below sentence correct?
-/// The number of times that Deref::deref needs to be inserted will be resolved at compile time, so there is no runtime penalty for using deref coercion. 
-/// 
+/// The number of times that Deref::deref needs to be inserted will be resolved at compile time, so there is no runtime penalty for using deref coercion.
+///
 /// - a) No, there is a limit set to 100 to the number of times that Deref::deref needs to be inserted to avoid an infinity loop
 /// - b) No, there is a runtime penalty for using the deref method
 /// - c) No, the number of times that Deref::deref needs to be inserted will be resolved at runtime.
@@ -136,8 +135,8 @@ pub fn answer_09() -> char {
 
 /// ## Question 10
 ///
-/// What does the Drop trait allow you to do? 
-/// 
+/// What does the Drop trait allow you to do?
+///
 /// - a) to omit the dereference operator
 /// - b) to define a custom behavior when a value is about to be dropped
 /// - c) to customize what happens when a value come into scope
@@ -163,7 +162,7 @@ pub fn answer_10() -> char {
 ///         let _two = CustomSmartPointer{number: 2};
 ///     }
 /// ```
-/// 
+///
 /// - a) Dropping one Dropping two
 /// - b) Dropping Two Dropping one
 /// - c) A compilation error as the Drop trait is not included in the prelude and needs to be imported
@@ -177,7 +176,7 @@ pub fn answer_11() -> char {
 ///     By using the std::mem::drop function you can clean up a value early. However you need to be carful from accidentally cleaning up value still in use.
 /// - a) Yes, this is why you should use it only when you are confident in your understanding of its implications and are certain about your actions
 /// - b) No, as the std::mem::drop function is similar to the drop method in the Drop trait
-/// - c) No, as the ownership system will make sure that the drop method can only be called once the value is no longer needed 
+/// - c) No, as the ownership system will make sure that the drop method can only be called once the value is no longer needed
 /// - d) Yes, this makes cleanup convenient and safe
 pub fn answer_12() -> char {
     todo!()
@@ -186,7 +185,7 @@ pub fn answer_12() -> char {
 /// ## Question 13
 ///
 /// What does Rc<T> enables in Rust?
-/// 
+///
 /// - a) it is an abbreviation for reference counting and it keeps track of the number
 ///      of references to data stored on the heap and enables multiple ownership for single-threaded scenarios
 /// - b) it enables multiple ownership for multithreaded scenarios
@@ -199,7 +198,7 @@ pub fn answer_13() -> char {
 /// ## Question 14
 ///
 /// What does Rc::clone() do?
-/// 
+///
 /// - a) it makes a deep copy of all the data
 /// - b) it makes a shallow copy of all the data
 /// - c) it increase the dereference count
@@ -208,10 +207,9 @@ pub fn answer_14() -> char {
     todo!()
 }
 
- 
 /// ## Question 15
 ///
-/// What will the last println!() of the below code print in the terminal? 
+/// What will the last println!() of the below code print in the terminal?
 /// ```notest
 ///     use List::{Cons, Nil};
 ///     enum List {
@@ -241,25 +239,23 @@ pub fn answer_15() -> char {
     todo!()
 }
 
-
 /// ## Question 16
 ///
 /// What can be a use case for RefCell<T>?
-/// 
+///
 /// - a) enables mutable borrows that are verified at runtime instead of compile time. If the borrowing rules are violated, the program will panic and terminate.
 /// - b) enables multiple owners of the same data
 /// - c) enables mutable or immutable borrows checked at compile time
-/// - d) enables only mutable borrows checked at runtime 
+/// - d) enables only mutable borrows checked at runtime
 pub fn answer_16() -> char {
     todo!()
 }
 
-
 /// ## Question 17
 ///
 /// If you have an Rc<T> that holds and RefCell<T>, you can get:
-/// 
-/// - a) a value that can have multiple owners and that is immutable 
+///
+/// - a) a value that can have multiple owners and that is immutable
 /// - b) mutable borrows that are checked at compile time
 /// - c) you get an error, also known as pen-pineapple-apple-pen error
 /// - d) a value that can have multiple owners and that you can mutate
@@ -267,21 +263,18 @@ pub fn answer_17() -> char {
     todo!()
 }
 
-
 /// ## Question 18
 ///
 /// Is the below sentence correct?
 /// Rust's memory safety guarantees make it impossible to create memory leak?
-/// 
+///
 /// - a) No, you can create memory leak in Rust (even tough it is difficult)
 /// - b) No, Rust's memory safety guarantees make it impossible to create socket leak
-/// - c) No, Rust's ownership rules make it impossible to create memory leak 
+/// - c) No, Rust's ownership rules make it impossible to create memory leak
 /// - d) Yes
-pub fn answer_17() -> char {
+pub fn answer_18() -> char {
     todo!()
 }
-
-
 
 #[cfg(test)]
 mod tests {
@@ -345,43 +338,43 @@ mod tests {
         sanity_check(&answer_10)
     }
 
-    // #[test]
-    // fn answer_11_sanity_check() {
-    //     sanity_check(&answer_11)
-    // }
+    #[test]
+    fn answer_11_sanity_check() {
+        sanity_check(&answer_11)
+    }
 
-    // #[test]
-    // fn answer_12_sanity_check() {
-    //     sanity_check(&answer_12)
-    // }
+    #[test]
+    fn answer_12_sanity_check() {
+        sanity_check(&answer_12)
+    }
 
-    // #[test]
-    // fn answer_13_sanity_check() {
-    //     sanity_check(&answer_13)
-    // }
+    #[test]
+    fn answer_13_sanity_check() {
+        sanity_check(&answer_13)
+    }
 
-    // #[test]
-    // fn answer_14_sanity_check() {
-    //     sanity_check(&answer_14)
-    // }
+    #[test]
+    fn answer_14_sanity_check() {
+        sanity_check(&answer_14)
+    }
 
-    // #[test]
-    // fn answer_15_sanity_check() {
-    //     sanity_check(&answer_15)
-    // }
+    #[test]
+    fn answer_15_sanity_check() {
+        sanity_check(&answer_15)
+    }
 
-    // #[test]
-    // fn answer_16_sanity_check() {
-    //     sanity_check(&answer_16)
-    // }
+    #[test]
+    fn answer_16_sanity_check() {
+        sanity_check(&answer_16)
+    }
 
-    // #[test]
-    // fn answer_17_sanity_check() {
-    //     sanity_check(&answer_17)
-    // }
+    #[test]
+    fn answer_17_sanity_check() {
+        sanity_check(&answer_17)
+    }
 
-    // #[test]
-    // fn answer_18_sanity_check() {
-    //     sanity_check(&answer_18)
-    // }
+    #[test]
+    fn answer_18_sanity_check() {
+        sanity_check(&answer_18)
+    }
 }

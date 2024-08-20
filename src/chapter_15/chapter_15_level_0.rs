@@ -1,5 +1,3 @@
-use std::arch::x86_64::_MM_PERM_BABA;
-
 fn main() {
     // To familiarize you with the syntax, solutions to the following exercises are provided in a separate file.
 
@@ -97,7 +95,86 @@ fn main() {
     // Ex 9 
     // As you know it is challenging to create memory leak in Rust but not impossible.
     // Create a reference cycle by completing the below example
+
+    // use std::cell::RefCell;
+    // use std::rc::Rc;
     //
+    // struct Node {
+    //     value: i32,
+    //     next: Option<Rc<RefCell<Node>>>,
+    // }
+    //
+    // fn main() {
+    //     // Create two Rc, RefCell wrapped Node instances
+    //     let node1 = Rc::new(RefCell::new(Node {
+    //         value: 1,
+    //         next: None,
+    //     }));
+    //     let node2 = todo!();
+    //     // Create a reference cycle node1.next() should reference node2 and vice versa. Use the borrow_mut method
+    //     node1.borrow_mut().next = Some(Rc::clone(&node2));
+    //     node2.borrow_mut().next = todo();
+
+    //     // At this point, the reference count of node1 and node2 is 2 due to the cycle:
+    //     println!("node1 strong count: {}", Rc::strong_count(&node1)); 
+    //     println!("node2 strong count: {}", Rc::strong_count(&node2));
+    // }
+    // At this point the reference count of node 1 and node2 is 1 rather than 0 -> so there is memory on the heap that won't be dropped = memory leak
+
+    // Ex 10
+    // We can prevent reference cycle by using weak reference
+    // A perfect use case for a weak reference is when: a parent node own its children, so if it is dropped so are its children.
+    // However, a child doesn't own its parent, so if it is dropped the parent should still exists
+    // Recreate the example similar to the one used in the book
+
+    //     use std::cell::RefCell;
+    // use std::rc::{Rc, Weak};
+
+    // #[derive(Debug)]
+    // struct Node {
+    //     value: i32,
+    //     parent: todo!(), // use a weak reference
+    //     children: todo!(),
+    // }
+
+    // fn main() {
+    //     // the leaf variable is an Rc wrapped Node
+    //     let leaf = todo!(),
+
+    //     println!(
+    //         "leaf: strong_count = {}, weak_count = {}",
+    //         Rc::strong_count(&leaf),
+    //         Rc::weak_count(&leaf),
+    //     );
+
+    //     {
+    //         // the branch variable is an Rc wrapped Node with its children being leaf
+    //         let branch = todo!();
+            
+    //         // assign branch as the parent of leaf 
+            
+
+    //         println!(
+    //             "branch: strong_count = {}, weak_count = {}",
+    //             Rc::strong_count(&branch),
+    //             Rc::weak_count(&branch),
+    //         );
+
+    //         println!(
+    //             "leaf: strong_count = {}, weak_count = {}",
+    //             Rc::strong_count(&leaf),
+    //             Rc::weak_count(&leaf),
+    //         );
+    //     }
+
+    //     println!("leaf parent = {:?}", leaf.parent.borrow().upgrade());
+    //     println!(
+    //         "leaf: strong_count = {}, weak_count = {}",
+    //         Rc::strong_count(&leaf),
+    //         Rc::weak_count(&leaf),
+    //     );
+    // }
+
 }
 
 #[cfg(test)]
