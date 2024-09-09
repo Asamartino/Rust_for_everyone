@@ -37,7 +37,6 @@ pub fn answer_01() -> char {
     todo!()
 }
 
-
 /// ## Question 2
 ///
 /// What does blocking a thread means?
@@ -53,9 +52,9 @@ pub fn answer_02() -> char {
 /// ## Question 3
 ///
 /// How does the `move` keyword affect the behavior of closures when used in conjunction with thread::spawn in Rust?
-/// 
+///
 /// - a) it allows the closure to move faster
-/// - b) it force the thread to move its data from the stack to the heap 
+/// - b) it force the thread to move its data from the stack to the heap
 /// - c) it force the closure to take ownership of the values it uses
 /// - d) it enables to closure to not run at the same time than the thread
 pub fn answer_03() -> char {
@@ -64,24 +63,24 @@ pub fn answer_03() -> char {
 
 /// ## Question 4
 ///
-/// Complete the sentence: When a Box<T> gets out of scope, ...
+/// Whn does a channel is said to be closed
 ///
-/// - a) 
-/// - b)
-/// - c) 
-/// - d) 
+/// - a) when the transmitter is dropped
+/// - b) when the receiver is dropped
+/// - c) when either the transmitter or the receiver is dropped
+/// - d) when it feels drained
 pub fn answer_04() -> char {
     todo!()
 }
 
 /// ## Question 5
 ///
-/// Is this sentence correct: A pointer size doesn't change based on the amount of data it's point to?
+/// What is a Mutex and what does it do?
 ///
-/// - a) 
-/// - b)
-/// - c) 
-/// - d) 
+/// - a) Mutex is an abbreviation for mutual exclusive and it grants access to the data to just one thread at a time
+/// - b) Mutex is an abbreviation for mutual exclusion and it grants access to the data to just one thread at a time
+/// - c) Mutex is an abbreviation for mutual exclusion and it grants access to the data to multiple thread at once
+/// - d) Mutex is an abbreviation for mutual exclusive and it grants access to the date to multiple thread at once
 pub fn answer_05() -> char {
     todo!()
 }
@@ -90,10 +89,10 @@ pub fn answer_05() -> char {
 ///
 /// When could you need to use the dereference operator *?
 ///
-/// - a) 
+/// - a)
 /// - b)
-/// - c) 
-/// - d) 
+/// - c)
+/// - d)
 pub fn answer_06() -> char {
     todo!()
 }
@@ -101,11 +100,11 @@ pub fn answer_06() -> char {
 /// ## Question 7
 ///
 /// Select the wrong answer to the question: Why do you need the Deref trait?
-/// 
-/// - a) 
+///
+/// - a)
 /// - b)
-/// - c) 
-/// - d) 
+/// - c)
+/// - d)
 pub fn answer_07() -> char {
     todo!()
 }
@@ -113,11 +112,11 @@ pub fn answer_07() -> char {
 /// ## Question 8
 ///
 /// What is Deref coercion?
-/// 
-/// - a) 
+///
+/// - a)
 /// - b)
-/// - c) 
-/// - d) 
+/// - c)
+/// - d)
 pub fn answer_08() -> char {
     todo!()
 }
@@ -125,24 +124,24 @@ pub fn answer_08() -> char {
 /// ## Question 9
 ///
 /// Is the below sentence correct?
-/// The number of times that Deref::deref needs to be inserted will be resolved at compile time, so there is no runtime penalty for using deref coercion. 
-/// 
-/// - a) 
+/// The number of times that Deref::deref needs to be inserted will be resolved at compile time, so there is no runtime penalty for using deref coercion.
+///
+/// - a)
 /// - b)
-/// - c) 
-/// - d) 
+/// - c)
+/// - d)
 pub fn answer_09() -> char {
     todo!()
 }
 
 /// ## Question 10
 ///
-/// What does the Drop trait allow you to do? 
-/// 
-/// - a) 
+/// What does the Drop trait allow you to do?
+///
+/// - a)
 /// - b)
-/// - c) 
-/// - d) 
+/// - c)
+/// - d)
 pub fn answer_10() -> char {
     todo!()
 }
@@ -164,16 +163,14 @@ pub fn answer_10() -> char {
 ///         let _two = CustomSmartPointer{number: 2};
 ///     }
 /// ```
-/// 
-/// - a) 
+///
+/// - a)
 /// - b)
-/// - c) 
-/// - d) 
+/// - c)
+/// - d)
 pub fn answer_11() -> char {
     todo!()
 }
-
-
 
 #[cfg(test)]
 mod tests {
@@ -241,5 +238,4 @@ mod tests {
     fn answer_11_sanity_check() {
         sanity_check(&answer_11)
     }
-
 }
