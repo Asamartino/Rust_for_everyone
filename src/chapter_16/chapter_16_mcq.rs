@@ -87,90 +87,68 @@ pub fn answer_05() -> char {
 
 /// ## Question 6
 ///
-/// When could you need to use the dereference operator *?
+/// What is an Arc<T>, and when should you use it?
 ///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+/// - a) it's a primitive type, and allows multiple threads to modify the same data simultaneously without any synchronization
+/// - b) it's an atomically reference counted type, and allows shared ownership of data across multiple threads (thread-safe)
+/// - c) it's an asynchronously reference counted type, and should only be used to store data that will never be accessed by multiple threads
+/// - d) it's an automatic reference counted type, and is safe to use in concurrent situations
 pub fn answer_06() -> char {
     todo!()
 }
 
 /// ## Question 7
 ///
-/// Select the wrong answer to the question: Why do you need the Deref trait?
+/// What is the trade-off with thread safety types?
 ///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+/// - a) Thread safety comes with security issues, that should only be incurred when absolutely necessary
+/// - b) There is no trade-off with thread safety types
+/// - c) Thread safety comes with a performance cost, so it's best to use it only when necessary 
+/// - d) Thread safety are more verbose
 pub fn answer_07() -> char {
     todo!()
 }
 
 /// ## Question 8
 ///
-/// What is Deref coercion?
+/// What does the Send trait do?
 ///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+/// - a) indicate that a type can be shared between multiple threads as long as it's mutable
+/// - b) it ensures that a type is thread-safe and free from data races
+/// - c) indicate that a that a type is safe for use with asynchronous functions
+/// - d) indicate a type that can be transferred across thread. A non-send type is Rc<T>
 pub fn answer_08() -> char {
     todo!()
 }
 
 /// ## Question 9
 ///
-/// Is the below sentence correct?
-/// The number of times that Deref::deref needs to be inserted will be resolved at compile time, so there is no runtime penalty for using deref coercion.
+/// What does the Sync trait do? 
 ///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+/// - a) indicate that that a type is synchronized with the compiler 
+/// - b) it synchronize all threads to execute in a specified order, i.e. transform a multi-thread into a single thread
+/// - c) stands for syncopate and shift transform a single thread to a multi-thread
+/// - d) indicate that a type that is safe to share references between threads
 pub fn answer_09() -> char {
     todo!()
 }
 
 /// ## Question 10
 ///
-/// What does the Drop trait allow you to do?
+/// Send and Sync are automatically derived traits. 
+/// This means that, if a type consists solely of Send or Sync components, it will be Send or Sync as well.
+/// Implementing these traits manually would involve using unsafe Rust
+/// 
+/// Is the above sentence correct?
 ///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+/// - a) No, implementing these traits manually would involve using safe Rust
+/// - b) No, if a type consists solely of Send or Sync components, it will not be Send or Sync
+/// - c) Yes
+/// - d) No, Send and Sync non-automatic derived traits
 pub fn answer_10() -> char {
     todo!()
 }
 
-/// ## Question 11
-///
-/// What will the following code produce in the terminal?
-/// ```notest
-///     struct CustomSmartPointer{
-///            number: i32,
-///     }
-///     impl Drop for CustomSmartPointer{
-///         fn drop(&mut self){
-///             print!("Dropping {} ", self.number);
-///         }
-///     }
-///     fn main(){
-///         let _one = CustomSmartPointer{number: 1};
-///         let _two = CustomSmartPointer{number: 2};
-///     }
-/// ```
-///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
-pub fn answer_11() -> char {
-    todo!()
-}
 
 #[cfg(test)]
 mod tests {

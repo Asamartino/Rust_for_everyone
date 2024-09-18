@@ -1,36 +1,15 @@
-/////////////////////////////////////////////////////////////////////////////////////////////////
-//////                                        Box<T>                                       //////
-/////////////////////////////////////////////////////////////////////////////////////////////////
-
-pub fn create_box<T>(value: T) -> Box<T> {
-    Box::new(value)
-}
-
-/////////////////////////////////////////////////////////////////////////////////////////////////
-//////                                        Rc<T>                                        //////
-/////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
-//////                                   RefCell<T>                                        //////
-/////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-// combine them Rc and RefCell and vice versa 
-
-// play with Cell<T> and Mutex<T> see pg 332?
-
-// Create the struct MyOwnBox<T>(T). Then, define the new function similar to the new function described on Box<T>.
-// Finally, implement the Deref trait on MyOwnBox<T> by implementing the deref method.
-// The below code should compile after you uncomment it:
-
+ // Ex 1: Spawn 10 threads that will each increment a shared counter by 1 a 100 times. Use Mutex<T> and Arc<T>.
+ // e.g. if you start from zero the final value should be 1000
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    #[test]
-    fn create_box_42() {
-        assert_eq!(Box::new(42), create_box(42));
-    }
+    // #[test]
+    // fn create_box_42() {
+    //     assert_eq!(Box::new(42), create_box(42));
+    // }
 }
