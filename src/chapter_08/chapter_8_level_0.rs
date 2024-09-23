@@ -5,8 +5,8 @@ fn main() {
     //////                                        Vectors                                      //////
     /////////////////////////////////////////////////////////////////////////////////////////////////
     //
-    // We will learn more about generics in Chapter 10. For now think of <T> in Vec<T> as representing any type. 
-    // Once <T> is explicitly determined, it denotes that the vector anticipates elements exclusively of the specified type, 
+    // We will learn more about generics in Chapter 10. For now think of <T> in Vec<T> as representing any type.
+    // Once <T> is explicitly determined, it denotes that the vector anticipates elements exclusively of the specified type,
     // thereby enforcing a rigorous adherence to the prescribed data type.
 
     // Exercise n°1
@@ -58,13 +58,12 @@ fn main() {
     let miny = "Miny".to_string();
     let moe = String::from("Moe");
 
-    
     /////////////////////////////////////////////////////////////////////////////////////////////////
     //////                                      Hash Maps                                      //////
     /////////////////////////////////////////////////////////////////////////////////////////////////
     //
-    // You will learn more about generics in Chapter 10. For now think of <K,V> in HashMap<K, V> as representing a key and a value of any type. 
-    // Once <K> and <V> are explicitly determined, the hashmap will anticipate keys and values exclusively of the specified type.  
+    // You will learn more about generics in Chapter 10. For now think of <K,V> in HashMap<K, V> as representing a key and a value of any type.
+    // Once <K> and <V> are explicitly determined, the hashmap will anticipate keys and values exclusively of the specified type.
     // It will ensure a rigorous conformity to the designated data type.
 
     // Exercise n°
@@ -72,7 +71,7 @@ fn main() {
 
     // Exercise n°
     // insert the key "Alice" (a String) and the value 100 into balance using the insert method. Do the same with the key "Bob" with a value of 50
-    
+
     // Exercise n°
     // create a variable called alice_balance and get the value associated with the key "Alice" in balance using the get method.
 
@@ -84,6 +83,6 @@ fn main() {
 
     // Exercise n°
     // count how many times each word appears in the below variable using a hashmap and print the hashmap in the terminal
-    let eeny_meeny_miny_moe = "eeny meeny miny moe catch a tiger by the toe if he hollers let him go eeny meeny miny moe";
-
+    let eeny_meeny_miny_moe =
+        "eeny meeny miny moe catch a tiger by the toe if he hollers let him go eeny meeny miny moe";
 }

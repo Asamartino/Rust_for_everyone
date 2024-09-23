@@ -5,9 +5,6 @@
 #![allow(unused_variables)]
 #![allow(unused_macros)]
 
-pub mod chapter_17_level_trait_objects_0;
-pub mod chapter_17_level_trait_objects_1;
-pub mod chapter_17_level_state_pattern_0;
-pub mod chapter_17_level_state_pattern_1;
-pub mod chapter_17_level_types;
-pub mod chapter_17_mcq;
+pub mod chapter_18_level_0;
+pub mod chapter_18_level_1;
+pub mod chapter_18_mcq;
