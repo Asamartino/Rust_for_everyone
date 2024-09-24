@@ -75,14 +75,14 @@ pub fn answer_04() -> char {
 
 /// ## Question 5
 ///
-/// what happens to the value in the below code?
+/// What happens to the value 3 in the below code?
 /// ```notest
 /// let (x,y,_) = (1,2,3);
 /// ```
 ///
-/// - a) the value 3 is will be stored in the tuple (x,y)
+/// - a) the value 3 will be stored in the tuple (x,y)
 /// - b) the value 3 is stored in _
-/// - c) the value 3 is will be stored in the tuple (x,y,z)
+/// - c) the value 3 will be stored in the tuple (x,y,z)
 /// - d) the value 3 is ignored and not stored anywhere
 pub fn answer_05() -> char {
     todo!()
@@ -90,24 +90,41 @@ pub fn answer_05() -> char {
 
 /// ## Question 6
 ///
-/// What is an Arc<T>, and when should you use it?
+/// Will the below code compile and why?
+/// ```notest
+/// if let x = 42 {
+///     println!("The answer to the ultimate question of life, the universe, and everything is: {}", x )
+/// }
+/// ```
 ///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+/// - a) No because, 42 is not the answer to the ultimate question of life, the universe, and everything
+/// - b) No because you use if let with a refutable pattern
+/// - c) Yes
+/// - d) No, because you use if let with an irrefutable pattern
 pub fn answer_06() -> char {
     todo!()
 }
 
 /// ## Question 7
 ///
-/// What is the trade-off with thread safety types?
+/// What line will appear on the terminal if the following code is executed?
+/// 
+/// ```notest
+/// let a = Some(1);
+/// let b = 2;
+/// let c = false;
+/// 
+/// match a {
+///     Some(2) => println!("Ma-ia-hii"),
+///     Some(b) => println!("Ma-ia-huu"),
+///     c => println!("Ma-ia-hoo"),
+/// }
+/// ```
 ///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+/// - a) Ma-ia-hii
+/// - b) Ma-ia-huu
+/// - c) Ma-ia-hoo
+/// - d) Ma-ia-haa-haa
 pub fn answer_07() -> char {
     todo!()
 }

@@ -26,7 +26,17 @@ fn main() {
         todo!()
     }
 
+    // using match, the | syntax, and the .. syntax the below function should return
+    // "Below 0" if the number is smaller than 0
+    // "Between 1 and 10" if the number is between 1 and 10 
+    // "Exactly 15 or 20" if the number is = 15 or 20
+    // "Other" in any other cases
+    pub fn classify_number(n: i32) -> &'static str {
+        todo!()
+    }
+
 }
+
 
 #[cfg(test)]
 mod tests {
