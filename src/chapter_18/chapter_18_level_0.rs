@@ -35,6 +35,33 @@ fn main() {
         todo!()
     }
 
+    // using only one match and the _ syntax complete the below function so that it returns:
+    // "Both numbers are even" if n1%2=0 & n2%2=0
+    // "One number is even and the other is uneven" if n1%2=0 & n2%2!=0 or n1%2!=0 & n2%2=0
+    // "Both numbers are uneven" in all other cases
+    pub fn even_uneven(n1: u32, n2: u32) -> &'static str{
+        todo!()
+    }
+
+    // using the .. syntax and a match arm that returns the addition of the first and last element
+    pub fn adding_first_and_last(arr: [u32;1000]) -> u32{
+        todo!()
+    }
+
+    // using match and ref mut the below option should change the value contain by the option to 4
+    pub fn replace_by_4(op: &mut Option<u32>) -> Option<u32>{
+        todo!()
+    }
+
+    // using match guards the following function should return:
+    // "Contains two negative number" if both number are <0.
+    // "Contains one negative number" if one number < 0
+    // "Both large numbers" if both values >= 1000
+    // "Other pair" in all the other cases 
+    pub fn check_number(pair: (i32,i32)) -> &'static str{
+        todo!()
+    }
+
 }
 
 

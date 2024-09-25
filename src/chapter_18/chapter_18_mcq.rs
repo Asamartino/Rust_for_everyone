@@ -77,7 +77,7 @@ pub fn answer_04() -> char {
 ///
 /// What happens to the value 3 in the below code?
 /// ```notest
-/// let (x,y,_) = (1,2,3);
+///     let (x,y,_) = (1,2,3);
 /// ```
 ///
 /// - a) the value 3 will be stored in the tuple (x,y)
@@ -92,9 +92,9 @@ pub fn answer_05() -> char {
 ///
 /// Will the below code compile and why?
 /// ```notest
-/// if let x = 42 {
-///     println!("The answer to the ultimate question of life, the universe, and everything is: {}", x )
-/// }
+///     if let x = 42 {
+///      println!("The answer to the ultimate question of life, the universe, and everything is: {}", x )
+///     }
 /// ```
 ///
 /// - a) No because, 42 is not the answer to the ultimate question of life, the universe, and everything
@@ -110,15 +110,15 @@ pub fn answer_06() -> char {
 /// What line will appear on the terminal if the following code is executed?
 /// 
 /// ```notest
-/// let a = Some(1);
-/// let b = 2;
-/// let c = false;
+///     let a = Some(1);
+///     let b = 2;
+///     let c = false;
 /// 
-/// match a {
-///     Some(2) => println!("Ma-ia-hii"),
-///     Some(b) => println!("Ma-ia-huu"),
-///     c => println!("Ma-ia-hoo"),
-/// }
+///     match a {
+///         Some(2) => println!("Ma-ia-hii"),
+///         Some(b) => println!("Ma-ia-huu"),
+///         c => println!("Ma-ia-hoo"),
+///     }
 /// ```
 ///
 /// - a) Ma-ia-hii
@@ -131,43 +131,111 @@ pub fn answer_07() -> char {
 
 /// ## Question 8
 ///
-/// What does the Send trait do?
+/// Is the below sentence correct?
+/// The destructuring pattern must correspond to how the enum’s data is structured.
 ///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+/// - a) No, the destructuring pattern doesn't need to correspond to how the enum's data is structured
+/// - b) Yes
+/// - c) No, the destructuring pattern must correspond to how the struct’s data is structured
+/// - d) No, the destructuring pattern must correspond to how the match arm is structured
 pub fn answer_08() -> char {
     todo!()
 }
 
 /// ## Question 9
 ///
-/// What does the Sync trait do?
+/// Will the below code compile and why?
+/// ```notest
+///    let s = Some(String::from("You want"));
 ///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+///    if let Some(_s) = s{
+///        println!("Here is the interior variable {}", _s);
+///    }
+///
+///    println!("the variable s is {:?}", s)
+/// ```
+///
+/// - a) Yes, both lines will be printed in the terminal
+/// - b) No, because s have been defined as immutable
+/// - c) No, because the value s will be shadowed by _s 
+/// - d) No, because the value s will be moved into _s preventing it to be used again
 pub fn answer_09() -> char {
     todo!()
 }
 
 /// ## Question 10
 ///
-/// Send and Sync are automatically derived traits.
-/// This means that, if a type consists solely of Send or Sync components, it will be Send or Sync as well.
-/// Implementing these traits manually would involve using unsafe Rust
+/// Will the below code compile and why?
+/// ```notest
+///    let s = Some(String::from("You want"));
 ///
-/// Is the above sentence correct?
+///    if let Some(_) = s{
+///        println!("s has something");
+///    }
 ///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+///    println!("the variable s is {:?}", s)
+/// ```
+///
+/// - a) No, because the value s will be shadowed by _
+/// - b) Yes, both lines will be printed in the terminal
+/// - c) No, because s have been defined as immutable
+/// - d) No, because the value s will be moved into _ preventing it to be used again
 pub fn answer_10() -> char {
     todo!()
 }
+
+
+/// ## Question 11
+///
+/// Why is the ref keyword used in a match pattern?
+/// 
+/// - a) to refute a pattern
+/// - b) to create a reference in a pattern
+/// - c) to create a reflection of a match arm
+/// - d) to redirect one match arm to another
+pub fn answer_11() -> char {
+    todo!()
+}
+
+
+/// ## Question 12
+///
+///  Which operator in Rust allows you to bind a value to a variable while also matching a pattern?
+/// 
+/// - a) @
+/// - b) &
+/// - c) |
+/// - d) ref
+pub fn answer_12() -> char {
+    todo!()
+}
+
+
+
+/// ## Question 13
+///
+///
+/// - a) 
+/// - b) 
+/// - c) 
+/// - d) 
+pub fn answer_13() -> char {
+    todo!()
+}
+
+
+
+/// ## Question 14
+///
+///
+/// - a) 
+/// - b) 
+/// - c) 
+/// - d) 
+pub fn answer_14() -> char {
+    todo!()
+}
+
 
 #[cfg(test)]
 mod tests {
