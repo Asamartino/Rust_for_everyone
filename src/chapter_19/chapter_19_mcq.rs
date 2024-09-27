@@ -78,7 +78,7 @@ pub fn answer_04() -> char {
 
 /// ## Question 5
 ///
-/// When do you need to use unsafe with a raw pointer?
+/// When do you need to use the unsafe keyword with a raw pointer?
 ///
 /// - a) When you created the raw pointer
 /// - b) When you dereference the raw pointer
@@ -90,71 +90,72 @@ pub fn answer_05() -> char {
 
 /// ## Question
 ///
-///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+/// Does the presence of unsafe code within a function require the entire function to be marked as unsafe?
+/// 
+/// - a) Yes
+/// - b) No
 pub fn answer_06() -> char {
     todo!()
 }
 
 /// ## Question 7
 ///
-///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+/// When should you use the #[no_mangle] annotation?
+/// 
+/// - a) When you need to ensure that the compiler does not modify the name of a function or variable during compilation. This is particularly useful when interfacing with other languages.
+/// - b) When two functions are so simialar that the compiler confuses them 
+/// - c) Whenever variables are crippled by the compiler
+/// - d) Whenever you have a data race
 pub fn answer_07() -> char {
     todo!()
 }
 
 /// ## Question 8
 ///
+/// Complete the sentence: In Rust, ... variables are called static variables
 ///
-///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+/// - a) dynamic
+/// - b) global
+/// - c) constant
+/// - d) immutable
 pub fn answer_08() -> char {
     todo!()
 }
 
 /// ## Question 9
 ///
+/// Static variables and constants are both used to define values that do not change, but they have important differences in their characteristics and usage.
+/// Which sentence below is incorrect:
 ///
-///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+/// - a) Constants variables could lead to data races
+/// - b) Static variables are variables that are stored in a fixed memory location for the entire duration of the program. 
+/// - c) Constants represent a value, not a memory address.
+/// - d) Static variable are a possibly mutable variable with 'static lifetime.
 pub fn answer_09() -> char {
     todo!()
 }
 
 /// ## Question 10
 ///
-/// Consider the below code:
+/// Complete this sentence: A trait is unsafe when ... of its methods has/have some invariant that the compiler can't verify 
 ///
 ///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+/// - a) all
+/// - b) exactly three
+/// - c) at least one
+/// - d) none
 pub fn answer_10() -> char {
     todo!()
 }
 /// ## Question 11
 ///
-/// Does the below code compile and what What would be the output?
+/// what does lifetime subtyping do?
 ///
 ///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+/// - a) Lifetime subtyping refers to the positions of lifetimes, which can either be: primary or secondary.
+/// - b) Lifetime subtyping is the principle that lifetime should satisfy the expectations of the compiler
+/// - c) Lifetime subtyping is a relationship between lifetimes that allows one lifetime to be considered a subtype of another, hence one should outlive another.
+/// - d) Lieftime subtyping is 
 pub fn answer_11() -> char {
     todo!()
 }
@@ -162,7 +163,15 @@ pub fn answer_11() -> char {
 /// ## Question 12
 ///
 /// Does the below code compile and why?
+/// ```notest
+///    let s = Some(String::from("You want"));
 ///
+///    if let Some(_) = s{
+///        println!("s has something");
+///    }
+///
+///    println!("the variable s is {:?}", s)
+/// ```
 ///
 /// - a)
 /// - b)

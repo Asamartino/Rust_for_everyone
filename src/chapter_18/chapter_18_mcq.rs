@@ -108,12 +108,12 @@ pub fn answer_06() -> char {
 /// ## Question 7
 ///
 /// What line will appear on the terminal if the following code is executed?
-/// 
+///
 /// ```notest
 ///     let a = Some(1);
 ///     let b = 2;
 ///     let c = false;
-/// 
+///
 ///     match a {
 ///         Some(2) => println!("Ma-ia-hii"),
 ///         Some(b) => println!("Ma-ia-huu"),
@@ -157,7 +157,7 @@ pub fn answer_08() -> char {
 ///
 /// - a) Yes, both lines will be printed in the terminal
 /// - b) No, because s have been defined as immutable
-/// - c) No, because the value s will be shadowed by _s 
+/// - c) No, because the value s will be shadowed by _s
 /// - d) No, because the value s will be moved into _s preventing it to be used again
 pub fn answer_09() -> char {
     todo!()
@@ -184,11 +184,10 @@ pub fn answer_10() -> char {
     todo!()
 }
 
-
 /// ## Question 11
 ///
 /// Why is the ref keyword used in a match pattern?
-/// 
+///
 /// - a) to refute a pattern
 /// - b) to create a reference in a pattern
 /// - c) to create a reflection of a match arm
@@ -197,11 +196,10 @@ pub fn answer_11() -> char {
     todo!()
 }
 
-
 /// ## Question 12
 ///
 ///  Which operator in Rust allows you to bind a value to a variable while also matching a pattern?
-/// 
+///
 /// - a) @
 /// - b) &
 /// - c) |
@@ -209,33 +207,6 @@ pub fn answer_11() -> char {
 pub fn answer_12() -> char {
     todo!()
 }
-
-
-
-/// ## Question 13
-///
-///
-/// - a) 
-/// - b) 
-/// - c) 
-/// - d) 
-pub fn answer_13() -> char {
-    todo!()
-}
-
-
-
-/// ## Question 14
-///
-///
-/// - a) 
-/// - b) 
-/// - c) 
-/// - d) 
-pub fn answer_14() -> char {
-    todo!()
-}
-
 
 #[cfg(test)]
 mod tests {
@@ -302,5 +273,10 @@ mod tests {
     #[test]
     fn answer_11_sanity_check() {
         sanity_check(&answer_11)
+    }
+
+    #[test]
+    fn answer_12_sanity_check() {
+        sanity_check(&answer_12)
     }
 }
