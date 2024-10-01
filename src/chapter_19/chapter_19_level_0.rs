@@ -25,4 +25,39 @@ fn main() {
     // Ex 6: Create a static variable and print its value in the terminal
 
     // Ex 7: Create a mutable static variable and update its value. Ensure that the value is updated by printing it in the terminal.
+
+    // Ex 8: Uncomment the code below and add lifetime annotation so it can compile
+    // Note that even to the name of the lifetime you use can be the same the lifetime parameters aren't related
+    // struct Context(&str);
+
+    // struct Parser {
+    //     context: &Context,
+    // }
+
+    // impl Parser{
+    //     fn parse(&self) -> Result<(),&str>{
+    //         Err(&self.context.0[1..])
+    //     }
+    // }
+
+    //Ex 9: Uncomment the code below and add lifetime annotation so it can compile. 
+    
+    // struct Context(&str);
+
+    // struct Parser {
+    //     context: &Context,
+    // }
+
+    // impl Parser{
+    //     fn parse(&self) -> Result<(),&str>{
+    //         Err(&self.context.0[1..])
+    //     }
+    // }
+
+    // fn parse_context(context: Context) -> Result<(),&str>{
+    //      Parser{ context: &context}.parse()
+    // }
+
+    // Ex 10: uncomment the below code and add an explicit lifetime bound so that the reference type &'a T does not outlive the data it points at
+    // struct Ref<'a, T>(&'a T);
 }

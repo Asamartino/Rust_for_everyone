@@ -152,31 +152,34 @@ pub fn answer_10() -> char {
 /// what does lifetime subtyping do?
 ///
 ///
-/// - a) Lifetime subtyping refers to the positions of lifetimes, which can either be: primary or secondary.
+/// - a) Lifetime subtyping refers to the ranking of lifetimes, which can either be: primary or secondary.
 /// - b) Lifetime subtyping is the principle that lifetime should satisfy the expectations of the compiler
 /// - c) Lifetime subtyping is a relationship between lifetimes that allows one lifetime to be considered a subtype of another, hence one should outlive another.
-/// - d) Lieftime subtyping is 
+/// - d) Lieftime subtyping is type of parser 
 pub fn answer_11() -> char {
     todo!()
 }
 
 /// ## Question 12
 ///
-/// Does the below code compile and why?
-/// ```notest
-///    let s = Some(String::from("You want"));
+/// What are lifetime bounds?
 ///
-///    if let Some(_) = s{
-///        println!("s has something");
-///    }
+/// - a) Specifies the minimum lifetime a reference must live to remain valid
+/// - b) Specifies the maximum lifetime a reference must live to remain valid
+/// - c) Lifetime that have a moral duty to remain valid
+/// - d) The upper limit of the amount of lifetime you can write per program
+pub fn answer_12() -> char {
+    todo!()
+}
+
+/// ## Question 12
 ///
-///    println!("the variable s is {:?}", s)
-/// ```
+/// The default lifetime of a trait object is ...?
 ///
-/// - a)
-/// - b)
-/// - c)
-/// - d)
+/// - a) 'dynamic
+/// - b) 'a
+/// - c) 'static
+/// - d) 'lexical
 pub fn answer_12() -> char {
     todo!()
 }
