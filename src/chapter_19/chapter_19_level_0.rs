@@ -41,7 +41,6 @@ fn main() {
     // }
 
     //Ex 9: Uncomment the code below and add lifetime annotation so it can compile. 
-    
     // struct Context(&str);
 
     // struct Parser {
@@ -59,5 +58,48 @@ fn main() {
     // }
 
     // Ex 10: uncomment the below code and add an explicit lifetime bound so that the reference type &'a T does not outlive the data it points at
-    // struct Ref<'a, T>(&'a T);
+    // struct Context(&str);
+
+    // struct Parser {
+    //     context: &Context,
+    // }
+
+    // impl Parser{
+    //     fn parse(&self) -> Result<(),&str>{
+    //         Err(&self.context.0[1..])
+    //     }
+    // }
+
+    // fn parse_context(context: Context) -> Result<(),&str>{
+    //      Parser{ context: &context}.parse()
+    // }
+
+    // Ex 11: recreate the trait Iterator using associated types. Recall that you need to define the type of element being iterated over and the next() function
+    // Why is the use of associated types different from using generics?
+
+
+    // Ex 12: Overload the operator add so that you can add two struct Position together. Uncomment and complete the code below:
+    // use std::ops::Add;
+
+    //#[derive(Debug, PartialEq)]
+    // struct Position{
+    //     x: i32,
+    //     y, i32
+    // }
+
+    // impl Add for Position{
+    //     todo!()
+    // }
+
+    // Ex 13: Uncomment and complete the code below so that you can add values in millimeters to values in meters
+    // use std::ops::Add;
+
+    // struct Millimeters(u32);
+    // struct Meters(u32);
+
+    // impl Add<Meters> for Millimeters{
+    //     todo!();
+    // }
+
+
 }

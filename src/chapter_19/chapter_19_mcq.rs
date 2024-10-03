@@ -91,7 +91,7 @@ pub fn answer_05() -> char {
 /// ## Question
 ///
 /// Does the presence of unsafe code within a function require the entire function to be marked as unsafe?
-/// 
+///
 /// - a) Yes
 /// - b) No
 pub fn answer_06() -> char {
@@ -101,9 +101,9 @@ pub fn answer_06() -> char {
 /// ## Question 7
 ///
 /// When should you use the #[no_mangle] annotation?
-/// 
+///
 /// - a) When you need to ensure that the compiler does not modify the name of a function or variable during compilation. This is particularly useful when interfacing with other languages.
-/// - b) When two functions are so simialar that the compiler confuses them 
+/// - b) When two functions are so simialar that the compiler confuses them
 /// - c) Whenever variables are crippled by the compiler
 /// - d) Whenever you have a data race
 pub fn answer_07() -> char {
@@ -128,7 +128,7 @@ pub fn answer_08() -> char {
 /// Which sentence below is incorrect:
 ///
 /// - a) Constants variables could lead to data races
-/// - b) Static variables are variables that are stored in a fixed memory location for the entire duration of the program. 
+/// - b) Static variables are variables that are stored in a fixed memory location for the entire duration of the program.
 /// - c) Constants represent a value, not a memory address.
 /// - d) Static variable are a possibly mutable variable with 'static lifetime.
 pub fn answer_09() -> char {
@@ -137,7 +137,7 @@ pub fn answer_09() -> char {
 
 /// ## Question 10
 ///
-/// Complete this sentence: A trait is unsafe when ... of its methods has/have some invariant that the compiler can't verify 
+/// Complete this sentence: A trait is unsafe when ... of its methods has/have some invariant that the compiler can't verify
 ///
 ///
 /// - a) all
@@ -155,7 +155,7 @@ pub fn answer_10() -> char {
 /// - a) Lifetime subtyping refers to the ranking of lifetimes, which can either be: primary or secondary.
 /// - b) Lifetime subtyping is the principle that lifetime should satisfy the expectations of the compiler
 /// - c) Lifetime subtyping is a relationship between lifetimes that allows one lifetime to be considered a subtype of another, hence one should outlive another.
-/// - d) Lieftime subtyping is type of parser 
+/// - d) Lieftime subtyping is type of parser
 pub fn answer_11() -> char {
     todo!()
 }
@@ -181,6 +181,79 @@ pub fn answer_12() -> char {
 /// - c) 'static
 /// - d) 'lexical
 pub fn answer_12() -> char {
+    todo!()
+}
+
+/// ## Question 13
+///
+/// What is an associated type ?
+///
+/// - a) a type that performs certain activities or services on behalf of another type
+/// - b) an entry-level or mid-level position within the type organization
+/// - c) another word for generic
+/// - d) a feature of traits that allow you to define types that are related to the trait, but are determined by the implementer of the trait
+pub fn answer_13() -> char {
+    todo!()
+}
+
+/// ## Question 14
+///
+/// Consider the below code:
+///
+///  ```notest
+/// trait Pilot {
+///     fn say_hi(&self);
+/// }
+/// trait Patrick {
+///     fn say_hi(&self);
+/// }
+/// trait Kenobi{
+///     fn say_hi(&self);
+/// }
+/// struct Human;
+/// impl Pilot for Human {
+///     fn say_hi(&self) {
+///         println!("Hello, this is your captain speaking.");
+///      }
+///  }
+/// impl Patrick for Human {
+///     fn say_hi(&self) {
+///         println!("Hello?");
+///     }
+/// }
+/// impl Human {
+///     fn say_hi(&self) {
+///         println!("Hi, I'm human");
+///     }
+/// }
+/// impl Kenobi for Human{
+///     fn say_hi(&self) {
+///         println!("Hello, there");
+///     }
+/// }
+///
+/// ```
+///
+/// Assume you create the variable: let human = Human.
+/// How can you call the say_hi method from Human which will result in "Hi, I'm human" in the terminal
+///
+/// - a) Pilot::say_hi(&human)
+/// - b) Patrick::say_hi(&human)
+/// - c) Human::say_hi(&human)
+/// - d) Kenobi::say_hi(&human)
+pub fn answer_14() -> char {
+    todo!()
+}
+
+/// ## Question 15
+///
+/// How is defined the fully qualified syntax:
+///
+/// - a) <Trait as Type>::function(next_arg, ...);
+/// - b) <Type as Trait>::function(next_arg, ...);
+/// - c) <Trait as Type>::function(receiver_if_method, next_arg, ...);
+/// - d) <Type as Trait>::function(receiver_if_method, next_arg, ...);
+pub fn answer_15() -> char {
     todo!()
 }
 
