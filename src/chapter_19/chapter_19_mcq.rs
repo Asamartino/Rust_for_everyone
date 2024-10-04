@@ -88,7 +88,7 @@ pub fn answer_05() -> char {
     todo!()
 }
 
-/// ## Question
+/// ## Question 6
 ///
 /// Does the presence of unsafe code within a function require the entire function to be marked as unsafe?
 ///
@@ -254,6 +254,69 @@ pub fn answer_14() -> char {
 /// - c) <Trait as Type>::function(receiver_if_method, next_arg, ...);
 /// - d) <Type as Trait>::function(receiver_if_method, next_arg, ...);
 pub fn answer_15() -> char {
+    todo!()
+}
+
+
+
+/// ## Question 16
+///
+/// What is a supertrait?
+///
+/// - a) a very powerful trait (e.g. Display)
+/// - b) a trait that another trait depends on, meaning that one trait is a superset of another trait
+/// - c) a trait use in a fully qualified syntax
+/// - d) a trait very well written
+pub fn answer_16() -> char {
+    todo!()
+}
+
+/// ## Question 17
+///
+/// What is a new type pattern?
+///
+/// - a) a new type as the name suggest
+/// - b) a design pattern where a new type is created as supertrait of an existing type
+/// - c) a design pattern where a new type is created as a wrapper around an existing type
+/// - d) a new type defined as unsafe
+pub fn answer_17() -> char {
+    todo!()
+}
+
+
+/// ## Question 18
+///
+/// What is the main use case of type alias?
+///
+/// - a) to give an affectuous name to your favorite variable
+/// - b) to conceal the type of a variable so that only the compiler knows it
+/// - c) to increase the speed of the compiler
+/// - d) to reduce repetition
+pub fn answer_18() -> char {
+    todo!()
+}
+
+/// ## Question 19
+///
+/// what does the ! type (aka never type) represents ? 
+///
+/// - a) the type of computations which never resolve to any value at all
+/// - b) the type of computations that never compiles
+/// - c) the type of computations that never ends
+/// - d) the type of computations that is not used anymore (comes from legacy Rust)
+pub fn answer_17() -> char {
+    todo!()
+}
+
+/// ## Question 20
+///
+/// Which of the following does not have a ! value?
+///
+/// - a) vec![]
+/// - b) loop
+/// - c) continue
+/// - d) panic!
+pub fn answer_17() -> char {
     todo!()
 }
 

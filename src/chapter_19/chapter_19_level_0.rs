@@ -101,5 +101,30 @@ fn main() {
     //     todo!();
     // }
 
+    // Ex: 14 Uncomment the below code and create the trait Car that is a supertrait of Vehicle
+    // Defining a basic trait `Vehicle`
+    // trait Vehicle {
+    //     fn drive(&self);
+    // }
+
+    // struct MyCar;
+
+    // impl Vehicle for MyCar {
+    //     fn drive(&self) {
+    //         println!("I'm driving my car \o/");
+    //     }
+    // }
+
+    // impl Car for MyCar {
+    //     fn honk(&self) {
+    //         println!("My car can honk");
+    //     }
+    // }
+
+    // let my_car = MyCar;
+    // my_car.drive(); 
+    // my_car.honk(); 
+
+    Ex 15: Use t
 
 }
