@@ -257,8 +257,6 @@ pub fn answer_15() -> char {
     todo!()
 }
 
-
-
 /// ## Question 16
 ///
 /// What is a supertrait?
@@ -283,7 +281,6 @@ pub fn answer_17() -> char {
     todo!()
 }
 
-
 /// ## Question 18
 ///
 /// What is the main use case of type alias?
@@ -298,13 +295,13 @@ pub fn answer_18() -> char {
 
 /// ## Question 19
 ///
-/// what does the ! type (aka never type) represents ? 
+/// what does the ! type (aka never type) represents ?
 ///
 /// - a) the type of computations which never resolve to any value at all
 /// - b) the type of computations that never compiles
 /// - c) the type of computations that never ends
 /// - d) the type of computations that is not used anymore (comes from legacy Rust)
-pub fn answer_17() -> char {
+pub fn answer_19() -> char {
     todo!()
 }
 
@@ -316,7 +313,31 @@ pub fn answer_17() -> char {
 /// - b) loop
 /// - c) continue
 /// - d) panic!
-pub fn answer_17() -> char {
+pub fn answer_20() -> char {
+    todo!()
+}
+
+/// ## Question 20
+///
+/// What is the golden rule of dynamically size types?
+///
+/// - a) must always put values of dynamically sized types behind a pointer
+/// - b) must always adjust its value during runtime
+/// - c) must always determine the type size at compile time
+/// - d) must always allocate the same amount of memory to their values
+pub fn answer_21() -> char {
+    todo!()
+}
+
+/// ## Question 22
+///
+/// What does the special syntax `?Sized` mean?
+///
+/// - a) that Sized is a function pointer
+/// - b) it either unwraps the value and continues execution or return an error
+/// - c) is not Sized
+/// - d) may or may not be Sized
+pub fn answer_22() -> char {
     todo!()
 }
 
@@ -389,6 +410,56 @@ mod tests {
 
     #[test]
     fn answer_12_sanity_check() {
+        sanity_check(&answer_10)
+    }
+
+    #[test]
+    fn answer_13_sanity_check() {
+        sanity_check(&answer_10)
+    }
+
+    #[test]
+    fn answer_14_sanity_check() {
+        sanity_check(&answer_10)
+    }
+
+    #[test]
+    fn answer_15_sanity_check() {
+        sanity_check(&answer_10)
+    }
+
+    #[test]
+    fn answer_16_sanity_check() {
+        sanity_check(&answer_10)
+    }
+
+    #[test]
+    fn answer_17_sanity_check() {
+        sanity_check(&answer_10)
+    }
+
+    #[test]
+    fn answer_18_sanity_check() {
+        sanity_check(&answer_10)
+    }
+
+    #[test]
+    fn answer_19_sanity_check() {
+        sanity_check(&answer_10)
+    }
+
+    #[test]
+    fn answer_20_sanity_check() {
+        sanity_check(&answer_10)
+    }
+
+    #[test]
+    fn answer_21_sanity_check() {
+        sanity_check(&answer_10)
+    }
+
+    #[test]
+    fn answer_22_sanity_check() {
         sanity_check(&answer_10)
     }
 }

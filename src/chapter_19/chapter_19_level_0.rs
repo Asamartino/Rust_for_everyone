@@ -40,7 +40,7 @@ fn main() {
     //     }
     // }
 
-    //Ex 9: Uncomment the code below and add lifetime annotation so it can compile. 
+    //Ex 9: Uncomment the code below and add lifetime annotation so it can compile.
     // struct Context(&str);
 
     // struct Parser {
@@ -76,7 +76,6 @@ fn main() {
 
     // Ex 11: recreate the trait Iterator using associated types. Recall that you need to define the type of element being iterated over and the next() function
     // Why is the use of associated types different from using generics?
-
 
     // Ex 12: Overload the operator add so that you can add two struct Position together. Uncomment and complete the code below:
     // use std::ops::Add;
@@ -122,9 +121,13 @@ fn main() {
     // }
 
     // let my_car = MyCar;
-    // my_car.drive(); 
-    // my_car.honk(); 
+    // my_car.drive();
+    // my_car.honk();
 
-    Ex 15: Use t
-
+    // Ex 15: Create the cube function using function pointer.
+    // The cube function will multiply the square function with the input argument
+    fn square(x: u32) -> u32 {
+        x * x
+    }
+    
 }
