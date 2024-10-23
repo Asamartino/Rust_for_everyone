@@ -77,8 +77,6 @@ pub fn answer_03() -> char {
     todo!()
 }
 
-// advantages of shadowing: few transformation and then variable is immutable + change the type of the value
-
 /// ## Question 4
 ///
 /// Rust has two primitive compound types: tuples and arrays. Which statement below is true?

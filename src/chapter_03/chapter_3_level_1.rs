@@ -21,7 +21,6 @@ pub fn reverse_tuple(tup: (u32, u32, u32, u32)) -> (u32, u32, u32, u32) {
 
 // reverse the tuple provided using destructuring and return the new tuple using shadowing, , f.i. (1,2,3) -> (3,2,1)
 pub fn reverse_tuple_destructuring(tup: (u32, u32, u32)) -> (u32, u32, u32) {
-    let response = tup;
     todo!()
 }
 
@@ -54,7 +53,7 @@ pub fn add_array(arr1: [u32; 3], arr2: [u32; 3]) -> [u32; 3] {
 
 // this function will take two arrays and substract the corresponding element together
 // e.g. subtract_array([1,2,3], [10,10,10]) -> [-9,-8,-7]
-pub fn substract_array(arr1: [u32; 3], arr2: [u32; 3]) -> [i32; 3] {
+pub fn substract_array(arr1: [i32; 3], arr2: [i32; 3]) -> [i32; 3] {
     todo!()
 }
 
@@ -79,7 +78,6 @@ pub fn divisble_by_2_3_4(num: u32) -> (bool, bool, bool) {
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //////                                     Loops                                           //////
 /////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 // Complete the code below by using a while loop that will add 1 to number and index, 25 times in total
 // note that this function returns a tuple of the number incremented by 25 and the index
@@ -110,7 +108,6 @@ pub fn for_array_add_10(arr: [u32; 5]) -> [u32; 5] {
 pub fn for_reverse_array(arr: [u32; 5]) -> [u32; 5] {
     todo!()
 }
-
 
 #[cfg(test)]
 mod tests {
@@ -181,8 +178,8 @@ mod tests {
 
     #[test]
     fn test_substract_array() {
-        let arr1: [u32; 3] = [1, 2, 3];
-        let arr2: [u32; 3] = [10, 10, 10];
+        let arr1: [i32; 3] = [1, 2, 3];
+        let arr2: [i32; 3] = [10, 10, 10];
         let response: [i32; 3] = [-9, -8, -7];
         assert_eq!(response, substract_array(arr1, arr2));
     }

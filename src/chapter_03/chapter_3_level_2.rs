@@ -33,7 +33,7 @@ pub fn reduce_array(arr: [[u32;3];5]) -> u32{
     todo!()
 }
 
-// this functions check if the number provided is a prime number (i.e. number greater than one and that is not obtained by the multiplaction of smaller numbers)
+// this functions check if the number provided is a prime number (i.e. number greater than one and that is not obtained by the multiplication of smaller numbers)
 // tip: you could use a for loop and the modulo operator
 pub fn is_prime(number: u32) -> bool {
     todo!()

@@ -72,7 +72,7 @@ pub fn return_maximum(n1: u32, n2: u32) -> u32 {
 }
 
 // this function returns the maximum values between the two numbers provided. If the numbers are equal this function return the number
-// This time complete this function using if on the right side of a let statment
+// This time complete this function using if on the right side of a let statement
 pub fn return_maximum_if_let(n1: u32, n2: u32) -> u32 {
     todo!()
 }
@@ -82,11 +82,11 @@ pub fn return_maximum_if_let(n1: u32, n2: u32) -> u32 {
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
 // In rust there are three types of loops:
-//      - loop: creates an infinite loop that can be stoped by using a break statement
+//      - loop: creates an infinite loop that can be stopped by using a break statement
 //      - while: will run till the condition is true
 //      - for: is a more concise and safe way than a while loop
 
-// Complete the below function by incrementing number by 1 at each loop incrementation. You should use a loop and breaking it once the number 100 is reached.
+// Complete the function below by incrementing the number by 1 during each iteration of the loop. You should use a loop that  exits when the number reaches 100.
 pub fn return_hundred_loop() -> u32 {
     todo!()
     // uncomment the code below and complete the loop
@@ -98,7 +98,7 @@ pub fn return_hundred_loop() -> u32 {
     // number
 }
 
-// Complete the below function by incrementing number by 1 at each loop incrementation. You should use a while loop and breaking it once the number 100 is reached.
+// Complete the function below by incrementing the number by 1 during each iteration of the loop. You should use a loop that  exits when the number reaches 100.
 pub fn return_hundred_while() -> u32 {
     todo!()
     // uncomment the code below and complete
@@ -107,7 +107,7 @@ pub fn return_hundred_while() -> u32 {
     // number
 }
 
-// Complete the below function by incrementing number by 1 at each loop incrementation. You should use a for loop and breaking it once the number 100 is reached.
+// Complete the function below by incrementing the number by 1 during each iteration of the loop. You should use a loop that  exits when the number reaches 100.
 pub fn return_hundred_for() -> u32 {
     todo!()
     // uncomment the code below and complete
