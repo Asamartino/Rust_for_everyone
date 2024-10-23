@@ -11,7 +11,7 @@ fn main() {
     }
 
     // Ex 4: Complete the below function so that it compiles
-    pub fn split_at_mut(slice: &mut [i32], ind: usize) -> (&mut [i32], &mut [i32]) {
+    pub fn split_at_mut(slice: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]) {
         let len = slice.len();
         let ptr = slice.as_mut_ptr();
 

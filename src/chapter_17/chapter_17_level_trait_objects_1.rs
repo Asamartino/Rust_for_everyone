@@ -1,8 +1,8 @@
- // Ex 1 Complete the code below so that it compiles by only adding code and not deleting any lines
+ // Ex 1 Uncomment the perimeter function in the trait Area and complete the code below so that it compiles by only adding code and not deleting any lines
 
 pub trait Area {
     fn area(&self) -> u32;
-    fn perimeter(&self) -> u32;
+    // fn perimeter(&self) -> u32;
 }
 
 pub struct Shape {

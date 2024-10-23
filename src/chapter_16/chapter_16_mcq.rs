@@ -211,9 +211,4 @@ mod tests {
     fn answer_10_sanity_check() {
         sanity_check(&answer_10)
     }
-
-    #[test]
-    fn answer_11_sanity_check() {
-        sanity_check(&answer_11)
-    }
 }

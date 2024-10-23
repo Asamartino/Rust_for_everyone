@@ -172,7 +172,7 @@ pub fn answer_12() -> char {
     todo!()
 }
 
-/// ## Question 12
+/// ## Question 13
 ///
 /// The default lifetime of a trait object is ...?
 ///
@@ -180,11 +180,11 @@ pub fn answer_12() -> char {
 /// - b) 'a
 /// - c) 'static
 /// - d) 'lexical
-pub fn answer_12() -> char {
+pub fn answer_13() -> char {
     todo!()
 }
 
-/// ## Question 13
+/// ## Question 14
 ///
 /// What is an associated type ?
 ///
@@ -192,11 +192,11 @@ pub fn answer_12() -> char {
 /// - b) an entry-level or mid-level position within the type organization
 /// - c) another word for generic
 /// - d) a feature of traits that allow you to define types that are related to the trait, but are determined by the implementer of the trait
-pub fn answer_13() -> char {
+pub fn answer_14() -> char {
     todo!()
 }
 
-/// ## Question 14
+/// ## Question 15
 ///
 /// Consider the below code:
 ///
@@ -241,11 +241,11 @@ pub fn answer_13() -> char {
 /// - b) Patrick::say_hi(&human)
 /// - c) Human::say_hi(&human)
 /// - d) Kenobi::say_hi(&human)
-pub fn answer_14() -> char {
+pub fn answer_15() -> char {
     todo!()
 }
 
-/// ## Question 15
+/// ## Question 16
 ///
 /// How is defined the fully qualified syntax:
 ///
@@ -253,11 +253,11 @@ pub fn answer_14() -> char {
 /// - b) <Type as Trait>::function(next_arg, ...);
 /// - c) <Trait as Type>::function(receiver_if_method, next_arg, ...);
 /// - d) <Type as Trait>::function(receiver_if_method, next_arg, ...);
-pub fn answer_15() -> char {
+pub fn answer_16() -> char {
     todo!()
 }
 
-/// ## Question 16
+/// ## Question 17
 ///
 /// What is a supertrait?
 ///
@@ -265,11 +265,11 @@ pub fn answer_15() -> char {
 /// - b) a trait that another trait depends on, meaning that one trait is a superset of another trait
 /// - c) a trait use in a fully qualified syntax
 /// - d) a trait very well written
-pub fn answer_16() -> char {
+pub fn answer_17() -> char {
     todo!()
 }
 
-/// ## Question 17
+/// ## Question 18
 ///
 /// What is a new type pattern?
 ///
@@ -277,11 +277,11 @@ pub fn answer_16() -> char {
 /// - b) a design pattern where a new type is created as supertrait of an existing type
 /// - c) a design pattern where a new type is created as a wrapper around an existing type
 /// - d) a new type defined as unsafe
-pub fn answer_17() -> char {
+pub fn answer_18() -> char {
     todo!()
 }
 
-/// ## Question 18
+/// ## Question 19
 ///
 /// What is the main use case of type alias?
 ///
@@ -289,11 +289,11 @@ pub fn answer_17() -> char {
 /// - b) to conceal the type of a variable so that only the compiler knows it
 /// - c) to increase the speed of the compiler
 /// - d) to reduce repetition
-pub fn answer_18() -> char {
+pub fn answer_19() -> char {
     todo!()
 }
 
-/// ## Question 19
+/// ## Question 20
 ///
 /// what does the ! type (aka never type) represents ?
 ///
@@ -301,11 +301,11 @@ pub fn answer_18() -> char {
 /// - b) the type of computations that never compiles
 /// - c) the type of computations that never ends
 /// - d) the type of computations that is not used anymore (comes from legacy Rust)
-pub fn answer_19() -> char {
+pub fn answer_20() -> char {
     todo!()
 }
 
-/// ## Question 20
+/// ## Question 21
 ///
 /// Which of the following does not have a ! value?
 ///
@@ -313,11 +313,11 @@ pub fn answer_19() -> char {
 /// - b) loop
 /// - c) continue
 /// - d) panic!
-pub fn answer_20() -> char {
+pub fn answer_21() -> char {
     todo!()
 }
 
-/// ## Question 20
+/// ## Question 22
 ///
 /// What is the golden rule of dynamically size types?
 ///
@@ -325,11 +325,11 @@ pub fn answer_20() -> char {
 /// - b) must always adjust its value during runtime
 /// - c) must always determine the type size at compile time
 /// - d) must always allocate the same amount of memory to their values
-pub fn answer_21() -> char {
+pub fn answer_22() -> char {
     todo!()
 }
 
-/// ## Question 22
+/// ## Question 23
 ///
 /// What does the special syntax `?Sized` mean?
 ///
@@ -337,7 +337,7 @@ pub fn answer_21() -> char {
 /// - b) it either unwraps the value and continues execution or return an error
 /// - c) is not Sized
 /// - d) may or may not be Sized
-pub fn answer_22() -> char {
+pub fn answer_23() -> char {
     todo!()
 }
 
@@ -405,61 +405,66 @@ mod tests {
 
     #[test]
     fn answer_11_sanity_check() {
-        sanity_check(&answer_10)
+        sanity_check(&answer_11)
     }
 
     #[test]
     fn answer_12_sanity_check() {
-        sanity_check(&answer_10)
+        sanity_check(&answer_12)
     }
 
     #[test]
     fn answer_13_sanity_check() {
-        sanity_check(&answer_10)
+        sanity_check(&answer_13)
     }
 
     #[test]
     fn answer_14_sanity_check() {
-        sanity_check(&answer_10)
+        sanity_check(&answer_14)
     }
 
     #[test]
     fn answer_15_sanity_check() {
-        sanity_check(&answer_10)
+        sanity_check(&answer_15)
     }
 
     #[test]
     fn answer_16_sanity_check() {
-        sanity_check(&answer_10)
+        sanity_check(&answer_16)
     }
 
     #[test]
     fn answer_17_sanity_check() {
-        sanity_check(&answer_10)
+        sanity_check(&answer_17)
     }
 
     #[test]
     fn answer_18_sanity_check() {
-        sanity_check(&answer_10)
+        sanity_check(&answer_18)
     }
 
     #[test]
     fn answer_19_sanity_check() {
-        sanity_check(&answer_10)
+        sanity_check(&answer_19)
     }
 
     #[test]
     fn answer_20_sanity_check() {
-        sanity_check(&answer_10)
+        sanity_check(&answer_20)
     }
 
     #[test]
     fn answer_21_sanity_check() {
-        sanity_check(&answer_10)
+        sanity_check(&answer_21)
     }
 
     #[test]
     fn answer_22_sanity_check() {
-        sanity_check(&answer_10)
+        sanity_check(&answer_22)
+    }
+
+    #[test]
+    fn answer_23_sanity_check() {
+        sanity_check(&answer_23)
     }
 }
