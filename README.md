@@ -9,7 +9,7 @@ While there are numerous excellent learning resources for Rust, we have recogniz
 These exercises are designed to bridge the gap, ensuring you not only grasp the theory but also gain practical experience to confidently apply what you've learned in the exciting world of Rust.
 Each chapters contains some well-commented starter code, and some todo!() macros that you are required to replace with your solutions.
 Each chapter will feature multiple exercises categorized by difficulty levels, along with a set of multiple-choice questions (MCQ). We recommend that you start with level 0 and progress through the levels.
-- [Chapter 3: Common Programming Concepts](https://github.com/Asamartino/Rust_for_everyone/tree/main/src/chapter_03))
+- [Chapter 3: Common Programming Concepts](https://github.com/Asamartino/Rust_for_everyone/tree/main/src/chapter_03)
 
 You can gauge your progress by running the tests associated with each level of exercises.
 ```sh
